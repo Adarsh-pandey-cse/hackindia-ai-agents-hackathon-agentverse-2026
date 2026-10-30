@@ -1,0 +1,1 @@
+AgentVerse 2026 - Verified Hackathon Project
