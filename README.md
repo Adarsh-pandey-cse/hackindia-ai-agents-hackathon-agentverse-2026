@@ -1,7 +1,8 @@
-# AgentVerse Autonomous AI Agent & Machine Learning Pipeline
+# AgentVerse Autonomous AI Agent & ML Pipeline
 
 [![HackIndia Python Skill](https://img.shields.io/badge/HackIndia%20Skill-Write%20a%20runnable%20Python%20tool-orange.svg)](https://hackindia.org/skills/write-a-runnable-python-tool)
 [![HackIndia ML Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20your%20first%20ML%20repo-purple.svg)](https://hackindia.org/skills/ship-your-first-ml-repo)
+[![HackIndia Claude Code Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20faster%20with%20Claude%20Code-blueviolet.svg)](https://hackindia.org/skills/ship-faster-with-claude-code)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Unit Tests](https://img.shields.io/badge/Unit%20Tests-7%20Passed-brightgreen.svg)](tests/)
@@ -9,6 +10,7 @@
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
 2. [Ship your first ML repo](https://hackindia.org/skills/ship-your-first-ml-repo)
+3. [Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -23,10 +25,11 @@
 
 ![System Architecture](assets/architecture_diagram.png)
 
-**AgentVerse Autonomous AI Agent & ML Pipeline** is a dual-capability engineering system designed for modern AI agent environments:
+**AgentVerse Autonomous AI Agent & ML Pipeline** is a complete, multi-tiered engineering system designed for AI agents hackathon workflows:
 
 1. **Autonomous Intelligence Agent CLI (`main.py`):** Ingests structured task feeds (`.json` or `.csv`), queries live external REST APIs (GitHub, CoinGecko, HTTPBin) with automatic offline mock fallbacks, applies Python data-shaping comprehensions, and writes structured JSON & Markdown reports. Built for the **[Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)** skill.
 2. **Scikit-Learn Machine Learning Pipeline (`train_ml_model.py`):** Trains, evaluates, and exports a production predictive model that forecasts agent task execution success/failure based on runtime workload metrics. Features stratified train/test split, feature scaling, model family benchmark comparisons, serialization to `.joblib`, and metric reports. Built for the **[Ship your first ML repo](https://hackindia.org/skills/ship-your-first-ml-repo)** skill.
+3. **Claude Code & Agent Context Integration:** Full project context orchestration via `CLAUDE.md`, `@AGENTS.md` import, safe shared settings in `.claude/settings.json`, and `.cursorrules` to guarantee secure, repeatable, and collaborative AI development. Built for the **[Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)** skill.
 
 ---
 
@@ -36,6 +39,13 @@
 .
 ├── README.md                          # Comprehensive project documentation & evaluation proof
 ├── requirements.txt                   # Pinned runtime dependencies (scikit-learn, joblib, requests, etc.)
+│
+├── [ CLAUDE CODE & AGENT CONTEXT ]
+├── CLAUDE.md                          # Operating guide for Claude Code (imports @AGENTS.md)
+├── AGENTS.md                          # Autonomous agent operating rules and security policies
+├── .cursorrules                       # Assistant guidelines for Cursor and AI pair programmers
+├── .claude/
+│   └── settings.json                  # Shared project settings (denies reading .env files)
 │
 ├── [ PYTHON AGENT TOOL ]
 ├── main.py                            # Runnable CLI entry point with argparse options and exit codes
@@ -68,6 +78,34 @@
     ├── test_agent.py                  # Unit tests for Python agent tool (5/5 passed)
     └── test_ml_model.py               # Unit tests for ML training pipeline (2/2 passed)
 ```
+
+---
+
+## 🛡️ Claude Code Integration & Safe Settings
+
+This repository is structured for safe and rapid development with Claude Code, fulfilling all requirements of the **HackIndia Claude Code** curriculum:
+
+1. **Context Management (`CLAUDE.md`):**
+   - Placed at repository root `./CLAUDE.md`.
+   - Imports `@AGENTS.md` so Claude Code automatically loads core repository architecture, guidelines, and operating constraints.
+   - Defines verified commands for running, testing, and linting the codebase.
+2. **Safe Shared Permissions (`.claude/settings.json`):**
+   - Configures deny-first security rules preventing Claude Code from reading sensitive files:
+     ```json
+     {
+       "permissions": {
+         "deny": [
+           "Read(./.env)",
+           "Read(./.env.*)"
+         ]
+       }
+     }
+     ```
+3. **Clean Git Isolation (`.gitignore`):**
+   - Explicitly excludes `.env`, `.env.*`, and `.claude/settings.local.json` to keep personal overrides out of the public repo.
+4. **Code Review & Pull Request:**
+   - Multi-file modifications follow plan-first conventions.
+   - All changes reviewed and pushed via clean commits and Pull Request [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1) on `HackIndiaXYZ`.
 
 ---
 
@@ -337,6 +375,16 @@ jupyter notebook ml_training_walkthrough.ipynb
 - [x] **Evaluation results:** Accuracy (96.25%), F1-Score (0.9771), Precision (0.9697), Recall (0.9846), Confusion Matrix.
 - [x] **Clear run steps:** Documented step-by-step run command `python train_ml_model.py`.
 - [x] **Jupyter notebook or dependencies in `requirements.txt`:** `scikit-learn>=1.4.0` in `requirements.txt` AND full [`ml_training_walkthrough.ipynb`](ml_training_walkthrough.ipynb) notebook included.
+
+### Skill 3: Ship faster with Claude Code
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** All commits authored by Adarsh Pandey (`adarshpandey.cse@gmail.com`).
+- [x] **Claude Code context file (`CLAUDE.md`):** Complete project context, tech stack, commands, conventions, and review checklist.
+- [x] **`@AGENTS.md` imported:** `CLAUDE.md` imports `@AGENTS.md` for shared agent operating rules.
+- [x] **Safe shared settings (`.claude/settings.json`):** Denies read permissions to `.env` and `.env.*`.
+- [x] **`.gitignore` protection:** Excludes `.env`, `.env.*`, and `.claude/settings.local.json`.
+- [x] **Multi-agent rules (`.cursorrules`):** Pair programming guidelines included.
+- [x] **Reviewed code changes:** Clean commit log and active Pull Request [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1) on HackIndiaXYZ.
 
 ---
 

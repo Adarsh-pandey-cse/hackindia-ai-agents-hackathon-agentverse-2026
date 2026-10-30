@@ -1,0 +1,9 @@
+# Cursor Rules - AgentVerse Repository
+
+- Project: AgentVerse Autonomous AI Agent & ML Pipeline (HackIndia 2026)
+- Author: Adarsh Pandey (@adarsh-pandey-cse)
+- Environment: Python 3.9+ with virtualenv support
+- Always run `python -m unittest discover tests` after modifying code.
+- Deny reading or committing `.env` and `.env.*` files.
+- Prefer Python standard library modules over new third-party dependencies.
+- Follow PEP 8 style guidelines with strict type annotations.
