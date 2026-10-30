@@ -1,4 +1,4 @@
-# AgentVerse Autonomous AI Agent
+﻿# AgentVerse Autonomous AI Agent
 
 [![HackIndia Skill](https://img.shields.io/badge/HackIndia%20Skill-Write%20a%20runnable%20Python%20tool-orange.svg)](https://hackindia.org/skills/write-a-runnable-python-tool)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
@@ -14,6 +14,8 @@
 ---
 
 ## 📌 Project Overview
+
+![System Architecture](assets/architecture_diagram.png)
 
 **AgentVerse Autonomous AI Agent** is a production-ready, command-line intelligence tool engineered for AI-adjacent analytical workflows. It ingests structured queries, queries live external REST APIs (with offline mock fallbacks), applies Python data-shaping comprehensions, and writes comprehensive JSON and Markdown reports.
 
