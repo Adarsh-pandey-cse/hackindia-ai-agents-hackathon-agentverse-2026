@@ -1,1 +1,2 @@
-AgentVerse 2026 - Verified Hackathon Project
+# Verified HackIndia 2026 Submission
+Updated via GitHub API.
