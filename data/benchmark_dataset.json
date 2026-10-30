@@ -1,0 +1,6406 @@
+{
+  "dataset_name": "AgentVerse AI Benchmarks 2026",
+  "total_samples": 400,
+  "benchmarks": [
+    {
+      "benchmark_id": "BENCH-0001",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8779,
+      "latency_ms": 181,
+      "tokens_per_sec": 46.17,
+      "memory_mb": 3853,
+      "cost_usd": 0.00316,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.868,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0002",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7979,
+      "latency_ms": 181,
+      "tokens_per_sec": 72.8,
+      "memory_mb": 1708,
+      "cost_usd": 0.002028,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.947,
+        "context_window_utilization": 0.23
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0003",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9213,
+      "latency_ms": 219,
+      "tokens_per_sec": 62.66,
+      "memory_mb": 1420,
+      "cost_usd": 0.001542,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.997,
+        "context_window_utilization": 0.93
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0004",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9697,
+      "latency_ms": 995,
+      "tokens_per_sec": 116.51,
+      "memory_mb": 3568,
+      "cost_usd": 0.002613,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.89,
+        "context_window_utilization": 0.42
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0005",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9078,
+      "latency_ms": 831,
+      "tokens_per_sec": 135.73,
+      "memory_mb": 2768,
+      "cost_usd": 0.00139,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.993,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0006",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9002,
+      "latency_ms": 1191,
+      "tokens_per_sec": 43.64,
+      "memory_mb": 881,
+      "cost_usd": 0.004348,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.883,
+        "context_window_utilization": 0.92
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0007",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7688,
+      "latency_ms": 1088,
+      "tokens_per_sec": 35.87,
+      "memory_mb": 3466,
+      "cost_usd": 0.002439,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.994,
+        "context_window_utilization": 0.83
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0008",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7776,
+      "latency_ms": 285,
+      "tokens_per_sec": 79.4,
+      "memory_mb": 955,
+      "cost_usd": 0.004623,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.877,
+        "context_window_utilization": 0.67
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0009",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9618,
+      "latency_ms": 436,
+      "tokens_per_sec": 61.89,
+      "memory_mb": 1521,
+      "cost_usd": 0.001521,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.911,
+        "context_window_utilization": 0.23
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0010",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9172,
+      "latency_ms": 945,
+      "tokens_per_sec": 111.5,
+      "memory_mb": 968,
+      "cost_usd": 0.002497,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.971,
+        "context_window_utilization": 0.58
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0011",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8968,
+      "latency_ms": 1116,
+      "tokens_per_sec": 48.94,
+      "memory_mb": 3033,
+      "cost_usd": 0.002127,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.866,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0012",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9319,
+      "latency_ms": 366,
+      "tokens_per_sec": 40.36,
+      "memory_mb": 627,
+      "cost_usd": 0.002265,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.948,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0013",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7883,
+      "latency_ms": 1850,
+      "tokens_per_sec": 36.48,
+      "memory_mb": 3774,
+      "cost_usd": 0.003943,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.901,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0014",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8833,
+      "latency_ms": 1755,
+      "tokens_per_sec": 99.16,
+      "memory_mb": 3941,
+      "cost_usd": 0.002757,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.941,
+        "context_window_utilization": 0.88
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0015",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8773,
+      "latency_ms": 1108,
+      "tokens_per_sec": 94.2,
+      "memory_mb": 1980,
+      "cost_usd": 0.000718,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.904,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0016",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8804,
+      "latency_ms": 1566,
+      "tokens_per_sec": 60.93,
+      "memory_mb": 2490,
+      "cost_usd": 0.00109,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.854,
+        "context_window_utilization": 0.46
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0017",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9842,
+      "latency_ms": 397,
+      "tokens_per_sec": 109.68,
+      "memory_mb": 1450,
+      "cost_usd": 0.00318,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.894,
+        "context_window_utilization": 0.92
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0018",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8207,
+      "latency_ms": 266,
+      "tokens_per_sec": 116.44,
+      "memory_mb": 1641,
+      "cost_usd": 0.00279,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.984,
+        "context_window_utilization": 0.93
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0019",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7504,
+      "latency_ms": 803,
+      "tokens_per_sec": 74.12,
+      "memory_mb": 2062,
+      "cost_usd": 0.001638,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.91,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0020",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8903,
+      "latency_ms": 1214,
+      "tokens_per_sec": 64.58,
+      "memory_mb": 2812,
+      "cost_usd": 0.001505,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.935,
+        "context_window_utilization": 0.36
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0021",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8599,
+      "latency_ms": 1037,
+      "tokens_per_sec": 113.69,
+      "memory_mb": 2102,
+      "cost_usd": 0.004883,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.922,
+        "context_window_utilization": 0.49
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0022",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.835,
+      "latency_ms": 1745,
+      "tokens_per_sec": 137.15,
+      "memory_mb": 846,
+      "cost_usd": 0.004566,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.864,
+        "context_window_utilization": 0.81
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0023",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7783,
+      "latency_ms": 1637,
+      "tokens_per_sec": 112.02,
+      "memory_mb": 669,
+      "cost_usd": 0.000732,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.948,
+        "context_window_utilization": 0.64
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0024",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8751,
+      "latency_ms": 633,
+      "tokens_per_sec": 139.78,
+      "memory_mb": 3341,
+      "cost_usd": 0.002748,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.869,
+        "context_window_utilization": 0.93
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0025",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8412,
+      "latency_ms": 1792,
+      "tokens_per_sec": 82.79,
+      "memory_mb": 3563,
+      "cost_usd": 0.000164,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.975,
+        "context_window_utilization": 0.69
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0026",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8923,
+      "latency_ms": 596,
+      "tokens_per_sec": 36.12,
+      "memory_mb": 2633,
+      "cost_usd": 0.003482,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.87,
+        "context_window_utilization": 0.57
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0027",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9881,
+      "latency_ms": 466,
+      "tokens_per_sec": 108.99,
+      "memory_mb": 729,
+      "cost_usd": 0.004344,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.974,
+        "context_window_utilization": 0.36
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0028",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8617,
+      "latency_ms": 877,
+      "tokens_per_sec": 109.12,
+      "memory_mb": 1301,
+      "cost_usd": 0.004205,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 1.0,
+        "context_window_utilization": 0.47
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0029",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7968,
+      "latency_ms": 495,
+      "tokens_per_sec": 58.9,
+      "memory_mb": 1507,
+      "cost_usd": 0.000735,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.866,
+        "context_window_utilization": 0.69
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0030",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.983,
+      "latency_ms": 842,
+      "tokens_per_sec": 92.73,
+      "memory_mb": 3262,
+      "cost_usd": 0.002421,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.856,
+        "context_window_utilization": 0.58
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0031",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7889,
+      "latency_ms": 228,
+      "tokens_per_sec": 94.03,
+      "memory_mb": 823,
+      "cost_usd": 0.00307,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.965,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0032",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9326,
+      "latency_ms": 124,
+      "tokens_per_sec": 79.61,
+      "memory_mb": 3176,
+      "cost_usd": 0.000567,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.857,
+        "context_window_utilization": 0.41
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0033",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9328,
+      "latency_ms": 981,
+      "tokens_per_sec": 87.74,
+      "memory_mb": 3391,
+      "cost_usd": 0.000131,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.896,
+        "context_window_utilization": 0.25
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0034",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8819,
+      "latency_ms": 1457,
+      "tokens_per_sec": 99.13,
+      "memory_mb": 296,
+      "cost_usd": 0.002023,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.862,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0035",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.884,
+      "latency_ms": 1316,
+      "tokens_per_sec": 40.26,
+      "memory_mb": 1475,
+      "cost_usd": 0.003718,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.886,
+        "context_window_utilization": 0.54
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0036",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7663,
+      "latency_ms": 273,
+      "tokens_per_sec": 51.5,
+      "memory_mb": 1464,
+      "cost_usd": 0.004894,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.924,
+        "context_window_utilization": 0.63
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0037",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.957,
+      "latency_ms": 638,
+      "tokens_per_sec": 138.28,
+      "memory_mb": 1551,
+      "cost_usd": 0.00241,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.96,
+        "context_window_utilization": 0.92
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0038",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8708,
+      "latency_ms": 1585,
+      "tokens_per_sec": 65.72,
+      "memory_mb": 1227,
+      "cost_usd": 0.003251,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.856,
+        "context_window_utilization": 0.38
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0039",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9684,
+      "latency_ms": 1208,
+      "tokens_per_sec": 104.78,
+      "memory_mb": 3114,
+      "cost_usd": 0.004978,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.922,
+        "context_window_utilization": 0.47
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0040",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8565,
+      "latency_ms": 1190,
+      "tokens_per_sec": 79.82,
+      "memory_mb": 2158,
+      "cost_usd": 0.000655,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.929,
+        "context_window_utilization": 0.61
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0041",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8074,
+      "latency_ms": 1210,
+      "tokens_per_sec": 37.5,
+      "memory_mb": 3181,
+      "cost_usd": 0.002136,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.939,
+        "context_window_utilization": 0.77
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0042",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7507,
+      "latency_ms": 1490,
+      "tokens_per_sec": 121.43,
+      "memory_mb": 347,
+      "cost_usd": 0.001711,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.88,
+        "context_window_utilization": 0.28
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0043",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9038,
+      "latency_ms": 712,
+      "tokens_per_sec": 48.15,
+      "memory_mb": 3570,
+      "cost_usd": 0.000526,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.888,
+        "context_window_utilization": 0.27
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0044",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.919,
+      "latency_ms": 1284,
+      "tokens_per_sec": 52.44,
+      "memory_mb": 916,
+      "cost_usd": 0.000388,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.957,
+        "context_window_utilization": 0.37
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0045",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9669,
+      "latency_ms": 814,
+      "tokens_per_sec": 54.95,
+      "memory_mb": 3057,
+      "cost_usd": 0.000205,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.959,
+        "context_window_utilization": 0.7
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0046",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9654,
+      "latency_ms": 1839,
+      "tokens_per_sec": 123.35,
+      "memory_mb": 1850,
+      "cost_usd": 0.004631,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.869,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0047",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9097,
+      "latency_ms": 1462,
+      "tokens_per_sec": 41.92,
+      "memory_mb": 2996,
+      "cost_usd": 0.00033,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.956,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0048",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7868,
+      "latency_ms": 1514,
+      "tokens_per_sec": 38.16,
+      "memory_mb": 1093,
+      "cost_usd": 0.001951,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.853,
+        "context_window_utilization": 0.37
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0049",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8874,
+      "latency_ms": 1594,
+      "tokens_per_sec": 96.74,
+      "memory_mb": 3544,
+      "cost_usd": 0.00365,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.959,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0050",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9559,
+      "latency_ms": 1553,
+      "tokens_per_sec": 114.22,
+      "memory_mb": 1817,
+      "cost_usd": 0.001778,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.885,
+        "context_window_utilization": 0.42
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0051",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8994,
+      "latency_ms": 957,
+      "tokens_per_sec": 91.35,
+      "memory_mb": 2269,
+      "cost_usd": 0.002589,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.869,
+        "context_window_utilization": 0.64
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0052",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9633,
+      "latency_ms": 141,
+      "tokens_per_sec": 102.76,
+      "memory_mb": 2621,
+      "cost_usd": 0.00167,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.931,
+        "context_window_utilization": 0.29
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0053",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8724,
+      "latency_ms": 1447,
+      "tokens_per_sec": 102.13,
+      "memory_mb": 3233,
+      "cost_usd": 0.002362,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.958,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0054",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8585,
+      "latency_ms": 1282,
+      "tokens_per_sec": 110.48,
+      "memory_mb": 1679,
+      "cost_usd": 0.002972,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.984,
+        "context_window_utilization": 0.41
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0055",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.851,
+      "latency_ms": 1847,
+      "tokens_per_sec": 124.36,
+      "memory_mb": 2713,
+      "cost_usd": 0.004234,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.984,
+        "context_window_utilization": 0.71
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0056",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7882,
+      "latency_ms": 1728,
+      "tokens_per_sec": 51.04,
+      "memory_mb": 2027,
+      "cost_usd": 0.004917,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.869,
+        "context_window_utilization": 0.58
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0057",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7807,
+      "latency_ms": 1368,
+      "tokens_per_sec": 120.2,
+      "memory_mb": 4040,
+      "cost_usd": 0.003335,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.871,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0058",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9828,
+      "latency_ms": 1269,
+      "tokens_per_sec": 72.86,
+      "memory_mb": 1264,
+      "cost_usd": 0.000674,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.854,
+        "context_window_utilization": 0.5
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0059",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.902,
+      "latency_ms": 241,
+      "tokens_per_sec": 95.52,
+      "memory_mb": 3877,
+      "cost_usd": 0.001193,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.939,
+        "context_window_utilization": 0.37
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0060",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8592,
+      "latency_ms": 1049,
+      "tokens_per_sec": 105.33,
+      "memory_mb": 2495,
+      "cost_usd": 0.000405,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.901,
+        "context_window_utilization": 0.92
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0061",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8726,
+      "latency_ms": 1494,
+      "tokens_per_sec": 55.61,
+      "memory_mb": 3574,
+      "cost_usd": 0.001128,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.881,
+        "context_window_utilization": 0.68
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0062",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7508,
+      "latency_ms": 1296,
+      "tokens_per_sec": 114.07,
+      "memory_mb": 2771,
+      "cost_usd": 0.000848,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.963,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0063",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8613,
+      "latency_ms": 320,
+      "tokens_per_sec": 38.13,
+      "memory_mb": 1284,
+      "cost_usd": 0.002027,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.953,
+        "context_window_utilization": 0.44
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0064",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9072,
+      "latency_ms": 363,
+      "tokens_per_sec": 49.72,
+      "memory_mb": 860,
+      "cost_usd": 0.003336,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.912,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0065",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9138,
+      "latency_ms": 609,
+      "tokens_per_sec": 57.38,
+      "memory_mb": 2521,
+      "cost_usd": 0.002129,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.856,
+        "context_window_utilization": 0.48
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0066",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.911,
+      "latency_ms": 1048,
+      "tokens_per_sec": 97.26,
+      "memory_mb": 3539,
+      "cost_usd": 0.000757,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.969,
+        "context_window_utilization": 0.68
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0067",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9811,
+      "latency_ms": 1827,
+      "tokens_per_sec": 98.14,
+      "memory_mb": 1568,
+      "cost_usd": 0.004446,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.905,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0068",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8844,
+      "latency_ms": 1668,
+      "tokens_per_sec": 126.13,
+      "memory_mb": 1293,
+      "cost_usd": 0.002453,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.902,
+        "context_window_utilization": 0.84
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0069",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8037,
+      "latency_ms": 203,
+      "tokens_per_sec": 38.86,
+      "memory_mb": 3185,
+      "cost_usd": 0.001243,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.898,
+        "context_window_utilization": 0.6
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0070",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8502,
+      "latency_ms": 1567,
+      "tokens_per_sec": 61.26,
+      "memory_mb": 3794,
+      "cost_usd": 0.001262,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.887,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0071",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8479,
+      "latency_ms": 448,
+      "tokens_per_sec": 85.88,
+      "memory_mb": 899,
+      "cost_usd": 0.002673,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.954,
+        "context_window_utilization": 0.88
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0072",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7926,
+      "latency_ms": 789,
+      "tokens_per_sec": 130.23,
+      "memory_mb": 2331,
+      "cost_usd": 0.001215,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.942,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0073",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9505,
+      "latency_ms": 511,
+      "tokens_per_sec": 72.67,
+      "memory_mb": 3184,
+      "cost_usd": 0.002858,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.9,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0074",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7696,
+      "latency_ms": 1083,
+      "tokens_per_sec": 133.18,
+      "memory_mb": 2269,
+      "cost_usd": 0.004523,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.939,
+        "context_window_utilization": 0.4
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0075",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8277,
+      "latency_ms": 1309,
+      "tokens_per_sec": 108.49,
+      "memory_mb": 2247,
+      "cost_usd": 0.000162,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.958,
+        "context_window_utilization": 0.49
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0076",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8663,
+      "latency_ms": 640,
+      "tokens_per_sec": 112.31,
+      "memory_mb": 963,
+      "cost_usd": 0.00429,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.891,
+        "context_window_utilization": 0.48
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0077",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8602,
+      "latency_ms": 737,
+      "tokens_per_sec": 69.26,
+      "memory_mb": 3756,
+      "cost_usd": 0.003159,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.898,
+        "context_window_utilization": 0.75
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0078",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7545,
+      "latency_ms": 591,
+      "tokens_per_sec": 98.38,
+      "memory_mb": 3631,
+      "cost_usd": 0.000684,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.863,
+        "context_window_utilization": 0.54
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0079",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8802,
+      "latency_ms": 1157,
+      "tokens_per_sec": 68.18,
+      "memory_mb": 1012,
+      "cost_usd": 0.003829,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.996,
+        "context_window_utilization": 0.78
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0080",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9617,
+      "latency_ms": 829,
+      "tokens_per_sec": 105.73,
+      "memory_mb": 3695,
+      "cost_usd": 0.003466,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.989,
+        "context_window_utilization": 0.37
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0081",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.844,
+      "latency_ms": 1715,
+      "tokens_per_sec": 60.73,
+      "memory_mb": 3634,
+      "cost_usd": 0.004476,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.955,
+        "context_window_utilization": 0.71
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0082",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9365,
+      "latency_ms": 1331,
+      "tokens_per_sec": 94.91,
+      "memory_mb": 1391,
+      "cost_usd": 0.000197,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.859,
+        "context_window_utilization": 0.73
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0083",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8376,
+      "latency_ms": 476,
+      "tokens_per_sec": 134.68,
+      "memory_mb": 3074,
+      "cost_usd": 0.003841,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.981,
+        "context_window_utilization": 0.6
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0084",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9454,
+      "latency_ms": 1146,
+      "tokens_per_sec": 43.57,
+      "memory_mb": 572,
+      "cost_usd": 0.001127,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.864,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0085",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.896,
+      "latency_ms": 965,
+      "tokens_per_sec": 67.2,
+      "memory_mb": 1972,
+      "cost_usd": 0.001157,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.898,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0086",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7772,
+      "latency_ms": 790,
+      "tokens_per_sec": 85.36,
+      "memory_mb": 2218,
+      "cost_usd": 0.004116,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.886,
+        "context_window_utilization": 0.67
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0087",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7942,
+      "latency_ms": 1833,
+      "tokens_per_sec": 47.88,
+      "memory_mb": 3221,
+      "cost_usd": 0.002524,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.998,
+        "context_window_utilization": 0.66
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0088",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9603,
+      "latency_ms": 1612,
+      "tokens_per_sec": 110.23,
+      "memory_mb": 2059,
+      "cost_usd": 0.001815,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.889,
+        "context_window_utilization": 0.38
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0089",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8741,
+      "latency_ms": 1583,
+      "tokens_per_sec": 77.95,
+      "memory_mb": 2385,
+      "cost_usd": 0.002762,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.937,
+        "context_window_utilization": 0.93
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0090",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8771,
+      "latency_ms": 559,
+      "tokens_per_sec": 38.05,
+      "memory_mb": 982,
+      "cost_usd": 0.003175,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.892,
+        "context_window_utilization": 0.61
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0091",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9423,
+      "latency_ms": 345,
+      "tokens_per_sec": 105.2,
+      "memory_mb": 2889,
+      "cost_usd": 0.001064,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.994,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0092",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.777,
+      "latency_ms": 1266,
+      "tokens_per_sec": 82.49,
+      "memory_mb": 1107,
+      "cost_usd": 0.002255,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.872,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0093",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8407,
+      "latency_ms": 1478,
+      "tokens_per_sec": 97.86,
+      "memory_mb": 3748,
+      "cost_usd": 0.004239,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.947,
+        "context_window_utilization": 0.64
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0094",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7839,
+      "latency_ms": 442,
+      "tokens_per_sec": 54.54,
+      "memory_mb": 3427,
+      "cost_usd": 0.000751,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.906,
+        "context_window_utilization": 0.69
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0095",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8859,
+      "latency_ms": 1827,
+      "tokens_per_sec": 59.01,
+      "memory_mb": 484,
+      "cost_usd": 0.000234,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.885,
+        "context_window_utilization": 0.58
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0096",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8162,
+      "latency_ms": 852,
+      "tokens_per_sec": 78.24,
+      "memory_mb": 2442,
+      "cost_usd": 0.003036,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.879,
+        "context_window_utilization": 0.62
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0097",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8583,
+      "latency_ms": 1757,
+      "tokens_per_sec": 48.19,
+      "memory_mb": 2822,
+      "cost_usd": 0.001156,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.938,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0098",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8075,
+      "latency_ms": 571,
+      "tokens_per_sec": 51.81,
+      "memory_mb": 1797,
+      "cost_usd": 0.001294,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.992,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0099",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9621,
+      "latency_ms": 1254,
+      "tokens_per_sec": 113.32,
+      "memory_mb": 2217,
+      "cost_usd": 0.000284,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.894,
+        "context_window_utilization": 0.27
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0100",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7543,
+      "latency_ms": 691,
+      "tokens_per_sec": 88.64,
+      "memory_mb": 3571,
+      "cost_usd": 0.000328,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.937,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0101",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8503,
+      "latency_ms": 585,
+      "tokens_per_sec": 131.48,
+      "memory_mb": 2225,
+      "cost_usd": 0.003252,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.939,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0102",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8641,
+      "latency_ms": 1134,
+      "tokens_per_sec": 98.27,
+      "memory_mb": 1355,
+      "cost_usd": 0.000626,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.867,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0103",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8453,
+      "latency_ms": 469,
+      "tokens_per_sec": 48.54,
+      "memory_mb": 552,
+      "cost_usd": 0.003053,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.97,
+        "context_window_utilization": 0.33
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0104",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8684,
+      "latency_ms": 1349,
+      "tokens_per_sec": 115.8,
+      "memory_mb": 2457,
+      "cost_usd": 0.002872,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.985,
+        "context_window_utilization": 0.76
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0105",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7812,
+      "latency_ms": 1784,
+      "tokens_per_sec": 75.1,
+      "memory_mb": 2074,
+      "cost_usd": 0.001855,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.964,
+        "context_window_utilization": 0.37
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0106",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7811,
+      "latency_ms": 1460,
+      "tokens_per_sec": 57.54,
+      "memory_mb": 323,
+      "cost_usd": 0.001651,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.885,
+        "context_window_utilization": 0.37
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0107",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9278,
+      "latency_ms": 347,
+      "tokens_per_sec": 77.38,
+      "memory_mb": 2709,
+      "cost_usd": 0.001117,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.963,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0108",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.87,
+      "latency_ms": 355,
+      "tokens_per_sec": 60.9,
+      "memory_mb": 2404,
+      "cost_usd": 0.002634,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.963,
+        "context_window_utilization": 0.48
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0109",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.813,
+      "latency_ms": 1124,
+      "tokens_per_sec": 91.33,
+      "memory_mb": 410,
+      "cost_usd": 0.003796,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.932,
+        "context_window_utilization": 0.56
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0110",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9793,
+      "latency_ms": 1749,
+      "tokens_per_sec": 108.08,
+      "memory_mb": 2019,
+      "cost_usd": 0.002564,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.956,
+        "context_window_utilization": 0.71
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0111",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7682,
+      "latency_ms": 123,
+      "tokens_per_sec": 56.46,
+      "memory_mb": 829,
+      "cost_usd": 0.001684,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.936,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0112",
+      "category": "vision_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8595,
+      "latency_ms": 1034,
+      "tokens_per_sec": 59.8,
+      "memory_mb": 2741,
+      "cost_usd": 0.004988,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.874,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0113",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8068,
+      "latency_ms": 1241,
+      "tokens_per_sec": 74.78,
+      "memory_mb": 920,
+      "cost_usd": 0.00355,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.908,
+        "context_window_utilization": 0.69
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0114",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9704,
+      "latency_ms": 184,
+      "tokens_per_sec": 113.46,
+      "memory_mb": 2914,
+      "cost_usd": 0.000541,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.983,
+        "context_window_utilization": 0.48
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0115",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8775,
+      "latency_ms": 799,
+      "tokens_per_sec": 121.01,
+      "memory_mb": 3394,
+      "cost_usd": 0.002879,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.898,
+        "context_window_utilization": 0.35
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0116",
+      "category": "vision_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8439,
+      "latency_ms": 1767,
+      "tokens_per_sec": 89.78,
+      "memory_mb": 2876,
+      "cost_usd": 0.000466,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.991,
+        "context_window_utilization": 0.89
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0117",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8239,
+      "latency_ms": 1437,
+      "tokens_per_sec": 85.26,
+      "memory_mb": 299,
+      "cost_usd": 0.001106,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.913,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0118",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.926,
+      "latency_ms": 1787,
+      "tokens_per_sec": 66.13,
+      "memory_mb": 2381,
+      "cost_usd": 0.004268,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.97,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0119",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.973,
+      "latency_ms": 1497,
+      "tokens_per_sec": 72.84,
+      "memory_mb": 2560,
+      "cost_usd": 0.000256,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.935,
+        "context_window_utilization": 0.59
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0120",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9483,
+      "latency_ms": 1604,
+      "tokens_per_sec": 96.11,
+      "memory_mb": 3141,
+      "cost_usd": 0.000895,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.95,
+        "context_window_utilization": 0.28
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0121",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9166,
+      "latency_ms": 134,
+      "tokens_per_sec": 112.02,
+      "memory_mb": 1571,
+      "cost_usd": 0.001642,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.923,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0122",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.888,
+      "latency_ms": 139,
+      "tokens_per_sec": 50.98,
+      "memory_mb": 2567,
+      "cost_usd": 0.001271,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.912,
+        "context_window_utilization": 0.59
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0123",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.875,
+      "latency_ms": 1262,
+      "tokens_per_sec": 68.05,
+      "memory_mb": 1808,
+      "cost_usd": 0.0002,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.907,
+        "context_window_utilization": 0.56
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0124",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8351,
+      "latency_ms": 515,
+      "tokens_per_sec": 36.57,
+      "memory_mb": 1436,
+      "cost_usd": 0.003053,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.906,
+        "context_window_utilization": 0.87
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0125",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7561,
+      "latency_ms": 470,
+      "tokens_per_sec": 95.44,
+      "memory_mb": 2051,
+      "cost_usd": 0.004127,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.965,
+        "context_window_utilization": 0.48
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0126",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7557,
+      "latency_ms": 1192,
+      "tokens_per_sec": 104.0,
+      "memory_mb": 1313,
+      "cost_usd": 0.00468,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.923,
+        "context_window_utilization": 0.41
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0127",
+      "category": "vision_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7734,
+      "latency_ms": 940,
+      "tokens_per_sec": 101.12,
+      "memory_mb": 3638,
+      "cost_usd": 0.003628,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.969,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0128",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7781,
+      "latency_ms": 1296,
+      "tokens_per_sec": 66.71,
+      "memory_mb": 746,
+      "cost_usd": 0.004937,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.992,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0129",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.829,
+      "latency_ms": 1145,
+      "tokens_per_sec": 83.62,
+      "memory_mb": 1419,
+      "cost_usd": 0.001296,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.852,
+        "context_window_utilization": 0.66
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0130",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9491,
+      "latency_ms": 1143,
+      "tokens_per_sec": 79.94,
+      "memory_mb": 2823,
+      "cost_usd": 0.002675,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.91,
+        "context_window_utilization": 0.56
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0131",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8971,
+      "latency_ms": 1638,
+      "tokens_per_sec": 89.04,
+      "memory_mb": 3152,
+      "cost_usd": 0.000733,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.912,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0132",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7936,
+      "latency_ms": 515,
+      "tokens_per_sec": 44.42,
+      "memory_mb": 1625,
+      "cost_usd": 0.003292,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.97,
+        "context_window_utilization": 0.21
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0133",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9021,
+      "latency_ms": 1696,
+      "tokens_per_sec": 50.75,
+      "memory_mb": 848,
+      "cost_usd": 0.001084,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.968,
+        "context_window_utilization": 0.73
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0134",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9259,
+      "latency_ms": 235,
+      "tokens_per_sec": 129.99,
+      "memory_mb": 3424,
+      "cost_usd": 0.001919,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.908,
+        "context_window_utilization": 0.32
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0135",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9459,
+      "latency_ms": 122,
+      "tokens_per_sec": 45.84,
+      "memory_mb": 1247,
+      "cost_usd": 0.004474,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.921,
+        "context_window_utilization": 0.69
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0136",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9133,
+      "latency_ms": 976,
+      "tokens_per_sec": 54.02,
+      "memory_mb": 1319,
+      "cost_usd": 0.004842,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.902,
+        "context_window_utilization": 0.52
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0137",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9632,
+      "latency_ms": 1634,
+      "tokens_per_sec": 86.05,
+      "memory_mb": 1104,
+      "cost_usd": 0.004663,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.901,
+        "context_window_utilization": 0.87
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0138",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7791,
+      "latency_ms": 1456,
+      "tokens_per_sec": 87.11,
+      "memory_mb": 1441,
+      "cost_usd": 0.000349,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.979,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0139",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8765,
+      "latency_ms": 866,
+      "tokens_per_sec": 81.0,
+      "memory_mb": 3999,
+      "cost_usd": 0.003228,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.873,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0140",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8499,
+      "latency_ms": 149,
+      "tokens_per_sec": 135.55,
+      "memory_mb": 2823,
+      "cost_usd": 0.003898,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.917,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0141",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9725,
+      "latency_ms": 443,
+      "tokens_per_sec": 108.78,
+      "memory_mb": 2015,
+      "cost_usd": 0.003527,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.923,
+        "context_window_utilization": 0.49
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0142",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9154,
+      "latency_ms": 856,
+      "tokens_per_sec": 60.01,
+      "memory_mb": 2534,
+      "cost_usd": 0.004092,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 1.0,
+        "context_window_utilization": 0.6
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0143",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9198,
+      "latency_ms": 496,
+      "tokens_per_sec": 60.94,
+      "memory_mb": 386,
+      "cost_usd": 0.002527,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.871,
+        "context_window_utilization": 0.47
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0144",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8612,
+      "latency_ms": 1381,
+      "tokens_per_sec": 38.71,
+      "memory_mb": 4046,
+      "cost_usd": 0.002435,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.964,
+        "context_window_utilization": 0.4
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0145",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7514,
+      "latency_ms": 249,
+      "tokens_per_sec": 109.57,
+      "memory_mb": 680,
+      "cost_usd": 0.003998,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.9,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0146",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7661,
+      "latency_ms": 1185,
+      "tokens_per_sec": 49.98,
+      "memory_mb": 2225,
+      "cost_usd": 0.000371,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.985,
+        "context_window_utilization": 0.38
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0147",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.891,
+      "latency_ms": 1554,
+      "tokens_per_sec": 66.35,
+      "memory_mb": 576,
+      "cost_usd": 0.002618,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.975,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0148",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9711,
+      "latency_ms": 480,
+      "tokens_per_sec": 58.28,
+      "memory_mb": 4052,
+      "cost_usd": 0.000596,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.875,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0149",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8788,
+      "latency_ms": 1391,
+      "tokens_per_sec": 112.98,
+      "memory_mb": 675,
+      "cost_usd": 0.002307,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.923,
+        "context_window_utilization": 0.87
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0150",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8217,
+      "latency_ms": 251,
+      "tokens_per_sec": 98.06,
+      "memory_mb": 1673,
+      "cost_usd": 0.003732,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.923,
+        "context_window_utilization": 0.54
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0151",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.919,
+      "latency_ms": 789,
+      "tokens_per_sec": 49.43,
+      "memory_mb": 582,
+      "cost_usd": 0.001854,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.88,
+        "context_window_utilization": 0.75
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0152",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8247,
+      "latency_ms": 1720,
+      "tokens_per_sec": 85.57,
+      "memory_mb": 3443,
+      "cost_usd": 0.000703,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.929,
+        "context_window_utilization": 0.49
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0153",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8986,
+      "latency_ms": 787,
+      "tokens_per_sec": 99.12,
+      "memory_mb": 3807,
+      "cost_usd": 0.002462,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.926,
+        "context_window_utilization": 0.73
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0154",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8872,
+      "latency_ms": 1504,
+      "tokens_per_sec": 136.16,
+      "memory_mb": 1789,
+      "cost_usd": 0.001119,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.868,
+        "context_window_utilization": 0.78
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0155",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9776,
+      "latency_ms": 1375,
+      "tokens_per_sec": 86.22,
+      "memory_mb": 1092,
+      "cost_usd": 0.001679,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.905,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0156",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9807,
+      "latency_ms": 1056,
+      "tokens_per_sec": 56.26,
+      "memory_mb": 2386,
+      "cost_usd": 0.00294,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.957,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0157",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9556,
+      "latency_ms": 1240,
+      "tokens_per_sec": 65.08,
+      "memory_mb": 707,
+      "cost_usd": 0.004937,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.864,
+        "context_window_utilization": 0.4
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0158",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8224,
+      "latency_ms": 949,
+      "tokens_per_sec": 95.86,
+      "memory_mb": 446,
+      "cost_usd": 0.004447,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.911,
+        "context_window_utilization": 0.33
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0159",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9393,
+      "latency_ms": 281,
+      "tokens_per_sec": 97.21,
+      "memory_mb": 827,
+      "cost_usd": 0.00125,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.95,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0160",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7984,
+      "latency_ms": 1632,
+      "tokens_per_sec": 114.34,
+      "memory_mb": 2158,
+      "cost_usd": 0.004304,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.99,
+        "context_window_utilization": 0.49
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0161",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7963,
+      "latency_ms": 1196,
+      "tokens_per_sec": 43.37,
+      "memory_mb": 376,
+      "cost_usd": 0.002478,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.915,
+        "context_window_utilization": 0.47
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0162",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8915,
+      "latency_ms": 926,
+      "tokens_per_sec": 93.55,
+      "memory_mb": 3848,
+      "cost_usd": 0.002509,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.881,
+        "context_window_utilization": 0.44
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0163",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7947,
+      "latency_ms": 599,
+      "tokens_per_sec": 49.03,
+      "memory_mb": 3652,
+      "cost_usd": 0.002965,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.869,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0164",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9364,
+      "latency_ms": 293,
+      "tokens_per_sec": 112.56,
+      "memory_mb": 1969,
+      "cost_usd": 0.002869,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.878,
+        "context_window_utilization": 0.28
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0165",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7835,
+      "latency_ms": 1000,
+      "tokens_per_sec": 135.68,
+      "memory_mb": 2627,
+      "cost_usd": 0.001913,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.879,
+        "context_window_utilization": 0.4
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0166",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9096,
+      "latency_ms": 333,
+      "tokens_per_sec": 139.8,
+      "memory_mb": 2656,
+      "cost_usd": 0.000243,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.943,
+        "context_window_utilization": 0.74
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0167",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9115,
+      "latency_ms": 1307,
+      "tokens_per_sec": 124.75,
+      "memory_mb": 1955,
+      "cost_usd": 0.002595,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.991,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0168",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8697,
+      "latency_ms": 433,
+      "tokens_per_sec": 59.25,
+      "memory_mb": 1696,
+      "cost_usd": 0.002448,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.908,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0169",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8399,
+      "latency_ms": 777,
+      "tokens_per_sec": 108.66,
+      "memory_mb": 3100,
+      "cost_usd": 0.002696,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.885,
+        "context_window_utilization": 0.46
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0170",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.938,
+      "latency_ms": 1667,
+      "tokens_per_sec": 128.68,
+      "memory_mb": 462,
+      "cost_usd": 0.000108,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.895,
+        "context_window_utilization": 0.87
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0171",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8666,
+      "latency_ms": 824,
+      "tokens_per_sec": 58.51,
+      "memory_mb": 4028,
+      "cost_usd": 0.002869,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.899,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0172",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8989,
+      "latency_ms": 1462,
+      "tokens_per_sec": 47.43,
+      "memory_mb": 2261,
+      "cost_usd": 0.004879,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.85,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0173",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8026,
+      "latency_ms": 1343,
+      "tokens_per_sec": 46.84,
+      "memory_mb": 1514,
+      "cost_usd": 0.004725,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.892,
+        "context_window_utilization": 0.88
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0174",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8532,
+      "latency_ms": 1824,
+      "tokens_per_sec": 94.28,
+      "memory_mb": 1188,
+      "cost_usd": 0.003466,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.999,
+        "context_window_utilization": 0.5
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0175",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7885,
+      "latency_ms": 240,
+      "tokens_per_sec": 132.79,
+      "memory_mb": 296,
+      "cost_usd": 0.004886,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.987,
+        "context_window_utilization": 0.89
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0176",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.964,
+      "latency_ms": 241,
+      "tokens_per_sec": 71.96,
+      "memory_mb": 3815,
+      "cost_usd": 0.001468,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.98,
+        "context_window_utilization": 0.32
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0177",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8598,
+      "latency_ms": 1401,
+      "tokens_per_sec": 118.9,
+      "memory_mb": 783,
+      "cost_usd": 0.00415,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.957,
+        "context_window_utilization": 0.73
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0178",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7768,
+      "latency_ms": 312,
+      "tokens_per_sec": 90.66,
+      "memory_mb": 2918,
+      "cost_usd": 0.004168,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.938,
+        "context_window_utilization": 0.62
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0179",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9608,
+      "latency_ms": 1608,
+      "tokens_per_sec": 56.86,
+      "memory_mb": 3540,
+      "cost_usd": 0.002369,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.969,
+        "context_window_utilization": 0.68
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0180",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9008,
+      "latency_ms": 1001,
+      "tokens_per_sec": 113.64,
+      "memory_mb": 4034,
+      "cost_usd": 0.004608,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.877,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0181",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7683,
+      "latency_ms": 975,
+      "tokens_per_sec": 49.51,
+      "memory_mb": 4075,
+      "cost_usd": 0.002236,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.904,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0182",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8406,
+      "latency_ms": 1674,
+      "tokens_per_sec": 39.27,
+      "memory_mb": 2984,
+      "cost_usd": 0.002584,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.974,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0183",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7827,
+      "latency_ms": 1531,
+      "tokens_per_sec": 137.35,
+      "memory_mb": 3745,
+      "cost_usd": 0.000448,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.908,
+        "context_window_utilization": 0.7
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0184",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8955,
+      "latency_ms": 961,
+      "tokens_per_sec": 53.02,
+      "memory_mb": 817,
+      "cost_usd": 0.003612,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.957,
+        "context_window_utilization": 0.63
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0185",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.759,
+      "latency_ms": 996,
+      "tokens_per_sec": 115.06,
+      "memory_mb": 3306,
+      "cost_usd": 0.002802,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.852,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0186",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9366,
+      "latency_ms": 602,
+      "tokens_per_sec": 37.21,
+      "memory_mb": 1441,
+      "cost_usd": 0.001555,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.89,
+        "context_window_utilization": 0.37
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0187",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8792,
+      "latency_ms": 1690,
+      "tokens_per_sec": 99.06,
+      "memory_mb": 1748,
+      "cost_usd": 0.001439,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.963,
+        "context_window_utilization": 0.21
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0188",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9849,
+      "latency_ms": 1255,
+      "tokens_per_sec": 65.48,
+      "memory_mb": 3018,
+      "cost_usd": 0.001471,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.977,
+        "context_window_utilization": 0.21
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0189",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8438,
+      "latency_ms": 1130,
+      "tokens_per_sec": 52.85,
+      "memory_mb": 1149,
+      "cost_usd": 0.001561,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.901,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0190",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8745,
+      "latency_ms": 614,
+      "tokens_per_sec": 97.58,
+      "memory_mb": 327,
+      "cost_usd": 0.004736,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.981,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0191",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9315,
+      "latency_ms": 1258,
+      "tokens_per_sec": 131.38,
+      "memory_mb": 2847,
+      "cost_usd": 0.002787,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.878,
+        "context_window_utilization": 0.44
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0192",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8162,
+      "latency_ms": 931,
+      "tokens_per_sec": 139.92,
+      "memory_mb": 2830,
+      "cost_usd": 0.001706,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.99,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0193",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9445,
+      "latency_ms": 648,
+      "tokens_per_sec": 54.13,
+      "memory_mb": 1340,
+      "cost_usd": 0.000702,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.997,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0194",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8184,
+      "latency_ms": 346,
+      "tokens_per_sec": 35.63,
+      "memory_mb": 3283,
+      "cost_usd": 0.004826,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.893,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0195",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8887,
+      "latency_ms": 684,
+      "tokens_per_sec": 138.55,
+      "memory_mb": 3231,
+      "cost_usd": 0.002078,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.855,
+        "context_window_utilization": 0.58
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0196",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9664,
+      "latency_ms": 1376,
+      "tokens_per_sec": 55.56,
+      "memory_mb": 2198,
+      "cost_usd": 0.004693,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.975,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0197",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7684,
+      "latency_ms": 1225,
+      "tokens_per_sec": 123.07,
+      "memory_mb": 3151,
+      "cost_usd": 0.001271,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.999,
+        "context_window_utilization": 0.32
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0198",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9438,
+      "latency_ms": 1421,
+      "tokens_per_sec": 112.25,
+      "memory_mb": 3256,
+      "cost_usd": 0.004767,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.919,
+        "context_window_utilization": 0.91
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0199",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8954,
+      "latency_ms": 518,
+      "tokens_per_sec": 44.02,
+      "memory_mb": 3816,
+      "cost_usd": 0.002889,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.869,
+        "context_window_utilization": 0.66
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0200",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8147,
+      "latency_ms": 994,
+      "tokens_per_sec": 111.71,
+      "memory_mb": 1510,
+      "cost_usd": 0.004533,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.851,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0201",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8309,
+      "latency_ms": 486,
+      "tokens_per_sec": 120.46,
+      "memory_mb": 3321,
+      "cost_usd": 0.001003,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.92,
+        "context_window_utilization": 0.48
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0202",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8192,
+      "latency_ms": 1574,
+      "tokens_per_sec": 84.8,
+      "memory_mb": 1220,
+      "cost_usd": 0.004966,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.974,
+        "context_window_utilization": 0.28
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0203",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8568,
+      "latency_ms": 1167,
+      "tokens_per_sec": 110.22,
+      "memory_mb": 3708,
+      "cost_usd": 0.0033,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.99,
+        "context_window_utilization": 0.4
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0204",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9162,
+      "latency_ms": 1558,
+      "tokens_per_sec": 137.22,
+      "memory_mb": 2647,
+      "cost_usd": 0.000488,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.881,
+        "context_window_utilization": 0.33
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0205",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7953,
+      "latency_ms": 1563,
+      "tokens_per_sec": 52.56,
+      "memory_mb": 1738,
+      "cost_usd": 0.000114,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.862,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0206",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8341,
+      "latency_ms": 1226,
+      "tokens_per_sec": 40.94,
+      "memory_mb": 1597,
+      "cost_usd": 0.000849,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.857,
+        "context_window_utilization": 0.21
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0207",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9603,
+      "latency_ms": 228,
+      "tokens_per_sec": 67.48,
+      "memory_mb": 1816,
+      "cost_usd": 0.002563,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.997,
+        "context_window_utilization": 0.69
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0208",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9488,
+      "latency_ms": 508,
+      "tokens_per_sec": 112.24,
+      "memory_mb": 902,
+      "cost_usd": 0.004184,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.906,
+        "context_window_utilization": 0.2
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0209",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8476,
+      "latency_ms": 1617,
+      "tokens_per_sec": 125.1,
+      "memory_mb": 2330,
+      "cost_usd": 0.000185,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.874,
+        "context_window_utilization": 0.67
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0210",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9098,
+      "latency_ms": 340,
+      "tokens_per_sec": 129.9,
+      "memory_mb": 2895,
+      "cost_usd": 0.000767,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.973,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0211",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8401,
+      "latency_ms": 1805,
+      "tokens_per_sec": 83.09,
+      "memory_mb": 2112,
+      "cost_usd": 0.001819,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.902,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0212",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7549,
+      "latency_ms": 703,
+      "tokens_per_sec": 118.61,
+      "memory_mb": 3523,
+      "cost_usd": 0.003068,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.87,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0213",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7538,
+      "latency_ms": 828,
+      "tokens_per_sec": 120.21,
+      "memory_mb": 2388,
+      "cost_usd": 0.000998,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.903,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0214",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9546,
+      "latency_ms": 1579,
+      "tokens_per_sec": 114.52,
+      "memory_mb": 2473,
+      "cost_usd": 0.001532,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.926,
+        "context_window_utilization": 0.54
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0215",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8568,
+      "latency_ms": 1551,
+      "tokens_per_sec": 69.03,
+      "memory_mb": 2774,
+      "cost_usd": 0.002256,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.876,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0216",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8433,
+      "latency_ms": 604,
+      "tokens_per_sec": 94.45,
+      "memory_mb": 1902,
+      "cost_usd": 0.002736,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.906,
+        "context_window_utilization": 0.5
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0217",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.786,
+      "latency_ms": 484,
+      "tokens_per_sec": 87.47,
+      "memory_mb": 2322,
+      "cost_usd": 0.002505,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.995,
+        "context_window_utilization": 0.42
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0218",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8688,
+      "latency_ms": 231,
+      "tokens_per_sec": 110.45,
+      "memory_mb": 2923,
+      "cost_usd": 0.004237,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.983,
+        "context_window_utilization": 0.74
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0219",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9227,
+      "latency_ms": 1220,
+      "tokens_per_sec": 94.84,
+      "memory_mb": 1970,
+      "cost_usd": 0.002462,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.978,
+        "context_window_utilization": 0.87
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0220",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8191,
+      "latency_ms": 1394,
+      "tokens_per_sec": 122.17,
+      "memory_mb": 2422,
+      "cost_usd": 0.004146,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.851,
+        "context_window_utilization": 0.35
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0221",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.891,
+      "latency_ms": 1722,
+      "tokens_per_sec": 109.69,
+      "memory_mb": 2392,
+      "cost_usd": 0.001694,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.9,
+        "context_window_utilization": 0.77
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0222",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8721,
+      "latency_ms": 589,
+      "tokens_per_sec": 82.95,
+      "memory_mb": 2369,
+      "cost_usd": 0.001832,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.889,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0223",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9613,
+      "latency_ms": 684,
+      "tokens_per_sec": 78.42,
+      "memory_mb": 2202,
+      "cost_usd": 0.001548,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.988,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0224",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.761,
+      "latency_ms": 1626,
+      "tokens_per_sec": 80.62,
+      "memory_mb": 1512,
+      "cost_usd": 0.000111,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.875,
+        "context_window_utilization": 0.82
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0225",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9512,
+      "latency_ms": 162,
+      "tokens_per_sec": 67.61,
+      "memory_mb": 3869,
+      "cost_usd": 0.003715,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.853,
+        "context_window_utilization": 0.87
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0226",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9773,
+      "latency_ms": 933,
+      "tokens_per_sec": 80.84,
+      "memory_mb": 1337,
+      "cost_usd": 0.003662,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.951,
+        "context_window_utilization": 0.7
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0227",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9781,
+      "latency_ms": 735,
+      "tokens_per_sec": 91.77,
+      "memory_mb": 3995,
+      "cost_usd": 0.004698,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.956,
+        "context_window_utilization": 0.94
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0228",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9899,
+      "latency_ms": 1221,
+      "tokens_per_sec": 53.05,
+      "memory_mb": 1394,
+      "cost_usd": 0.002759,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.914,
+        "context_window_utilization": 0.76
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0229",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9497,
+      "latency_ms": 799,
+      "tokens_per_sec": 121.67,
+      "memory_mb": 2936,
+      "cost_usd": 0.003955,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.906,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0230",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8623,
+      "latency_ms": 1711,
+      "tokens_per_sec": 35.13,
+      "memory_mb": 2754,
+      "cost_usd": 0.004269,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.905,
+        "context_window_utilization": 0.67
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0231",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9595,
+      "latency_ms": 439,
+      "tokens_per_sec": 77.44,
+      "memory_mb": 883,
+      "cost_usd": 0.004159,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.913,
+        "context_window_utilization": 0.33
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0232",
+      "category": "vision_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8421,
+      "latency_ms": 778,
+      "tokens_per_sec": 47.73,
+      "memory_mb": 992,
+      "cost_usd": 0.00363,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.997,
+        "context_window_utilization": 0.71
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0233",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8482,
+      "latency_ms": 583,
+      "tokens_per_sec": 129.8,
+      "memory_mb": 3366,
+      "cost_usd": 0.001892,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.925,
+        "context_window_utilization": 0.44
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0234",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9876,
+      "latency_ms": 733,
+      "tokens_per_sec": 114.79,
+      "memory_mb": 1829,
+      "cost_usd": 0.001556,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.983,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0235",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9846,
+      "latency_ms": 796,
+      "tokens_per_sec": 136.81,
+      "memory_mb": 2794,
+      "cost_usd": 0.002741,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.905,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0236",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8786,
+      "latency_ms": 1540,
+      "tokens_per_sec": 62.1,
+      "memory_mb": 1850,
+      "cost_usd": 0.001611,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.854,
+        "context_window_utilization": 0.83
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0237",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9141,
+      "latency_ms": 423,
+      "tokens_per_sec": 51.09,
+      "memory_mb": 1122,
+      "cost_usd": 0.002144,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.916,
+        "context_window_utilization": 0.6
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0238",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7959,
+      "latency_ms": 186,
+      "tokens_per_sec": 51.6,
+      "memory_mb": 413,
+      "cost_usd": 0.004538,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.865,
+        "context_window_utilization": 0.52
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0239",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8341,
+      "latency_ms": 1808,
+      "tokens_per_sec": 131.73,
+      "memory_mb": 1149,
+      "cost_usd": 0.003496,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.864,
+        "context_window_utilization": 0.77
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0240",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9356,
+      "latency_ms": 795,
+      "tokens_per_sec": 53.96,
+      "memory_mb": 755,
+      "cost_usd": 0.001358,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.934,
+        "context_window_utilization": 0.83
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0241",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7642,
+      "latency_ms": 1816,
+      "tokens_per_sec": 63.95,
+      "memory_mb": 1715,
+      "cost_usd": 0.002095,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.896,
+        "context_window_utilization": 0.74
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0242",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9838,
+      "latency_ms": 258,
+      "tokens_per_sec": 81.16,
+      "memory_mb": 1124,
+      "cost_usd": 0.004051,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.91,
+        "context_window_utilization": 0.75
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0243",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8496,
+      "latency_ms": 1192,
+      "tokens_per_sec": 44.9,
+      "memory_mb": 3547,
+      "cost_usd": 0.004569,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.954,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0244",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9788,
+      "latency_ms": 150,
+      "tokens_per_sec": 139.17,
+      "memory_mb": 1354,
+      "cost_usd": 0.004776,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.876,
+        "context_window_utilization": 0.28
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0245",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8557,
+      "latency_ms": 1215,
+      "tokens_per_sec": 96.6,
+      "memory_mb": 1719,
+      "cost_usd": 0.003381,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.948,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0246",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7801,
+      "latency_ms": 1655,
+      "tokens_per_sec": 39.05,
+      "memory_mb": 282,
+      "cost_usd": 0.003187,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.916,
+        "context_window_utilization": 0.35
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0247",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9613,
+      "latency_ms": 884,
+      "tokens_per_sec": 69.26,
+      "memory_mb": 2156,
+      "cost_usd": 0.000647,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.919,
+        "context_window_utilization": 0.52
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0248",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8546,
+      "latency_ms": 147,
+      "tokens_per_sec": 63.47,
+      "memory_mb": 2156,
+      "cost_usd": 0.002716,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.995,
+        "context_window_utilization": 0.48
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0249",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8314,
+      "latency_ms": 481,
+      "tokens_per_sec": 76.32,
+      "memory_mb": 838,
+      "cost_usd": 0.00245,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.994,
+        "context_window_utilization": 0.93
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0250",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8462,
+      "latency_ms": 1771,
+      "tokens_per_sec": 35.63,
+      "memory_mb": 1119,
+      "cost_usd": 0.00489,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.886,
+        "context_window_utilization": 0.41
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0251",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9195,
+      "latency_ms": 1760,
+      "tokens_per_sec": 128.2,
+      "memory_mb": 2292,
+      "cost_usd": 0.003503,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.892,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0252",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7624,
+      "latency_ms": 570,
+      "tokens_per_sec": 89.42,
+      "memory_mb": 2822,
+      "cost_usd": 0.004898,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.961,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0253",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8701,
+      "latency_ms": 1322,
+      "tokens_per_sec": 68.83,
+      "memory_mb": 2856,
+      "cost_usd": 0.003338,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.898,
+        "context_window_utilization": 0.68
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0254",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9138,
+      "latency_ms": 1169,
+      "tokens_per_sec": 39.88,
+      "memory_mb": 1334,
+      "cost_usd": 0.001406,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.972,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0255",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9062,
+      "latency_ms": 1702,
+      "tokens_per_sec": 129.3,
+      "memory_mb": 2225,
+      "cost_usd": 0.003846,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.89,
+        "context_window_utilization": 0.89
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0256",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9285,
+      "latency_ms": 494,
+      "tokens_per_sec": 67.82,
+      "memory_mb": 3642,
+      "cost_usd": 0.004168,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.866,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0257",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9741,
+      "latency_ms": 1080,
+      "tokens_per_sec": 40.21,
+      "memory_mb": 3242,
+      "cost_usd": 0.000277,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.928,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0258",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9622,
+      "latency_ms": 1618,
+      "tokens_per_sec": 90.19,
+      "memory_mb": 2817,
+      "cost_usd": 0.004193,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.888,
+        "context_window_utilization": 0.27
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0259",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7669,
+      "latency_ms": 469,
+      "tokens_per_sec": 95.18,
+      "memory_mb": 2909,
+      "cost_usd": 0.0009,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.957,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0260",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9708,
+      "latency_ms": 905,
+      "tokens_per_sec": 118.17,
+      "memory_mb": 2681,
+      "cost_usd": 0.00088,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.979,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0261",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9379,
+      "latency_ms": 1413,
+      "tokens_per_sec": 73.36,
+      "memory_mb": 2694,
+      "cost_usd": 0.004464,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.977,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0262",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9843,
+      "latency_ms": 1449,
+      "tokens_per_sec": 88.97,
+      "memory_mb": 2072,
+      "cost_usd": 0.000834,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.95,
+        "context_window_utilization": 0.87
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0263",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8506,
+      "latency_ms": 645,
+      "tokens_per_sec": 125.11,
+      "memory_mb": 1737,
+      "cost_usd": 0.002081,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.879,
+        "context_window_utilization": 0.27
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0264",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8761,
+      "latency_ms": 779,
+      "tokens_per_sec": 91.4,
+      "memory_mb": 1549,
+      "cost_usd": 0.002861,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.998,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0265",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9797,
+      "latency_ms": 1685,
+      "tokens_per_sec": 74.24,
+      "memory_mb": 2450,
+      "cost_usd": 0.000606,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.994,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0266",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8978,
+      "latency_ms": 1680,
+      "tokens_per_sec": 73.49,
+      "memory_mb": 3419,
+      "cost_usd": 0.002027,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.991,
+        "context_window_utilization": 0.91
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0267",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8372,
+      "latency_ms": 984,
+      "tokens_per_sec": 50.87,
+      "memory_mb": 2388,
+      "cost_usd": 0.004732,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.936,
+        "context_window_utilization": 0.21
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0268",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8908,
+      "latency_ms": 966,
+      "tokens_per_sec": 74.24,
+      "memory_mb": 2608,
+      "cost_usd": 0.00431,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.875,
+        "context_window_utilization": 0.84
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0269",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8041,
+      "latency_ms": 1468,
+      "tokens_per_sec": 128.21,
+      "memory_mb": 1981,
+      "cost_usd": 0.00104,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.921,
+        "context_window_utilization": 0.59
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0270",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7751,
+      "latency_ms": 1019,
+      "tokens_per_sec": 116.61,
+      "memory_mb": 2085,
+      "cost_usd": 0.001434,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.878,
+        "context_window_utilization": 0.61
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0271",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7667,
+      "latency_ms": 673,
+      "tokens_per_sec": 113.84,
+      "memory_mb": 2807,
+      "cost_usd": 0.002227,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.886,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0272",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7897,
+      "latency_ms": 1638,
+      "tokens_per_sec": 97.81,
+      "memory_mb": 3706,
+      "cost_usd": 0.003764,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.964,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0273",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8034,
+      "latency_ms": 1164,
+      "tokens_per_sec": 75.49,
+      "memory_mb": 777,
+      "cost_usd": 0.001427,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.874,
+        "context_window_utilization": 0.95
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0274",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9421,
+      "latency_ms": 1370,
+      "tokens_per_sec": 82.85,
+      "memory_mb": 1680,
+      "cost_usd": 0.000551,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.958,
+        "context_window_utilization": 0.88
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0275",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8816,
+      "latency_ms": 1610,
+      "tokens_per_sec": 138.3,
+      "memory_mb": 2370,
+      "cost_usd": 0.000705,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.921,
+        "context_window_utilization": 0.84
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0276",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9473,
+      "latency_ms": 1418,
+      "tokens_per_sec": 37.74,
+      "memory_mb": 1308,
+      "cost_usd": 0.000588,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.883,
+        "context_window_utilization": 0.73
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0277",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9734,
+      "latency_ms": 164,
+      "tokens_per_sec": 50.18,
+      "memory_mb": 2878,
+      "cost_usd": 0.001612,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.867,
+        "context_window_utilization": 0.72
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0278",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8607,
+      "latency_ms": 785,
+      "tokens_per_sec": 41.72,
+      "memory_mb": 3152,
+      "cost_usd": 0.000673,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.86,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0279",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9768,
+      "latency_ms": 1567,
+      "tokens_per_sec": 65.77,
+      "memory_mb": 2320,
+      "cost_usd": 0.001945,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.996,
+        "context_window_utilization": 0.62
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0280",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9308,
+      "latency_ms": 819,
+      "tokens_per_sec": 38.01,
+      "memory_mb": 2720,
+      "cost_usd": 0.003617,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.977,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0281",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9578,
+      "latency_ms": 211,
+      "tokens_per_sec": 110.39,
+      "memory_mb": 1142,
+      "cost_usd": 0.000472,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.877,
+        "context_window_utilization": 0.27
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0282",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7831,
+      "latency_ms": 459,
+      "tokens_per_sec": 114.67,
+      "memory_mb": 882,
+      "cost_usd": 0.002241,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.931,
+        "context_window_utilization": 0.29
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0283",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.983,
+      "latency_ms": 644,
+      "tokens_per_sec": 81.62,
+      "memory_mb": 2818,
+      "cost_usd": 0.001227,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.989,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0284",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7652,
+      "latency_ms": 876,
+      "tokens_per_sec": 98.71,
+      "memory_mb": 2943,
+      "cost_usd": 0.003452,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.974,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0285",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9695,
+      "latency_ms": 1702,
+      "tokens_per_sec": 88.69,
+      "memory_mb": 1826,
+      "cost_usd": 0.003798,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.96,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0286",
+      "category": "vision_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.984,
+      "latency_ms": 1080,
+      "tokens_per_sec": 81.36,
+      "memory_mb": 2711,
+      "cost_usd": 0.00025,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.941,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0287",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8178,
+      "latency_ms": 698,
+      "tokens_per_sec": 46.77,
+      "memory_mb": 1607,
+      "cost_usd": 0.003533,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.922,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0288",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9792,
+      "latency_ms": 908,
+      "tokens_per_sec": 106.76,
+      "memory_mb": 2502,
+      "cost_usd": 0.003224,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.968,
+        "context_window_utilization": 0.32
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0289",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8967,
+      "latency_ms": 1183,
+      "tokens_per_sec": 77.02,
+      "memory_mb": 1029,
+      "cost_usd": 0.001274,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.906,
+        "context_window_utilization": 0.7
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0290",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8247,
+      "latency_ms": 1279,
+      "tokens_per_sec": 62.66,
+      "memory_mb": 3799,
+      "cost_usd": 0.004124,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.981,
+        "context_window_utilization": 0.57
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0291",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8173,
+      "latency_ms": 1250,
+      "tokens_per_sec": 132.79,
+      "memory_mb": 1237,
+      "cost_usd": 0.004348,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.897,
+        "context_window_utilization": 0.23
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0292",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7824,
+      "latency_ms": 548,
+      "tokens_per_sec": 85.77,
+      "memory_mb": 2643,
+      "cost_usd": 0.003781,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.998,
+        "context_window_utilization": 0.71
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0293",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9322,
+      "latency_ms": 1007,
+      "tokens_per_sec": 37.19,
+      "memory_mb": 2934,
+      "cost_usd": 0.00496,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.935,
+        "context_window_utilization": 0.68
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0294",
+      "category": "vision_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8594,
+      "latency_ms": 434,
+      "tokens_per_sec": 65.25,
+      "memory_mb": 1114,
+      "cost_usd": 0.002388,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.914,
+        "context_window_utilization": 0.78
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0295",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9567,
+      "latency_ms": 1451,
+      "tokens_per_sec": 103.19,
+      "memory_mb": 1130,
+      "cost_usd": 0.004164,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.906,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0296",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.891,
+      "latency_ms": 801,
+      "tokens_per_sec": 112.3,
+      "memory_mb": 2929,
+      "cost_usd": 0.000905,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.964,
+        "context_window_utilization": 0.25
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0297",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8427,
+      "latency_ms": 534,
+      "tokens_per_sec": 138.68,
+      "memory_mb": 3184,
+      "cost_usd": 0.001298,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.994,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0298",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8251,
+      "latency_ms": 1224,
+      "tokens_per_sec": 68.89,
+      "memory_mb": 1270,
+      "cost_usd": 0.001116,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.928,
+        "context_window_utilization": 0.27
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0299",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9854,
+      "latency_ms": 1095,
+      "tokens_per_sec": 44.09,
+      "memory_mb": 3518,
+      "cost_usd": 0.002699,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.858,
+        "context_window_utilization": 0.66
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0300",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9673,
+      "latency_ms": 1520,
+      "tokens_per_sec": 85.36,
+      "memory_mb": 1217,
+      "cost_usd": 0.002711,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.965,
+        "context_window_utilization": 0.6
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0301",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8374,
+      "latency_ms": 322,
+      "tokens_per_sec": 121.19,
+      "memory_mb": 2593,
+      "cost_usd": 0.000982,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.893,
+        "context_window_utilization": 0.83
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0302",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8631,
+      "latency_ms": 554,
+      "tokens_per_sec": 115.93,
+      "memory_mb": 1545,
+      "cost_usd": 0.000741,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.903,
+        "context_window_utilization": 0.52
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0303",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7595,
+      "latency_ms": 354,
+      "tokens_per_sec": 54.98,
+      "memory_mb": 1670,
+      "cost_usd": 0.001946,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.969,
+        "context_window_utilization": 0.64
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0304",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7516,
+      "latency_ms": 1379,
+      "tokens_per_sec": 110.7,
+      "memory_mb": 673,
+      "cost_usd": 0.002343,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.902,
+        "context_window_utilization": 0.46
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0305",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8518,
+      "latency_ms": 548,
+      "tokens_per_sec": 45.95,
+      "memory_mb": 2036,
+      "cost_usd": 0.00105,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.923,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0306",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9151,
+      "latency_ms": 338,
+      "tokens_per_sec": 128.56,
+      "memory_mb": 921,
+      "cost_usd": 0.001591,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.883,
+        "context_window_utilization": 0.89
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0307",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7789,
+      "latency_ms": 185,
+      "tokens_per_sec": 74.77,
+      "memory_mb": 926,
+      "cost_usd": 0.003984,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.957,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0308",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9523,
+      "latency_ms": 959,
+      "tokens_per_sec": 93.33,
+      "memory_mb": 3440,
+      "cost_usd": 0.004747,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.932,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0309",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9343,
+      "latency_ms": 262,
+      "tokens_per_sec": 85.56,
+      "memory_mb": 3613,
+      "cost_usd": 0.000574,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.943,
+        "context_window_utilization": 0.33
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0310",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9846,
+      "latency_ms": 986,
+      "tokens_per_sec": 50.73,
+      "memory_mb": 2435,
+      "cost_usd": 0.001655,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.972,
+        "context_window_utilization": 0.64
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0311",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8574,
+      "latency_ms": 1037,
+      "tokens_per_sec": 59.33,
+      "memory_mb": 796,
+      "cost_usd": 0.004507,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.991,
+        "context_window_utilization": 0.21
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0312",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8764,
+      "latency_ms": 1824,
+      "tokens_per_sec": 72.14,
+      "memory_mb": 3973,
+      "cost_usd": 0.000305,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.934,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0313",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8546,
+      "latency_ms": 1765,
+      "tokens_per_sec": 112.7,
+      "memory_mb": 3124,
+      "cost_usd": 0.003631,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.876,
+        "context_window_utilization": 0.5
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0314",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7916,
+      "latency_ms": 810,
+      "tokens_per_sec": 63.43,
+      "memory_mb": 684,
+      "cost_usd": 0.002217,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.927,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0315",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7987,
+      "latency_ms": 583,
+      "tokens_per_sec": 79.98,
+      "memory_mb": 413,
+      "cost_usd": 0.00077,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.925,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0316",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8463,
+      "latency_ms": 374,
+      "tokens_per_sec": 67.2,
+      "memory_mb": 2909,
+      "cost_usd": 0.004066,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.898,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0317",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9251,
+      "latency_ms": 643,
+      "tokens_per_sec": 135.64,
+      "memory_mb": 2087,
+      "cost_usd": 0.002573,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.955,
+        "context_window_utilization": 0.31
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0318",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9677,
+      "latency_ms": 1434,
+      "tokens_per_sec": 94.88,
+      "memory_mb": 2895,
+      "cost_usd": 0.004678,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.998,
+        "context_window_utilization": 0.28
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0319",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8856,
+      "latency_ms": 658,
+      "tokens_per_sec": 51.31,
+      "memory_mb": 3029,
+      "cost_usd": 0.004094,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.99,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0320",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8897,
+      "latency_ms": 192,
+      "tokens_per_sec": 72.14,
+      "memory_mb": 4095,
+      "cost_usd": 0.003103,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.914,
+        "context_window_utilization": 0.54
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0321",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8962,
+      "latency_ms": 1620,
+      "tokens_per_sec": 64.26,
+      "memory_mb": 328,
+      "cost_usd": 0.003667,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.883,
+        "context_window_utilization": 0.94
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0322",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8438,
+      "latency_ms": 563,
+      "tokens_per_sec": 80.15,
+      "memory_mb": 3124,
+      "cost_usd": 0.003227,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.985,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0323",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8359,
+      "latency_ms": 1507,
+      "tokens_per_sec": 46.54,
+      "memory_mb": 1752,
+      "cost_usd": 0.004841,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.903,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0324",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8645,
+      "latency_ms": 787,
+      "tokens_per_sec": 121.32,
+      "memory_mb": 633,
+      "cost_usd": 0.00022,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.875,
+        "context_window_utilization": 0.62
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0325",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9529,
+      "latency_ms": 439,
+      "tokens_per_sec": 90.29,
+      "memory_mb": 3783,
+      "cost_usd": 0.003426,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.89,
+        "context_window_utilization": 0.75
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0326",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.857,
+      "latency_ms": 709,
+      "tokens_per_sec": 123.72,
+      "memory_mb": 3885,
+      "cost_usd": 0.002168,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.943,
+        "context_window_utilization": 0.21
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0327",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.7915,
+      "latency_ms": 432,
+      "tokens_per_sec": 38.84,
+      "memory_mb": 1605,
+      "cost_usd": 0.003857,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.897,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0328",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8042,
+      "latency_ms": 894,
+      "tokens_per_sec": 105.57,
+      "memory_mb": 3845,
+      "cost_usd": 0.003307,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.907,
+        "context_window_utilization": 0.83
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0329",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8071,
+      "latency_ms": 180,
+      "tokens_per_sec": 51.41,
+      "memory_mb": 1652,
+      "cost_usd": 0.003468,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.89,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0330",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9154,
+      "latency_ms": 1829,
+      "tokens_per_sec": 119.09,
+      "memory_mb": 2563,
+      "cost_usd": 0.002166,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.876,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0331",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8524,
+      "latency_ms": 481,
+      "tokens_per_sec": 44.9,
+      "memory_mb": 1697,
+      "cost_usd": 0.003924,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.994,
+        "context_window_utilization": 0.83
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0332",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8007,
+      "latency_ms": 366,
+      "tokens_per_sec": 106.93,
+      "memory_mb": 2492,
+      "cost_usd": 0.002462,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.872,
+        "context_window_utilization": 0.38
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0333",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7625,
+      "latency_ms": 1824,
+      "tokens_per_sec": 135.9,
+      "memory_mb": 2093,
+      "cost_usd": 0.002565,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.869,
+        "context_window_utilization": 0.77
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0334",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9192,
+      "latency_ms": 528,
+      "tokens_per_sec": 77.85,
+      "memory_mb": 3803,
+      "cost_usd": 0.003636,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.879,
+        "context_window_utilization": 0.43
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0335",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9012,
+      "latency_ms": 1800,
+      "tokens_per_sec": 122.42,
+      "memory_mb": 574,
+      "cost_usd": 0.002287,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.979,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0336",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9109,
+      "latency_ms": 1276,
+      "tokens_per_sec": 138.25,
+      "memory_mb": 354,
+      "cost_usd": 0.004924,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.877,
+        "context_window_utilization": 0.41
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0337",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8275,
+      "latency_ms": 501,
+      "tokens_per_sec": 88.32,
+      "memory_mb": 2471,
+      "cost_usd": 0.001044,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.988,
+        "context_window_utilization": 0.22
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0338",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7944,
+      "latency_ms": 1414,
+      "tokens_per_sec": 62.34,
+      "memory_mb": 3621,
+      "cost_usd": 0.002407,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.975,
+        "context_window_utilization": 0.24
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0339",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8507,
+      "latency_ms": 205,
+      "tokens_per_sec": 114.82,
+      "memory_mb": 872,
+      "cost_usd": 0.003193,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.909,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0340",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9691,
+      "latency_ms": 1715,
+      "tokens_per_sec": 52.24,
+      "memory_mb": 686,
+      "cost_usd": 0.004876,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.96,
+        "context_window_utilization": 0.52
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0341",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8407,
+      "latency_ms": 480,
+      "tokens_per_sec": 66.87,
+      "memory_mb": 1226,
+      "cost_usd": 0.00172,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.982,
+        "context_window_utilization": 0.91
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0342",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7985,
+      "latency_ms": 222,
+      "tokens_per_sec": 64.99,
+      "memory_mb": 3143,
+      "cost_usd": 0.003064,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.895,
+        "context_window_utilization": 0.76
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0343",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8429,
+      "latency_ms": 700,
+      "tokens_per_sec": 102.07,
+      "memory_mb": 3310,
+      "cost_usd": 0.003101,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.893,
+        "context_window_utilization": 0.42
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0344",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8959,
+      "latency_ms": 287,
+      "tokens_per_sec": 46.86,
+      "memory_mb": 329,
+      "cost_usd": 0.002073,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.957,
+        "context_window_utilization": 0.84
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0345",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9817,
+      "latency_ms": 150,
+      "tokens_per_sec": 139.89,
+      "memory_mb": 2179,
+      "cost_usd": 0.003708,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.851,
+        "context_window_utilization": 0.33
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0346",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8032,
+      "latency_ms": 847,
+      "tokens_per_sec": 42.15,
+      "memory_mb": 3660,
+      "cost_usd": 0.004158,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.915,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0347",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8472,
+      "latency_ms": 515,
+      "tokens_per_sec": 35.64,
+      "memory_mb": 3492,
+      "cost_usd": 0.003907,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.874,
+        "context_window_utilization": 0.89
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0348",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9503,
+      "latency_ms": 353,
+      "tokens_per_sec": 75.18,
+      "memory_mb": 410,
+      "cost_usd": 0.004991,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.963,
+        "context_window_utilization": 0.2
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0349",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9834,
+      "latency_ms": 894,
+      "tokens_per_sec": 67.06,
+      "memory_mb": 1335,
+      "cost_usd": 0.002013,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.876,
+        "context_window_utilization": 0.61
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0350",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9098,
+      "latency_ms": 871,
+      "tokens_per_sec": 69.18,
+      "memory_mb": 3642,
+      "cost_usd": 0.002044,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.974,
+        "context_window_utilization": 0.27
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0351",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8678,
+      "latency_ms": 1006,
+      "tokens_per_sec": 100.0,
+      "memory_mb": 1874,
+      "cost_usd": 0.004139,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.988,
+        "context_window_utilization": 0.49
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0352",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9099,
+      "latency_ms": 1024,
+      "tokens_per_sec": 124.06,
+      "memory_mb": 3002,
+      "cost_usd": 0.003556,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.878,
+        "context_window_utilization": 0.6
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0353",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7665,
+      "latency_ms": 179,
+      "tokens_per_sec": 62.01,
+      "memory_mb": 1802,
+      "cost_usd": 0.001511,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.943,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0354",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8603,
+      "latency_ms": 1702,
+      "tokens_per_sec": 78.43,
+      "memory_mb": 814,
+      "cost_usd": 0.000231,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.853,
+        "context_window_utilization": 0.66
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0355",
+      "category": "nlp_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9807,
+      "latency_ms": 1148,
+      "tokens_per_sec": 88.03,
+      "memory_mb": 810,
+      "cost_usd": 0.003415,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.977,
+        "context_window_utilization": 0.26
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0356",
+      "category": "reasoning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9195,
+      "latency_ms": 1605,
+      "tokens_per_sec": 139.52,
+      "memory_mb": 2574,
+      "cost_usd": 0.002091,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.889,
+        "context_window_utilization": 0.85
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0357",
+      "category": "tool_calling_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8901,
+      "latency_ms": 409,
+      "tokens_per_sec": 129.47,
+      "memory_mb": 366,
+      "cost_usd": 0.002457,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.868,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0358",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7894,
+      "latency_ms": 205,
+      "tokens_per_sec": 103.75,
+      "memory_mb": 3579,
+      "cost_usd": 0.001465,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.879,
+        "context_window_utilization": 0.33
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0359",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8413,
+      "latency_ms": 1773,
+      "tokens_per_sec": 87.93,
+      "memory_mb": 332,
+      "cost_usd": 0.00286,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.915,
+        "context_window_utilization": 0.71
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0360",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9654,
+      "latency_ms": 1228,
+      "tokens_per_sec": 98.54,
+      "memory_mb": 3862,
+      "cost_usd": 0.004424,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.989,
+        "context_window_utilization": 0.86
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0361",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8051,
+      "latency_ms": 675,
+      "tokens_per_sec": 128.01,
+      "memory_mb": 3725,
+      "cost_usd": 0.000755,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.882,
+        "context_window_utilization": 0.34
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0362",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9371,
+      "latency_ms": 621,
+      "tokens_per_sec": 43.06,
+      "memory_mb": 866,
+      "cost_usd": 0.002686,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.876,
+        "context_window_utilization": 0.58
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0363",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.8681,
+      "latency_ms": 584,
+      "tokens_per_sec": 93.83,
+      "memory_mb": 1724,
+      "cost_usd": 0.0021,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.97,
+        "context_window_utilization": 0.32
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0364",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8262,
+      "latency_ms": 1602,
+      "tokens_per_sec": 121.4,
+      "memory_mb": 3329,
+      "cost_usd": 0.00372,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.918,
+        "context_window_utilization": 0.92
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0365",
+      "category": "vision_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7925,
+      "latency_ms": 748,
+      "tokens_per_sec": 90.46,
+      "memory_mb": 2434,
+      "cost_usd": 0.003219,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.948,
+        "context_window_utilization": 0.35
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0366",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8632,
+      "latency_ms": 889,
+      "tokens_per_sec": 133.57,
+      "memory_mb": 2462,
+      "cost_usd": 0.000996,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.86,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0367",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.897,
+      "latency_ms": 857,
+      "tokens_per_sec": 108.94,
+      "memory_mb": 1286,
+      "cost_usd": 0.003341,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.922,
+        "context_window_utilization": 0.77
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0368",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8496,
+      "latency_ms": 314,
+      "tokens_per_sec": 92.37,
+      "memory_mb": 1336,
+      "cost_usd": 0.000869,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.939,
+        "context_window_utilization": 0.94
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0369",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.79,
+      "latency_ms": 572,
+      "tokens_per_sec": 123.52,
+      "memory_mb": 2144,
+      "cost_usd": 0.00058,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.926,
+        "context_window_utilization": 0.77
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0370",
+      "category": "nlp_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7531,
+      "latency_ms": 1595,
+      "tokens_per_sec": 84.41,
+      "memory_mb": 3917,
+      "cost_usd": 0.004678,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.884,
+        "context_window_utilization": 0.3
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0371",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8939,
+      "latency_ms": 474,
+      "tokens_per_sec": 51.5,
+      "memory_mb": 2429,
+      "cost_usd": 0.002853,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.877,
+        "context_window_utilization": 0.74
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0372",
+      "category": "tool_calling_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9783,
+      "latency_ms": 1580,
+      "tokens_per_sec": 120.78,
+      "memory_mb": 1747,
+      "cost_usd": 0.002973,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.928,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0373",
+      "category": "nlp_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9376,
+      "latency_ms": 884,
+      "tokens_per_sec": 135.21,
+      "memory_mb": 3441,
+      "cost_usd": 0.002013,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.889,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0374",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8751,
+      "latency_ms": 1179,
+      "tokens_per_sec": 117.56,
+      "memory_mb": 3228,
+      "cost_usd": 0.000968,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.916,
+        "context_window_utilization": 0.36
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0375",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8792,
+      "latency_ms": 181,
+      "tokens_per_sec": 77.72,
+      "memory_mb": 1737,
+      "cost_usd": 0.00499,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.912,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0376",
+      "category": "planning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9676,
+      "latency_ms": 1654,
+      "tokens_per_sec": 100.59,
+      "memory_mb": 3254,
+      "cost_usd": 0.002462,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.992,
+        "context_window_utilization": 0.83
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0377",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.9317,
+      "latency_ms": 857,
+      "tokens_per_sec": 37.81,
+      "memory_mb": 2782,
+      "cost_usd": 0.004765,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.863,
+        "context_window_utilization": 0.72
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0378",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.8244,
+      "latency_ms": 164,
+      "tokens_per_sec": 138.77,
+      "memory_mb": 4084,
+      "cost_usd": 0.004266,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.903,
+        "context_window_utilization": 0.45
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0379",
+      "category": "reasoning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.8504,
+      "latency_ms": 740,
+      "tokens_per_sec": 62.13,
+      "memory_mb": 3183,
+      "cost_usd": 0.000421,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.966,
+        "context_window_utilization": 0.28
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0380",
+      "category": "planning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.7616,
+      "latency_ms": 1018,
+      "tokens_per_sec": 65.64,
+      "memory_mb": 2506,
+      "cost_usd": 0.004638,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.969,
+        "context_window_utilization": 0.46
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0381",
+      "category": "planning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8187,
+      "latency_ms": 1783,
+      "tokens_per_sec": 100.06,
+      "memory_mb": 612,
+      "cost_usd": 0.00283,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.859,
+        "context_window_utilization": 0.51
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0382",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.978,
+      "latency_ms": 1674,
+      "tokens_per_sec": 137.5,
+      "memory_mb": 3328,
+      "cost_usd": 0.002372,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.972,
+        "context_window_utilization": 0.42
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0383",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9124,
+      "latency_ms": 865,
+      "tokens_per_sec": 73.99,
+      "memory_mb": 3851,
+      "cost_usd": 0.002889,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.879,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0384",
+      "category": "vision_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9245,
+      "latency_ms": 284,
+      "tokens_per_sec": 36.15,
+      "memory_mb": 3383,
+      "cost_usd": 0.003415,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.998,
+        "context_window_utilization": 0.55
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0385",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7636,
+      "latency_ms": 1806,
+      "tokens_per_sec": 133.75,
+      "memory_mb": 1809,
+      "cost_usd": 0.004129,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.941,
+        "context_window_utilization": 0.95
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0386",
+      "category": "reasoning_agent",
+      "model": "Gemini-1.5-Pro",
+      "accuracy": 0.7508,
+      "latency_ms": 519,
+      "tokens_per_sec": 85.92,
+      "memory_mb": 335,
+      "cost_usd": 0.00216,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.896,
+        "context_window_utilization": 0.29
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0387",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9021,
+      "latency_ms": 481,
+      "tokens_per_sec": 42.01,
+      "memory_mb": 1229,
+      "cost_usd": 0.002364,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.883,
+        "context_window_utilization": 0.53
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0388",
+      "category": "vision_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.927,
+      "latency_ms": 954,
+      "tokens_per_sec": 107.48,
+      "memory_mb": 2884,
+      "cost_usd": 0.000181,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.889,
+        "context_window_utilization": 0.67
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0389",
+      "category": "nlp_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.9713,
+      "latency_ms": 1701,
+      "tokens_per_sec": 73.27,
+      "memory_mb": 2380,
+      "cost_usd": 0.003682,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.952,
+        "context_window_utilization": 0.59
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0390",
+      "category": "tool_calling_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9801,
+      "latency_ms": 292,
+      "tokens_per_sec": 89.36,
+      "memory_mb": 1697,
+      "cost_usd": 0.00058,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.867,
+        "context_window_utilization": 0.95
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0391",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9012,
+      "latency_ms": 1000,
+      "tokens_per_sec": 81.56,
+      "memory_mb": 2131,
+      "cost_usd": 0.002247,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.934,
+        "context_window_utilization": 0.64
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0392",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7761,
+      "latency_ms": 626,
+      "tokens_per_sec": 65.52,
+      "memory_mb": 3771,
+      "cost_usd": 0.000712,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.929,
+        "context_window_utilization": 0.9
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0393",
+      "category": "vision_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.8833,
+      "latency_ms": 660,
+      "tokens_per_sec": 89.6,
+      "memory_mb": 2876,
+      "cost_usd": 0.001071,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.943,
+        "context_window_utilization": 0.35
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0394",
+      "category": "planning_agent",
+      "model": "Gemini-Flash",
+      "accuracy": 0.7692,
+      "latency_ms": 842,
+      "tokens_per_sec": 134.42,
+      "memory_mb": 432,
+      "cost_usd": 0.003256,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.928,
+        "context_window_utilization": 0.8
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0395",
+      "category": "tool_calling_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.928,
+      "latency_ms": 1582,
+      "tokens_per_sec": 79.14,
+      "memory_mb": 283,
+      "cost_usd": 0.002524,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.897,
+        "context_window_utilization": 0.57
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0396",
+      "category": "planning_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.7806,
+      "latency_ms": 141,
+      "tokens_per_sec": 37.65,
+      "memory_mb": 3252,
+      "cost_usd": 0.002641,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.985,
+        "context_window_utilization": 0.89
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0397",
+      "category": "reasoning_agent",
+      "model": "Llama-3-70B",
+      "accuracy": 0.9791,
+      "latency_ms": 1153,
+      "tokens_per_sec": 48.86,
+      "memory_mb": 984,
+      "cost_usd": 0.003544,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.972,
+        "context_window_utilization": 0.65
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0398",
+      "category": "reasoning_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.8986,
+      "latency_ms": 202,
+      "tokens_per_sec": 52.36,
+      "memory_mb": 838,
+      "cost_usd": 0.002274,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.916,
+        "context_window_utilization": 0.91
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0399",
+      "category": "nlp_agent",
+      "model": "Claude-3.5-Sonnet",
+      "accuracy": 0.9468,
+      "latency_ms": 377,
+      "tokens_per_sec": 132.23,
+      "memory_mb": 1362,
+      "cost_usd": 0.004704,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.996,
+        "context_window_utilization": 0.79
+      }
+    },
+    {
+      "benchmark_id": "BENCH-0400",
+      "category": "tool_calling_agent",
+      "model": "GPT-4o",
+      "accuracy": 0.9454,
+      "latency_ms": 733,
+      "tokens_per_sec": 135.97,
+      "memory_mb": 751,
+      "cost_usd": 0.00348,
+      "status": "verified",
+      "details": {
+        "agentverse_compliance": true,
+        "tool_use_success_rate": 0.956,
+        "context_window_utilization": 0.8
+      }
+    }
+  ]
+}
