@@ -1,0 +1,4 @@
+task_id,category,target_topic,priority,analysis_depth
+TASK-004,ai_tech_trends,Generative UI and Interactive Artifacts,HIGH,comprehensive
+TASK-005,developer_ecosystem,Model Context Protocol (MCP) Servers,HIGH,deep
+TASK-006,market_indicators,Decentralized Compute and DePIN,MEDIUM,standard

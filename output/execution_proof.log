@@ -1,20 +1,22 @@
-[2026-10-30 11:30:52] [INFO] [AgentVerse.Main]: Initializing AgentVerse Autonomous Agent session...
-[2026-10-30 11:30:52] [INFO] [AgentVerse.Main]: [STEP 1/3] Ingesting sample input dataset from data/sample_input.json
-[2026-10-30 11:30:52] [INFO] [AgentVerse.Agent]: Loading input task data from: data/sample_input.json
-[2026-10-30 11:30:52] [INFO] [AgentVerse.Agent]: Loaded 3 tasks from input file.
-[2026-10-30 11:30:52] [INFO] [AgentVerse.Main]: [STEP 2/3] Calling live REST APIs & mock fallbacks for intelligence gathering
-[2026-10-30 11:30:52] [INFO] [AgentVerse.Agent]: [1/3] Processing TASK-001: 'Autonomous AI Agents in 2026' (Priority: HIGH)
-[2026-10-30 11:30:52] [INFO] [AgentVerse.APIClient]: Dispatching API call for category 'ai_tech_trends' on topic: 'Autonomous AI Agents in 2026'
-[2026-10-30 11:30:52] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): httpbin.org:443
-[2026-10-30 11:30:54] [DEBUG] [urllib3.connectionpool]: https://httpbin.org:443 "GET /get?query_topic=Autonomous+AI+Agents+in+2026&agent=AgentVerse-AI-Agent&mode=autonomous HTTP/1.1" 200 480
-[2026-10-30 11:30:54] [INFO] [AgentVerse.Agent]: [2/3] Processing TASK-002: 'Cryptocurrency and Web3 Ecosystem Metrics' (Priority: MEDIUM)
-[2026-10-30 11:30:54] [INFO] [AgentVerse.APIClient]: Dispatching API call for category 'market_indicators' on topic: 'Cryptocurrency and Web3 Ecosystem Metrics'
-[2026-10-30 11:30:54] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): api.coingecko.com:443
-[2026-10-30 11:30:54] [DEBUG] [urllib3.connectionpool]: https://api.coingecko.com:443 "GET /api/v3/simple/price?ids=ethereum%2Cbitcoin%2Csolana&vs_currencies=usd&include_24hr_change=true HTTP/1.1" 200 None
-[2026-10-30 11:30:54] [INFO] [AgentVerse.Agent]: [3/3] Processing TASK-003: 'Open Source AI Tools & Frameworks' (Priority: HIGH)
-[2026-10-30 11:30:54] [INFO] [AgentVerse.APIClient]: Dispatching API call for category 'developer_ecosystem' on topic: 'Open Source AI Tools & Frameworks'
-[2026-10-30 11:30:54] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): api.github.com:443
-[2026-10-30 11:30:55] [DEBUG] [urllib3.connectionpool]: https://api.github.com:443 "GET /search/repositories?q=Open+Source+AI+Tools+%26+Frameworks+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=3 HTTP/1.1" 200 72
-[2026-10-30 11:30:55] [INFO] [AgentVerse.Main]: [STEP 3/3] Exporting structured results & executive markdown report to output/
-[2026-10-30 11:30:55] [INFO] [AgentVerse.Agent]: Saved JSON results to output\agent_results.json
-[2026-10-30 11:30:55] [INFO] [AgentVerse.Agent]: Saved Markdown report to output\agent_summary.md
+[2026-10-30 11:53:30] [INFO] [AgentVerse.Main]: Starting AgentVerse Autonomous Agent session...
+[2026-10-30 11:53:30] [INFO] [AgentVerse.Main]: Configuration: input=data/sample_input.json, output_dir=output, mock=False
+[2026-10-30 11:53:30] [INFO] [AgentVerse.Main]: [STEP 1/3] Reading data from: data/sample_input.json
+[2026-10-30 11:53:30] [INFO] [AgentVerse.Agent]: Loading input dataset from: data/sample_input.json
+[2026-10-30 11:53:30] [INFO] [AgentVerse.Agent]: Successfully loaded and validated 3 tasks.
+[2026-10-30 11:53:30] [INFO] [AgentVerse.Main]: [STEP 2/3] Calling external REST APIs & mock fallbacks...
+[2026-10-30 11:53:30] [INFO] [AgentVerse.Agent]: [1/3] Executing task 'TASK-001': Autonomous AI Agents in 2026 (HIGH)
+[2026-10-30 11:53:30] [INFO] [AgentVerse.APIClient]: Dispatching API call for category 'ai_tech_trends' on topic: 'Autonomous AI Agents in 2026'
+[2026-10-30 11:53:30] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): httpbin.org:443
+[2026-10-30 11:53:31] [DEBUG] [urllib3.connectionpool]: https://httpbin.org:443 "GET /get?query_topic=Autonomous+AI+Agents+in+2026&agent=AgentVerse-AI-Agent&mode=autonomous HTTP/1.1" 200 500
+[2026-10-30 11:53:31] [INFO] [AgentVerse.Agent]: [2/3] Executing task 'TASK-002': Cryptocurrency and Web3 Ecosystem Metrics (MEDIUM)
+[2026-10-30 11:53:31] [INFO] [AgentVerse.APIClient]: Dispatching API call for category 'market_indicators' on topic: 'Cryptocurrency and Web3 Ecosystem Metrics'
+[2026-10-30 11:53:31] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): api.coingecko.com:443
+[2026-10-30 11:53:32] [DEBUG] [urllib3.connectionpool]: https://api.coingecko.com:443 "GET /api/v3/simple/price?ids=ethereum%2Cbitcoin%2Csolana&vs_currencies=usd&include_24hr_change=true HTTP/1.1" 200 None
+[2026-10-30 11:53:32] [INFO] [AgentVerse.Agent]: [3/3] Executing task 'TASK-003': Open Source AI Tools & Frameworks (HIGH)
+[2026-10-30 11:53:32] [INFO] [AgentVerse.APIClient]: Dispatching API call for category 'developer_ecosystem' on topic: 'Open Source AI Tools & Frameworks'
+[2026-10-30 11:53:32] [DEBUG] [urllib3.connectionpool]: Starting new HTTPS connection (1): api.github.com:443
+[2026-10-30 11:53:32] [DEBUG] [urllib3.connectionpool]: https://api.github.com:443 "GET /search/repositories?q=Open+Source+AI+Tools+%26+Frameworks+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=3 HTTP/1.1" 200 72
+[2026-10-30 11:53:32] [INFO] [AgentVerse.Agent]: Completed execution of 3 analytical tasks.
+[2026-10-30 11:53:32] [INFO] [AgentVerse.Main]: [STEP 3/3] Exporting structured reports to: output
+[2026-10-30 11:53:32] [INFO] [AgentVerse.Agent]: Saved JSON results to: output\agent_results.json
+[2026-10-30 11:53:32] [INFO] [AgentVerse.Agent]: Saved Markdown report to: output\agent_summary.md

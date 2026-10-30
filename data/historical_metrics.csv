@@ -1,8 +1,0 @@
-timestamp,category,topic,sentiment_score,activity_index,status
-2026-10-01T08:00:00Z,ai_tech_trends,Autonomous AI Agents,0.89,1420,active
-2026-10-05T12:00:00Z,market_indicators,Web3 Infrastructure,0.76,890,active
-2026-10-10T16:30:00Z,developer_ecosystem,Open Source LLMs,0.95,3100,active
-2026-10-15T10:15:00Z,ai_tech_trends,Multi-Agent Orchestration,0.92,2450,active
-2026-10-20T14:45:00Z,developer_ecosystem,Model Context Protocol (MCP),0.97,4200,active
-2026-10-25T09:20:00Z,market_indicators,Decentralized AI Compute,0.84,1150,active
-2026-10-28T18:00:00Z,ai_tech_trends,Agent Tool Use & Automation,0.94,3800,active
