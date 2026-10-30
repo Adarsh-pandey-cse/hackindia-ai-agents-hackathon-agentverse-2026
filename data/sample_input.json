@@ -1,0 +1,33 @@
+{
+  "agent_name": "AgentVerse Trend & Intelligence Agent",
+  "version": "1.0.0",
+  "query_tasks": [
+    {
+      "task_id": "TASK-001",
+      "category": "ai_tech_trends",
+      "target_topic": "Autonomous AI Agents in 2026",
+      "priority": "HIGH",
+      "analysis_depth": "comprehensive"
+    },
+    {
+      "task_id": "TASK-002",
+      "category": "market_indicators",
+      "target_topic": "Cryptocurrency and Web3 Ecosystem Metrics",
+      "priority": "MEDIUM",
+      "analysis_depth": "standard"
+    },
+    {
+      "task_id": "TASK-003",
+      "category": "developer_ecosystem",
+      "target_topic": "Open Source AI Tools & Frameworks",
+      "priority": "HIGH",
+      "analysis_depth": "deep"
+    }
+  ],
+  "settings": {
+    "use_live_api": true,
+    "fallback_to_mock": true,
+    "output_formats": ["json", "markdown"],
+    "max_retries": 3
+  }
+}
