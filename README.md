@@ -3,6 +3,7 @@
 [![HackIndia Python Skill](https://img.shields.io/badge/HackIndia%20Skill-Write%20a%20runnable%20Python%20tool-orange.svg)](https://hackindia.org/skills/write-a-runnable-python-tool)
 [![HackIndia ML Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20your%20first%20ML%20repo-purple.svg)](https://hackindia.org/skills/ship-your-first-ml-repo)
 [![HackIndia Claude Code Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20faster%20with%20Claude%20Code-blueviolet.svg)](https://hackindia.org/skills/ship-faster-with-claude-code)
+[![HackIndia Design Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20a%20usable%20hackathon%20app-crimson.svg)](https://hackindia.org/skills/design-a-usable-hackathon-app)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Unit Tests](https://img.shields.io/badge/Unit%20Tests-7%20Passed-brightgreen.svg)](tests/)
@@ -11,6 +12,7 @@
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
 2. [Ship your first ML repo](https://hackindia.org/skills/ship-your-first-ml-repo)
 3. [Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)
+4. [Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -30,6 +32,56 @@
 1. **Autonomous Intelligence Agent CLI (`main.py`):** Ingests structured task feeds (`.json` or `.csv`), queries live external REST APIs (GitHub, CoinGecko, HTTPBin) with automatic offline mock fallbacks, applies Python data-shaping comprehensions, and writes structured JSON & Markdown reports. Built for the **[Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)** skill.
 2. **Scikit-Learn Machine Learning Pipeline (`train_ml_model.py`):** Trains, evaluates, and exports a production predictive model that forecasts agent task execution success/failure based on runtime workload metrics. Features stratified train/test split, feature scaling, model family benchmark comparisons, serialization to `.joblib`, and metric reports. Built for the **[Ship your first ML repo](https://hackindia.org/skills/ship-your-first-ml-repo)** skill.
 3. **Claude Code & Agent Context Integration:** Full project context orchestration via `CLAUDE.md`, `@AGENTS.md` import, safe shared settings in `.claude/settings.json`, and `.cursorrules` to guarantee secure, repeatable, and collaborative AI development. Built for the **[Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)** skill.
+4. **Interactive UI/UX & Design System (`web/index.html` & `docs/screens/`):** Accessible, responsive 3-screen interface showcasing visual hierarchy, 8px spacing scale, readable typography, WCAG AAA contrast, human-friendly empty states, and explicit error recovery copy. Built for the **[Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)** skill.
+
+---
+
+## 🎨 Interface design proof
+
+**Project:** AgentVerse Autonomous AI Agent & ML Pipeline  
+
+### Working screens / flows:
+
+#### 1. Agent Control Dashboard & Analytics View (`docs/screens/home.png`)
+- **Clear main action:** `"Run Workload Analysis"` (High-contrast Saffron `#f97316` button prominently placed in the hero action banner).
+- **Cards & Layout:** Key performance indicators (Model Accuracy 96.25%, Total Workloads 1,200, API Latency 879ms, Active Agents 3) formatted in elevated surface cards using consistent 8px/16px/24px spacing grid.
+- **Readable telemetry:** Execution queue with readable status pills (`HIGH`, `MEDIUM`, `COMPLETED`).
+
+![Dashboard View](docs/screens/home.png)
+
+---
+
+#### 2. Task Explorer & Real-Time Search Results (`docs/screens/search-empty.png`)
+- **Interactive Filtering:** Filter by keyword topic and priority level.
+- **Empty state shown:** Triggered when no tasks match the filter criteria (e.g. searching `"quantum-crypto-2030"`).
+- **Empty copy:** *"No matching agent tasks found. No active tasks match your search query 'quantum-crypto-2030' with priority 'HIGH'. Try searching with broader terms, clearing the filter, or ingesting a new dataset."*
+- **Clear recovery action:** Prominent `[ ↺ Reset All Filters ]` button immediately restores the complete active task feed.
+
+![Empty State View](docs/screens/search-empty.png)
+
+---
+
+#### 3. Dataset Diagnostics & Validation Form (`docs/screens/report-error.png`)
+- **Error state shown:** High-contrast, accessible red alert box (`#450a0a` background with `#dc2626` border) displayed when payload validation fails.
+- **Error copy:** *"Validation Error: Missing Required Field 'topic'. The task dataset in 'data/invalid_task_payload.json' is missing the mandatory 'topic' property in item index 2. Autonomous agent dispatch requires 4 mandatory attributes: 'id', 'category', 'topic', and 'priority'."*
+- **Contextual Form Guidance:** Form fields clearly display inline validation alerts (*"⚠ Field cannot be empty. Please enter an analytical prompt."*).
+- **Actionable Next Steps:** Direct recovery action buttons: `[ Load Valid Sample (JSON) ]` and `[ Inspect Schema Docs ]`.
+
+![Error State View](docs/screens/report-error.png)
+
+---
+
+### Design checks:
+- **Visual Hierarchy:** Primary action is visually unmistakable. Main headings (26px/20px bold) are distinctly larger than subheadings (16px) and body text (15px).
+- **Consistent Spacing:** Built on a standardized 4px/8px/16px/24px spacing scale; all cards, headings, and buttons align to clear, consistent edges.
+- **Readable Typography:** 15px/16px base body font size with 1.5 line height, ensuring effortless scanning across devices.
+- **Accessible Contrast:** Meets WCAG AAA contrast guidelines with light text (`#f9fafb`) on dark slate (`#111827`), high-contrast saffron accent (`#f97316`), and dedicated error contrast (`#fca5a5` on `#450a0a`).
+- **Responsive Width:** Layouts adapt seamlessly from 360px mobile viewports to 1440px desktop displays.
+
+### Screenshots:
+- [`docs/screens/home.png`](docs/screens/home.png)
+- [`docs/screens/search-empty.png`](docs/screens/search-empty.png)
+- [`docs/screens/report-error.png`](docs/screens/report-error.png)
 
 ---
 
@@ -39,6 +91,17 @@
 .
 ├── README.md                          # Comprehensive project documentation & evaluation proof
 ├── requirements.txt                   # Pinned runtime dependencies (scikit-learn, joblib, requests, etc.)
+│
+├── [ UI/UX DESIGN SYSTEM & WEB APP ]
+├── web/
+│   └── index.html                     # Interactive 3-screen dashboard (Dashboard, Empty State, Error State)
+├── web_app.py                         # Lightweight local server to launch interactive web app
+├── generate_screenshots.py            # Automated script to generate design proof screenshots
+├── docs/
+│   └── screens/
+│       ├── home.png                   # Screen 1: Agent Dashboard & Control Center
+│       ├── search-empty.png           # Screen 2: Task Explorer & Accessible Empty State
+│       └── report-error.png           # Screen 3: Diagnostics & Accessible Error State
 │
 ├── [ CLAUDE CODE & AGENT CONTEXT ]
 ├── CLAUDE.md                          # Operating guide for Claude Code (imports @AGENTS.md)
@@ -150,8 +213,16 @@ pip install -r requirements.txt
 
 ## 💻 Running the Projects
 
-### Part 1: Autonomous Agent CLI Tool (`main.py`)
+### Part 1: Interactive Web App & UI Dashboard
+Launch the local web server to inspect all 3 screens and flows:
+```bash
+python web_app.py
+```
+Open **`http://localhost:8080`** in any browser.
 
+---
+
+### Part 2: Autonomous Agent CLI Tool (`main.py`)
 Run the tool with zero configuration:
 ```bash
 python main.py
@@ -187,16 +258,11 @@ python main.py --mock
 
 ---
 
-### Part 2: Machine Learning Training & Evaluation (`train_ml_model.py`)
+### Part 3: Machine Learning Training & Evaluation (`train_ml_model.py`)
 
 Run the complete scikit-learn training and evaluation pipeline:
 ```bash
 python train_ml_model.py
-```
-
-Optional CLI arguments:
-```bash
-python train_ml_model.py --dataset data/agent_workload_dataset.csv --output-dir output --models-dir models
 ```
 
 ---
@@ -241,13 +307,6 @@ We benchmarked three diverse scikit-learn model families:
   - False Negatives: **3**
   - True Positives (Correctly predicted success): **192**
 
-### 5. Exported Model & Metric Artifacts
-- Model File: `models/agent_workload_classifier.joblib`
-- Scaler File: `models/scaler.joblib`
-- Detailed JSON Metrics: [`output/ml_evaluation_report.json`](output/ml_evaluation_report.json)
-- Executive Markdown Summary: [`output/ml_evaluation_summary.md`](output/ml_evaluation_summary.md)
-- Interactive ML Notebook: [`ml_training_walkthrough.ipynb`](ml_training_walkthrough.ipynb)
-
 ---
 
 ## 🧪 Running Unit Tests
@@ -262,91 +321,9 @@ Expected output:
 ```text
 .......
 ----------------------------------------------------------------------
-Ran 7 tests in 0.204s
+Ran 7 tests in 0.520s
 
 OK
-```
-
-The 7 unit tests cover:
-1. `test_load_json_data`: Ingestion and schema validation of JSON task inputs.
-2. `test_load_csv_data`: Ingestion and schema validation of CSV task inputs.
-3. `test_filter_by_priority`: Priority-based data comprehension filtering.
-4. `test_mock_api_execution`: Mock API dispatch and latency tracking.
-5. `test_run_pipeline_creates_files`: Export of JSON and Markdown reports.
-6. `test_dataset_exists_and_loads`: ML dataset validation and class balance.
-7. `test_ml_training_and_evaluation`: End-to-end ML train/test split, scikit-learn fitting, model persistence, and evaluation score thresholds (F1 > 0.85).
-
----
-
-## 📓 Interactive Jupyter Notebooks
-
-Two complete, pre-executed Jupyter Notebooks are provided:
-
-1. **[`walkthrough.ipynb`](walkthrough.ipynb):** Demonstrates the runnable Python tool with step-by-step data loading, comprehensions, API calls, and outputs.
-2. **[`ml_training_walkthrough.ipynb`](ml_training_walkthrough.ipynb):** Demonstrates the complete machine learning workflow:
-   - Loading dataset and feature inspection
-   - 80/20 train/test split with `train_test_split`
-   - Data scaling with `StandardScaler`
-   - Training candidate scikit-learn models (`RandomForestClassifier`, `LogisticRegression`, `DecisionTreeClassifier`)
-   - Evaluation metrics: Accuracy, Precision, Recall, F1-Score, and Confusion Matrix
-   - Model inference on a new hypothetical task
-
-```bash
-pip install jupyter
-jupyter notebook ml_training_walkthrough.ipynb
-```
-
----
-
-## 📊 Proof of Execution
-
-### 1. Python Tool Terminal Output:
-```text
-========================================================================
-  AgentVerse Autonomous AI Agent - HackIndia 2026
-  Skill: Write a runnable Python tool
-  Developer: @adarsh-pandey-cse (Adarsh Pandey)
-========================================================================
-[*] Successfully ingested 3 tasks.
-[*] Completed 3 API-backed analytical tasks.
-[+] Output JSON Report:     output/agent_results.json
-[+] Output Markdown Report: output/agent_summary.md
-[+] Execution Proof Log:    output/execution_proof.log
-========================================================================
-  AGENT EXECUTION COMPLETED SUCCESSFULLY (EXIT CODE 0)
-========================================================================
-```
-
-### 2. Machine Learning Pipeline Terminal Output:
-```text
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]: Loading workload dataset from data/agent_workload_dataset.csv...
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]: Loaded 1200 samples with 6 features. Positive class ratio: 81.42%
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]: Executing 80/20 stratified train/test split (random_state=42)...
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]: Training and comparing candidate scikit-learn models...
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]:  - RandomForest       | Accuracy: 94.58% | F1-Score: 0.9666
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]:  - LogisticRegression | Accuracy: 96.25% | F1-Score: 0.9771
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]:  - DecisionTree       | Accuracy: 94.58% | F1-Score: 0.9666
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]: Saved trained scikit-learn model to: models\agent_workload_classifier.joblib
-[2026-10-30 13:03:02] [INFO] [ML-Pipeline]: Saved StandardScaler to: models\scaler.joblib
-========================================================================
-  AgentVerse ML Pipeline - HackIndia Machine Learning Skill
-  Model: scikit-learn Workload Classifier
-  Developer: @adarsh-pandey-cse (Adarsh Pandey)
-========================================================================
-[*] Training samples: 960 | Evaluation test samples: 240
-[+] Selected Champion Model: LogisticRegression (F1-Score: 0.9771)
-
-========================================================================
-  EVALUATION RESULTS ON UNSEEN TEST SET (20% Split):
-========================================================================
-  [+] Accuracy:  96.25%
-  [+] Precision: 0.9697
-  [+] Recall:    0.9846
-  [+] F1-Score:  0.9771
-  [+] Saved Model:  models\agent_workload_classifier.joblib
-  [+] JSON Report:  output\ml_evaluation_report.json
-  [+] MD Summary:   output\ml_evaluation_summary.md
-========================================================================
 ```
 
 ---
@@ -385,6 +362,18 @@ jupyter notebook ml_training_walkthrough.ipynb
 - [x] **`.gitignore` protection:** Excludes `.env`, `.env.*`, and `.claude/settings.local.json`.
 - [x] **Multi-agent rules (`.cursorrules`):** Pair programming guidelines included.
 - [x] **Reviewed code changes:** Clean commit log and active Pull Request [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1) on HackIndiaXYZ.
+
+### Skill 4: Design a usable hackathon app
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **At least 3 working screens or flows:** Control Dashboard, Task Explorer (Empty State), and Diagnostics (Error State).
+- [x] **Clear visual hierarchy:** Primary actions, headings, and metrics visually prioritized.
+- [x] **Standardized spacing:** 8px grid spacing scale consistently applied.
+- [x] **Readable type & WCAG AAA contrast:** 15px/16px body, high contrast colors.
+- [x] **Empty state with recovery action:** No results screen provides explanatory copy and reset button.
+- [x] **Error state with understandable copy:** Form error gives actionable guidance and repair options.
+- [x] **`docs/screens/` folder with screenshots:** `home.png`, `search-empty.png`, `report-error.png`.
+- [x] **`## Interface design proof` in README:** Matches HackIndia template and requirements.
 
 ---
 

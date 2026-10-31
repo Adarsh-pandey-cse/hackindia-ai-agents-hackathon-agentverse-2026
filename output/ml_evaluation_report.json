@@ -2,7 +2,7 @@
   "metadata": {
     "project": "AgentVerse AI Workload Failure Predictor",
     "developer": "Adarsh Pandey (@adarsh-pandey-cse)",
-    "trained_at": "2026-10-30T07:51:23.672958+00:00",
+    "trained_at": "2026-10-31T05:58:13.489769+00:00",
     "dataset_source": "HackIndia AgentVerse Telemetry Benchmark",
     "total_samples": 1200,
     "train_samples": 960,
