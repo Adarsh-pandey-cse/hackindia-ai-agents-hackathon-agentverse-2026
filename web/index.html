@@ -597,7 +597,7 @@
           <option value="MEDIUM">Medium Priority Only</option>
           <option value="LOW">Low Priority Only</option>
         </select>
-        <button class="btn btn-secondary" onclick="simulateEmptyState()">Simulate Empty State</button>
+        <button class="btn btn-secondary" id="btn-sim-empty">Simulate Empty State</button>
       </div>
 
       <!-- Task Results List (Visible when items match) -->
@@ -644,7 +644,7 @@
         <p class="empty-desc">
           No tasks match your current filter criteria (<span id="empty-query-label">"quantum-crypto-2030"</span>). Try adjusting your keywords or clearing the priority filter.
         </p>
-        <button class="btn btn-primary" onclick="resetFilters()">
+        <button class="btn btn-primary" id="btn-reset-filters">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
           Reset Filters
         </button>
@@ -671,7 +671,7 @@
             The dataset payload is missing the mandatory <strong>'topic'</strong> parameter in item index 2. Autonomous agent dispatch requires 'id', 'category', 'topic', and 'priority'.
           </div>
           <div class="error-actions">
-            <button class="btn btn-primary" style="padding: 6px 12px; font-size: 13px;" onclick="loadValidDataset()">
+            <button class="btn btn-primary" id="btn-load-sample" style="padding: 6px 12px; font-size: 13px;">
               Load Valid Sample (JSON)
             </button>
             <a href="https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team" target="_blank" class="btn btn-secondary" style="padding: 6px 12px; font-size: 13px;">
@@ -702,8 +702,8 @@
           </div>
 
           <div style="display: flex; gap: 12px; margin-top: 20px;">
-            <button class="btn btn-primary" onclick="simulateValidationSuccess()">Validate & Run Task</button>
-            <button class="btn btn-secondary" onclick="simulateValidationError()">Simulate Error State</button>
+            <button class="btn btn-primary" id="btn-validate-task">Validate & Run Task</button>
+            <button class="btn btn-secondary" id="btn-sim-error">Simulate Error State</button>
           </div>
         </form>
       </div>
@@ -712,57 +712,10 @@
 
   <footer>
     <div>AgentVerse Autonomous AI Agent · HackIndia 2026</div>
-    <div>Built with Accessible UI Design: Clear Hierarchy, 8px Spacing, WCAG AAA Contrast, Empty & Error States</div>
+    <div>Built with Modular JavaScript (ES Modules, async/await, fetch, immutable arrays) & Accessible UI Design</div>
   </footer>
 
-  <script>
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.screen-view').forEach(view => view.classList.remove('active'));
-      document.getElementById('tab-' + tabId).classList.add('active');
-      document.getElementById('view-' + tabId).classList.add('active');
-    }
-
-    function handleSearch(query) {
-      const emptyCard = document.getElementById('empty-state-card');
-      const taskList = document.getElementById('task-list');
-      if (query.trim().length > 0 && !query.toLowerCase().includes('ai') && !query.toLowerCase().includes('task')) {
-        emptyCard.style.display = 'block';
-        taskList.style.display = 'none';
-        document.getElementById('empty-query-label').innerText = '"' + query + '"';
-      } else {
-        emptyCard.style.display = 'none';
-        taskList.style.display = 'block';
-      }
-    }
-
-    function simulateEmptyState() {
-      document.getElementById('task-search').value = 'non-existent-quantum-algo';
-      handleSearch('non-existent-quantum-algo');
-    }
-
-    function resetFilters() {
-      document.getElementById('task-search').value = '';
-      document.getElementById('priority-filter').value = 'ALL';
-      document.getElementById('empty-state-card').style.display = 'none';
-      document.getElementById('task-list').style.display = 'block';
-    }
-
-    function simulateValidationError() {
-      document.getElementById('error-notification').style.display = 'flex';
-      document.getElementById('task-topic-input').value = '';
-    }
-
-    function loadValidDataset() {
-      document.getElementById('task-topic-input').value = 'Autonomous AI Agents in 2026';
-      document.getElementById('error-notification').style.display = 'none';
-      alert('Valid dataset loaded from data/sample_input.json! Error state resolved.');
-    }
-
-    function simulateValidationSuccess() {
-      document.getElementById('error-notification').style.display = 'none';
-      alert('Validation passed! All 4 required fields present.');
-    }
-  </script>
+  <!-- Modular JavaScript Entry Point (Lesson 7) -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

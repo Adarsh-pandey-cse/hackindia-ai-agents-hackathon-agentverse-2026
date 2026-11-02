@@ -4,15 +4,18 @@
 [![HackIndia ML Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20your%20first%20ML%20repo-purple.svg)](https://hackindia.org/skills/ship-your-first-ml-repo)
 [![HackIndia Claude Code Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20faster%20with%20Claude%20Code-blueviolet.svg)](https://hackindia.org/skills/ship-faster-with-claude-code)
 [![HackIndia Design Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20a%20usable%20hackathon%20app-crimson.svg)](https://hackindia.org/skills/design-a-usable-hackathon-app)
+[![HackIndia JavaScript Skill](https://img.shields.io/badge/HackIndia%20Skill-Write%20JavaScript%20without%20guessing-yellow.svg)](https://hackindia.org/skills/write-javascript-without-guessing)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
+[![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-7%20Passed-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-14%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
 2. [Ship your first ML repo](https://hackindia.org/skills/ship-your-first-ml-repo)
 3. [Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)
 4. [Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)
+5. [Write JavaScript without guessing](https://hackindia.org/skills/write-javascript-without-guessing)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -33,6 +36,73 @@
 2. **Scikit-Learn Machine Learning Pipeline (`train_ml_model.py`):** Trains, evaluates, and exports a production predictive model that forecasts agent task execution success/failure based on runtime workload metrics. Features stratified train/test split, feature scaling, model family benchmark comparisons, serialization to `.joblib`, and metric reports. Built for the **[Ship your first ML repo](https://hackindia.org/skills/ship-your-first-ml-repo)** skill.
 3. **Claude Code & Agent Context Integration:** Full project context orchestration via `CLAUDE.md`, `@AGENTS.md` import, safe shared settings in `.claude/settings.json`, and `.cursorrules` to guarantee secure, repeatable, and collaborative AI development. Built for the **[Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)** skill.
 4. **Interactive UI/UX & Design System (`web/index.html` & `docs/screens/`):** Accessible, responsive 3-screen interface showcasing visual hierarchy, 8px spacing scale, readable typography, WCAG AAA contrast, human-friendly empty states, and explicit error recovery copy. Built for the **[Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)** skill.
+5. **Modular JavaScript Engine (`src/` & `web/js/`):** Clean, non-guessing JavaScript architecture using modern ES modules, pure functions, immutable array operations (`map`, `filter`, copy-before-sort), robust `async/await` network queries with `response.ok` checks, Node.js CLI script, and automated test suite. Built for the **[Write JavaScript without guessing](https://hackindia.org/skills/write-javascript-without-guessing)** skill.
+
+---
+
+## ⚡ JavaScript Architecture & Implementation (HackIndia JS Skill)
+
+A modular, robust JavaScript subsystem powering both the browser application and the Node.js agent execution engine.
+
+### Features
+- **Asynchronous Data Ingestion:** Fetches task feeds asynchronously using `fetch()` and `async/await` with offline fallback resilience.
+- **Strict Data Validation:** Catches missing attributes and null/undefined values before execution without guessing or assuming loose truthiness.
+- **Dynamic Card & Table Rendering:** Generates clean, accessible DOM elements with visual hierarchy and badge indicators.
+- **Real-Time Filtering & Immutability:** Filters tasks by keyword and priority while keeping original data stores completely immutable.
+- **Accessible State Handling:** Displays responsive empty states for zero-result queries and clear, human-readable error banners for invalid inputs.
+
+### JavaScript Used
+- **Modules (`src/` and `web/js/`):** Code is split into focused ES modules with single responsibilities:
+  - `src/data.js`: Pure data functions, validation, immutable filtering, and ID-based updates.
+  - `src/api.js`: Network queries with `fetch()`, `async/await`, `response.ok` status validation, abort controller timeouts, and fallback handling.
+  - `src/render.js`: DOM rendering functions for task rows, empty states, and error alerts.
+  - `src/main.js`: Browser entry point wiring event listeners, state updates, and rendering.
+  - `src/agent_cli.js`: Standalone Node.js CLI runner executing tasks from the terminal.
+- **Functions:** Every function has a single job with explicit inputs, outputs, and zero unintended side effects.
+- **Arrays & Objects:** Workload records stored as arrays of objects; updates target specific tasks by unique `id` rather than fragile array indices.
+- **fetch & async/await:** Network queries explicitly check `response.ok` before reading JSON payloads and safely catch timeouts.
+
+### How to Run JavaScript
+
+#### Option 1: Run Interactive Browser App
+```bash
+# Launch using Python local server
+python web_app.py
+
+# Or launch using Node.js / npx serve
+npx serve web -p 8080
+```
+Open **`http://localhost:8080`** in any browser.
+
+#### Option 2: Run Node.js CLI Agent
+```bash
+node src/agent_cli.js
+# Or via npm
+npm run cli
+```
+
+#### Option 3: Run Automated JavaScript Unit Tests
+```bash
+node --test tests/test_agent.js
+# Or via npm
+npm test
+```
+
+Expected test output:
+```text
+✔ validateTask: accepts valid task object
+✔ validateTask: catches missing properties and null values
+✔ filterTasks: filters by search query and priority without mutating original
+✔ sortTasksByPriority: sorts high to low immutably
+✔ updateTaskById: updates by ID rather than index
+✔ normalizeTasks: parses both arrays and nested query_tasks payloads
+✔ queryExternalApi: handles network call or falls back to mock resilience
+ℹ tests 7 | pass 7 | fail 0
+```
+
+### Known Issues
+- Local task updates reset upon full browser page refresh (persists in-memory for the active session).
+- Search currently matches across `topic`, `category`, and `id` properties.
 
 ---
 
@@ -90,11 +160,19 @@
 ```text
 .
 ├── README.md                          # Comprehensive project documentation & evaluation proof
+├── package.json                       # Node.js project manifest, ES module setup & scripts
 ├── requirements.txt                   # Pinned runtime dependencies (scikit-learn, joblib, requests, etc.)
 │
-├── [ UI/UX DESIGN SYSTEM & WEB APP ]
+├── [ JAVASCRIPT SUBSYSTEM (SRC & WEB) ]
+├── src/
+│   ├── data.js                        # Task validation, filtering, mapping & immutable sorting
+│   ├── api.js                         # Asynchronous fetch client, response.ok checks & mock engine
+│   ├── render.js                      # DOM rendering functions for cards, empty & error states
+│   ├── main.js                        # Browser application coordinator & event bindings
+│   └── agent_cli.js                   # Runnable Node.js CLI agent runner
 ├── web/
-│   └── index.html                     # Interactive 3-screen dashboard (Dashboard, Empty State, Error State)
+│   ├── index.html                     # Interactive 3-screen dashboard (Dashboard, Empty State, Error State)
+│   └── js/                            # Browser-ready ES modules (synced with src/)
 ├── web_app.py                         # Lightweight local server to launch interactive web app
 ├── generate_screenshots.py            # Automated script to generate design proof screenshots
 ├── docs/
@@ -138,8 +216,9 @@
 │
 └── [ AUTOMATED TESTS ]
 └── tests/
-    ├── test_agent.py                  # Unit tests for Python agent tool (5/5 passed)
-    └── test_ml_model.py               # Unit tests for ML training pipeline (2/2 passed)
+    ├── test_agent.py                  # Python agent tool unit tests (5/5 passed)
+    ├── test_ml_model.py               # Scikit-learn ML pipeline unit tests (2/2 passed)
+    └── test_agent.js                  # Node.js JavaScript module unit tests (7/7 passed)
 ```
 
 ---
@@ -176,7 +255,8 @@ This repository is structured for safe and rapid development with Claude Code, f
 
 ### 1. Prerequisites
 - **Python 3.9+** (Tested on Python 3.12.10)
-- `pip` (Python package manager)
+- **Node.js 18+** (Tested on Node.js v24.14.1)
+- `pip` & `npm`
 - `git`
 
 ### 2. Clone the Repository
@@ -206,7 +286,11 @@ source venv/bin/activate
 
 ### 4. Install Dependencies
 ```bash
+# Python dependencies
 pip install -r requirements.txt
+
+# Node.js dependencies (zero external dependencies required)
+npm test
 ```
 
 ---
@@ -223,7 +307,7 @@ Open **`http://localhost:8080`** in any browser.
 ---
 
 ### Part 2: Autonomous Agent CLI Tool (`main.py`)
-Run the tool with zero configuration:
+Run the Python agent tool with zero configuration:
 ```bash
 python main.py
 ```
@@ -233,33 +317,22 @@ View CLI options:
 python main.py --help
 ```
 
-```text
-options:
-  -h, --help            show this help message and exit
-  -i INPUT_FILE, --input INPUT_FILE
-                        Path to input task dataset (.json or .csv). Default: data/sample_input.json
-  -o OUTPUT_DIR, --output-dir OUTPUT_DIR
-                        Directory to save generated JSON, Markdown, and log outputs. Default: output
-  -p {ALL,HIGH,MEDIUM,LOW}, --priority {ALL,HIGH,MEDIUM,LOW}
-                        Filter tasks by minimum priority level. Default: ALL
-  --mock                Force mock API simulation mode (offline / isolated sandbox test)
-  -v, --verbose         Enable detailed debug logs
-```
-
 Run with custom CSV input and priority filtering:
 ```bash
 python main.py --input data/sample_input.csv --priority HIGH
 ```
 
-Run in offline mock mode:
+---
+
+### Part 3: Node.js CLI Agent (`src/agent_cli.js`)
+Run the JavaScript agent directly in Node.js:
 ```bash
-python main.py --mock
+node src/agent_cli.js
 ```
 
 ---
 
-### Part 3: Machine Learning Training & Evaluation (`train_ml_model.py`)
-
+### Part 4: Machine Learning Training & Evaluation (`train_ml_model.py`)
 Run the complete scikit-learn training and evaluation pipeline:
 ```bash
 python train_ml_model.py
@@ -311,20 +384,19 @@ We benchmarked three diverse scikit-learn model families:
 
 ## 🧪 Running Unit Tests
 
-The test suite validates both the Python intelligence agent and the scikit-learn ML pipeline:
+The test suite validates both Python and Node.js subsystems (14 tests total):
 
+### Python Tests (Agent Tool + ML Pipeline)
 ```bash
 python -m unittest discover tests
 ```
+Expected: `Ran 7 tests ... OK`
 
-Expected output:
-```text
-.......
-----------------------------------------------------------------------
-Ran 7 tests in 0.520s
-
-OK
+### JavaScript Tests (Node.js Modules)
+```bash
+npm test
 ```
+Expected: `ℹ tests 7 | pass 7 | fail 0`
 
 ---
 
@@ -374,6 +446,16 @@ OK
 - [x] **Error state with understandable copy:** Form error gives actionable guidance and repair options.
 - [x] **`docs/screens/` folder with screenshots:** `home.png`, `search-empty.png`, `report-error.png`.
 - [x] **`## Interface design proof` in README:** Matches HackIndia template and requirements.
+
+### Skill 5: Write JavaScript without guessing
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **Modules in `src/` & `web/js/`:** Split across `data.js`, `api.js`, `render.js`, `main.js`, `agent_cli.js`.
+- [x] **Functions with single responsibility:** Pure data operations, rendering, and API queries separated.
+- [x] **Arrays and objects:** Task records represented as objects in arrays, updated by unique `id`.
+- [x] **`fetch` and `async/await`:** Asynchronous data fetching with `response.ok` checks and fallback resilience.
+- [x] **Clear README run steps:** Step-by-step browser, CLI, and test execution documented.
+- [x] **Automated test suite (`tests/test_agent.js`):** 7/7 unit tests passing on Node.js (`npm test`).
 
 ---
 
