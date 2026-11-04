@@ -5,10 +5,11 @@
 [![HackIndia Claude Code Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20faster%20with%20Claude%20Code-blueviolet.svg)](https://hackindia.org/skills/ship-faster-with-claude-code)
 [![HackIndia Design Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20a%20usable%20hackathon%20app-crimson.svg)](https://hackindia.org/skills/design-a-usable-hackathon-app)
 [![HackIndia JavaScript Skill](https://img.shields.io/badge/HackIndia%20Skill-Write%20JavaScript%20without%20guessing-yellow.svg)](https://hackindia.org/skills/write-javascript-without-guessing)
+[![HackIndia RAG Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20grounded%20document%20QA%20app-teal.svg)](https://hackindia.org/skills/build-a-grounded-document-qa-app)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-14%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-21%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -16,6 +17,7 @@
 3. [Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)
 4. [Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)
 5. [Write JavaScript without guessing](https://hackindia.org/skills/write-javascript-without-guessing)
+6. [Build a grounded document QA app](https://hackindia.org/skills/build-a-grounded-document-qa-app)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -37,6 +39,7 @@
 3. **Claude Code & Agent Context Integration:** Full project context orchestration via `CLAUDE.md`, `@AGENTS.md` import, safe shared settings in `.claude/settings.json`, and `.cursorrules` to guarantee secure, repeatable, and collaborative AI development. Built for the **[Ship faster with Claude Code](https://hackindia.org/skills/ship-faster-with-claude-code)** skill.
 4. **Interactive UI/UX & Design System (`web/index.html` & `docs/screens/`):** Accessible, responsive 3-screen interface showcasing visual hierarchy, 8px spacing scale, readable typography, WCAG AAA contrast, human-friendly empty states, and explicit error recovery copy. Built for the **[Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)** skill.
 5. **Modular JavaScript Engine (`src/` & `web/js/`):** Clean, non-guessing JavaScript architecture using modern ES modules, pure functions, immutable array operations (`map`, `filter`, copy-before-sort), robust `async/await` network queries with `response.ok` checks, Node.js CLI script, and automated test suite. Built for the **[Write JavaScript without guessing](https://hackindia.org/skills/write-javascript-without-guessing)** skill.
+6. **Grounded Document QA RAG App (`app.py`, `ingest.py`, `evaluate.py`):** Production Retrieval-Augmented Generation application that ingests multi-page documents, indexes text chunks with rich source/page metadata, retrieves evidence, constructs grounded prompts, generates answers with verbatim source citations (`[source: <chunk_id>, page: <page>]`), flags broken citations, strictly refuses out-of-scope queries to prevent hallucination, and includes an automated grounding evaluation (`eval/grounding_eval.md`). Built for the **[Build a grounded document QA app](https://hackindia.org/skills/build-a-grounded-document-qa-app)** skill.
 
 ---
 
@@ -382,15 +385,81 @@ We benchmarked three diverse scikit-learn model families:
 
 ---
 
+## 📚 Grounded Document QA RAG App (HackIndia RAG Skill)
+
+Ask questions from the sample documents and get answers with citations.
+
+### Features
+- **Loads documents from `data/sample_docs/`:** Ingests `college_faq.txt` and `refund_policy.txt`.
+- **Splits documents and creates embeddings:** Chunks pages into structured records with rich metadata (`chunk_id`, `source`, `page`, `word_count`).
+- **Retrieves evidence for each question:** High-speed vector similarity and keyword search ranking the most relevant chunks.
+- **Answers with source citations:** Every factual claim cites the exact chunk and page: `[source: <chunk_id>, page: <page>]`.
+- **Strict Anti-Hallucination Guardrail:** If evidence is missing, the app strictly refuses to guess and answers: *"I could not find this in the provided documents."*
+- **Broken Citation Verification:** Validates generated citation tags against retrieved chunk IDs, flagging any fabricated or out-of-retrieval citations.
+- **Automated Grounding Evaluation:** Benchmark runner evaluating accuracy, citation precision, and refusal behavior (`eval/grounding_eval.md`).
+
+### Setup & Quickstart
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team.git
+   cd hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team
+   ```
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv .venv
+   # Windows:
+   .venv\Scripts\activate
+   # Linux/macOS:
+   source .venv/bin/activate
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Copy environment template:**
+   ```bash
+   cp .env.example .env
+   ```
+   *(Optional: Set `OPENAI_API_KEY` or `GEMINI_API_KEY`. Runs 100% offline with zero external network dependencies out of the box).*
+5. **Run document ingestion:**
+   ```bash
+   python ingest.py
+   ```
+   *Extracts 10 structured chunks from `data/sample_docs/` into `data/chunks.json` and creates a persistent vector index.*
+6. **Start the app:**
+   ```bash
+   # Interactive Mode:
+   python app.py
+
+   # Single Query Mode:
+   python app.py --query "What is the refund window?"
+   ```
+7. **Run the grounding evaluation:**
+   ```bash
+   python evaluate.py
+   ```
+
+### Try these questions
+- What is the refund window?
+- Who can apply for the hostel Wi-Fi pass?
+- Can I pay semester fees using UPI, and what happens if I pay late?
+- What administrative processing fee is deducted from approved refund requests?
+- Are students permitted to park personal electric scooters inside hostel bedrooms? *(Tests anti-hallucination refusal)*
+
+### Grounding Evaluation
+See [`eval/grounding_eval.md`](eval/grounding_eval.md) for benchmark questions, answers, citations, and grounding validation results (100% pass rate across 6 test cases).
+
+---
+
 ## 🧪 Running Unit Tests
 
-The test suite validates both Python and Node.js subsystems (14 tests total):
+The test suite validates Python CLI, ML Pipeline, RAG QA System, and Node.js subsystems (21 tests total):
 
-### Python Tests (Agent Tool + ML Pipeline)
+### Python Tests (Agent Tool + ML Pipeline + RAG QA System)
 ```bash
 python -m unittest discover tests
 ```
-Expected: `Ran 7 tests ... OK`
+Expected: `Ran 14 tests ... OK`
 
 ### JavaScript Tests (Node.js Modules)
 ```bash
@@ -456,6 +525,18 @@ Expected: `ℹ tests 7 | pass 7 | fail 0`
 - [x] **`fetch` and `async/await`:** Asynchronous data fetching with `response.ok` checks and fallback resilience.
 - [x] **Clear README run steps:** Step-by-step browser, CLI, and test execution documented.
 - [x] **Automated test suite (`tests/test_agent.js`):** 7/7 unit tests passing on Node.js (`npm test`).
+
+### Skill 6: Build a grounded document QA app
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **Dependency on `chromadb` (or similar):** Listed in `requirements.txt`.
+- [x] **Document ingestion pipeline (`ingest.py`):** Parses text into structured chunks with `chunk_id`, `source`, `page`, and word count metadata.
+- [x] **Sample documents in `data/sample_docs/`:** `college_faq.txt` and `refund_policy.txt` included.
+- [x] **Example questions & cited answers:** Documented in `examples/questions.json` and `examples/cited_answers.md`.
+- [x] **Grounded QA application (`app.py`):** Labeled evidence prompt, inline citations `[source: <chunk_id>, page: <page>]`, broken citation detection.
+- [x] **Hallucination refusal guardrail:** Returns *"I could not find this in the provided documents."* on out-of-domain queries.
+- [x] **Automated grounding evaluation (`evaluate.py`):** Verifies citation validity, answer accuracy, and refusal behavior, saving results to `eval/grounding_eval.md`.
+- [x] **Unit tests (`tests/test_rag.py`):** Automated tests covering ingestion, retrieval, prompt formatting, citations, and refusal (7/7 passed).
 
 ---
 

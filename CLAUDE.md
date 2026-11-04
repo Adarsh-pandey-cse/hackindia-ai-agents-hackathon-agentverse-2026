@@ -19,7 +19,11 @@ Commands:
 - Run with options: python main.py --input data/sample_input.csv --priority HIGH
 - Run in offline mock mode: python main.py --mock
 - Run ML training pipeline: python train_ml_model.py
-- Run full test suite: python -m unittest discover tests
+- Run RAG Document Ingestion: python ingest.py
+- Run Grounded Document QA App: python app.py --query "What is the refund window?"
+- Run Grounding Evaluation: python evaluate.py
+- Run full Python test suite: python -m unittest discover tests
+- Run full JavaScript test suite: npm test
 
 Conventions:
 - Strongly typed data models using @dataclass.

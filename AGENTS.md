@@ -5,9 +5,10 @@
 HackIndia AI Agents Hackathon - AgentVerse 2026  
 Developer: Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))
 
-This repository contains two production components:
+This repository contains three production components:
 1. **Autonomous Intelligence CLI Tool (`main.py`):** Ingests structured task data (`.json` or `.csv`), executes external REST queries (with automatic mock fallbacks), applies data shaping, and generates structured JSON and Markdown summary reports.
 2. **Machine Learning Pipeline (`train_ml_model.py`):** Trains and evaluates a scikit-learn classifier to predict agent workload execution success on unseen test data.
+3. **Grounded Document QA RAG Engine (`app.py`, `ingest.py`, `evaluate.py`):** Chunks multi-page texts with metadata, executes vector/keyword retrieval, generates grounded answers with verifiable citations (`[source: <chunk_id>, page: <page>]`), flags broken citations, refuses unanswerable queries, and executes automated grounding evaluations.
 
 ---
 
@@ -16,8 +17,13 @@ This repository contains two production components:
 - `agent.py`: Core agent logic (`AgentVerseAgent`). Uses `@dataclass` (`TaskItem`, `AnalysisRecord`) and list comprehensions.
 - `api_client.py`: External REST client (`ExternalAPIClient`) with live endpoints and instant offline fallback mocks.
 - `train_ml_model.py`: Scikit-learn training and evaluation pipeline. Stratified 80/20 train/test split, StandardScaler, model comparison, joblib serialization, JSON/MD metric reports.
-- `tests/`: Automated unit tests (`test_agent.py`, `test_ml_model.py`). Run with `python -m unittest discover tests`.
-- `data/`: Dataset storage (`sample_input.json`, `sample_input.csv`, `agent_workload_dataset.csv`).
+- `app.py`: Grounded document question answering system with prompt synthesis, citation verification, and hallucination refusal.
+- `ingest.py`: Chunking and metadata extractor for documents in `data/sample_docs/`.
+- `evaluate.py`: Automated evaluation runner checking citations, answer correctness, and refusal behavior on benchmark queries.
+- `tests/`: Automated unit tests (`test_agent.py`, `test_ml_model.py`, `test_rag.py`, `test_agent.js`). Run with `python -m unittest discover tests` and `npm test`.
+- `data/`: Dataset storage (`sample_input.json`, `sample_input.csv`, `agent_workload_dataset.csv`, `chunks.json`, `sample_docs/`).
+- `examples/`: Sample benchmark questions (`questions.json`) and documented cited answers (`cited_answers.md`).
+- `eval/`: Grounding evaluation report (`grounding_eval.md`).
 - `output/`: Directory where runtime and evaluation artifacts are written.
 - `models/`: Saved model binaries (`agent_workload_classifier.joblib`, `scaler.joblib`).
 

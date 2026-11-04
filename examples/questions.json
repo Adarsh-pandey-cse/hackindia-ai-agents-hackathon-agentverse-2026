@@ -1,0 +1,56 @@
+[
+  {
+    "id": "q1",
+    "question": "What is the refund window for receiving a full 100% tuition refund?",
+    "expected_source": "refund_policy.txt",
+    "expected_page": 1,
+    "expected_chunk_id": "refund_policy_p1_c1",
+    "answerable": true,
+    "keywords": ["100%", "refund", "7 days", "payment"]
+  },
+  {
+    "id": "q2",
+    "question": "Who can apply for the hostel Wi-Fi pass and how many devices are allowed?",
+    "expected_source": "college_faq.txt",
+    "expected_page": 2,
+    "expected_chunk_id": "college_faq_p2_c1",
+    "answerable": true,
+    "keywords": ["hostel residents", "two personal devices", "Wi-Fi pass"]
+  },
+  {
+    "id": "q3",
+    "question": "Can I pay semester fees using UPI, and what happens if I pay late after 15 August?",
+    "expected_source": "college_faq.txt",
+    "expected_page": 4,
+    "expected_chunk_id": "college_faq_p4_c1",
+    "answerable": true,
+    "keywords": ["UPI", "15 August", "Rs 500"]
+  },
+  {
+    "id": "q4",
+    "question": "What administrative processing fee is deducted from approved refund requests?",
+    "expected_source": "refund_policy.txt",
+    "expected_page": 2,
+    "expected_chunk_id": "refund_policy_p2_c1",
+    "answerable": true,
+    "keywords": ["Rs 250", "administrative processing"]
+  },
+  {
+    "id": "q5",
+    "question": "What is the overdue fine for returning library books late?",
+    "expected_source": "college_faq.txt",
+    "expected_page": 3,
+    "expected_chunk_id": "college_faq_p3_c1",
+    "answerable": true,
+    "keywords": ["Rs 10 per day", "overdue"]
+  },
+  {
+    "id": "q6",
+    "question": "Are students permitted to park personal electric scooters inside hostel bedrooms?",
+    "expected_source": null,
+    "expected_page": null,
+    "expected_chunk_id": null,
+    "answerable": false,
+    "keywords": ["could not find this in the provided documents"]
+  }
+]
