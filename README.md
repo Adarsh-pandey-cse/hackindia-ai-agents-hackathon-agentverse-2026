@@ -6,10 +6,11 @@
 [![HackIndia Design Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20a%20usable%20hackathon%20app-crimson.svg)](https://hackindia.org/skills/design-a-usable-hackathon-app)
 [![HackIndia JavaScript Skill](https://img.shields.io/badge/HackIndia%20Skill-Write%20JavaScript%20without%20guessing-yellow.svg)](https://hackindia.org/skills/write-javascript-without-guessing)
 [![HackIndia RAG Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20grounded%20document%20QA%20app-teal.svg)](https://hackindia.org/skills/build-a-grounded-document-qa-app)
+[![HackIndia Safe Tool Calling Agent Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20safe%20tool--calling%20agent-darkred.svg)](https://hackindia.org/skills/build-a-safe-tool-calling-agent)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-21%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-30%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -18,6 +19,7 @@
 4. [Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)
 5. [Write JavaScript without guessing](https://hackindia.org/skills/write-javascript-without-guessing)
 6. [Build a grounded document QA app](https://hackindia.org/skills/build-a-grounded-document-qa-app)
+7. [Build a safe tool-calling agent](https://hackindia.org/skills/build-a-safe-tool-calling-agent)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -40,6 +42,7 @@
 4. **Interactive UI/UX & Design System (`web/index.html` & `docs/screens/`):** Accessible, responsive 3-screen interface showcasing visual hierarchy, 8px spacing scale, readable typography, WCAG AAA contrast, human-friendly empty states, and explicit error recovery copy. Built for the **[Design a usable hackathon app](https://hackindia.org/skills/design-a-usable-hackathon-app)** skill.
 5. **Modular JavaScript Engine (`src/` & `web/js/`):** Clean, non-guessing JavaScript architecture using modern ES modules, pure functions, immutable array operations (`map`, `filter`, copy-before-sort), robust `async/await` network queries with `response.ok` checks, Node.js CLI script, and automated test suite. Built for the **[Write JavaScript without guessing](https://hackindia.org/skills/write-javascript-without-guessing)** skill.
 6. **Grounded Document QA RAG App (`app.py`, `ingest.py`, `evaluate.py`):** Production Retrieval-Augmented Generation application that ingests multi-page documents, indexes text chunks with rich source/page metadata, retrieves evidence, constructs grounded prompts, generates answers with verbatim source citations (`[source: <chunk_id>, page: <page>]`), flags broken citations, strictly refuses out-of-scope queries to prevent hallucination, and includes an automated grounding evaluation (`eval/grounding_eval.md`). Built for the **[Build a grounded document QA app](https://hackindia.org/skills/build-a-grounded-document-qa-app)** skill.
+7. **Safe Tool-Calling Agent (`src/agent_loop.py`, `src/tools/`, `safe_agent_cli.py`):** Production tool-calling system featuring explicit tool JSON schemas, complete call-result loop, interactive human approval gates for high-risk operations (email dispatch, database mutation), hard limits (`max_turns`, `max_tool_calls`, `max_seconds`, consecutive failure stops), and documented trade-offs explaining when a deterministic script is superior. Built for the **[Build a safe tool-calling agent](https://hackindia.org/skills/build-a-safe-tool-calling-agent)** skill.
 
 ---
 
@@ -451,15 +454,64 @@ See [`eval/grounding_eval.md`](eval/grounding_eval.md) for benchmark questions, 
 
 ---
 
+## 🛡️ Safe Tool-Calling Agent (HackIndia Skill)
+
+### Project: Campus Event & Reimbursement Assistant
+
+### What it does
+Helps students discover campus events, verify rules, calculate travel/registration reimbursements against institutional expense caps, draft formal communications, and request human supervisor approval before executing external dispatches or database modifications.
+
+### How to run
+1. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Add required environment variables (optional):**
+   ```bash
+   cp .env.example .env
+   ```
+   *(Works 100% offline out-of-the-box with deterministic mock planning and tool execution).*
+3. **Run the agent with sample requests:**
+   ```bash
+   # Multi-turn event discovery & draft registration (Interactive Human Approval Gate):
+   python safe_agent_cli.py --goal "Find AI events in Bengaluru and draft registration"
+
+   # Calculate reimbursement with automatic approval for CI/testing:
+   python safe_agent_cli.py --goal "Calculate reimbursement for travel expenses: 450, 1200, 350" --auto-approve
+
+   # Test simulated human rejection on risky operations:
+   python safe_agent_cli.py --goal "Find AI events and send registration email" --reject-risky
+
+   # Inspect registered tool schemas and risk classifications:
+   python safe_agent_cli.py --list-tools
+   ```
+
+### Safety features
+- **Tool schemas are in:** [`src/tools/schemas.py`](src/tools/schemas.py) (strict JSON schemas, typing, and risk levels: `low` vs `high`).
+- **Call-result loop is in:** [`src/agent_loop.py`](src/agent_loop.py) (`SafeToolCallingAgent` handles model tool requests, validation, tool feedback, and loop termination).
+- **Approval gate is used before:** `send_registration_email` (external communication) and `update_student_record` (database mutation).
+- **Hard limits used:**
+  - `max_turns = 8`: Stops runaway iteration loops.
+  - `max_tool_calls = 12`: Enforces strict API / tool execution budget.
+  - `max_seconds = 30.0s`: Hard timeout wall.
+  - `max_failures = 2`: Halts execution immediately upon consecutive tool errors.
+- **Risky actions are not run without human approval:** If a human supervisor rejects a gated action, execution halts safely without modifying state.
+
+### When I would replace this with a script
+I would use a script if the workflow steps are fixed: reading a CSV, calculating expense totals, filling an HTML template, and generating a PDF report. I use an agent only when the request needs runtime judgement, such as interpreting ambiguous user intents, choosing dynamically which tool to call based on prior tool outputs, or asking follow-up questions.
+See detailed architecture analysis in [`docs/agent_vs_script.md`](docs/agent_vs_script.md).
+
+---
+
 ## 🧪 Running Unit Tests
 
-The test suite validates Python CLI, ML Pipeline, RAG QA System, and Node.js subsystems (21 tests total):
+The test suite validates Python CLI, ML Pipeline, RAG QA System, Safe Tool-Calling Agent, and Node.js subsystems (30 tests total):
 
-### Python Tests (Agent Tool + ML Pipeline + RAG QA System)
+### Python Tests (Agent Tool + ML Pipeline + RAG QA System + Safe Tool-Calling Agent)
 ```bash
 python -m unittest discover tests
 ```
-Expected: `Ran 14 tests ... OK`
+Expected: `Ran 23 tests ... OK`
 
 ### JavaScript Tests (Node.js Modules)
 ```bash
@@ -537,6 +589,18 @@ Expected: `ℹ tests 7 | pass 7 | fail 0`
 - [x] **Hallucination refusal guardrail:** Returns *"I could not find this in the provided documents."* on out-of-domain queries.
 - [x] **Automated grounding evaluation (`evaluate.py`):** Verifies citation validity, answer accuracy, and refusal behavior, saving results to `eval/grounding_eval.md`.
 - [x] **Unit tests (`tests/test_rag.py`):** Automated tests covering ingestion, retrieval, prompt formatting, citations, and refusal (7/7 passed).
+
+### Skill 7: Build a safe tool-calling agent
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **Dependency on `langgraph` (or similar):** Listed in `requirements.txt`.
+- [x] **Tool schemas:** Registered in `src/tools/schemas.py` with parameter typing and risk classifications.
+- [x] **Call-result loop:** Orchestrated in `src/agent_loop.py` (`SafeToolCallingAgent`).
+- [x] **Human approval gates:** Implemented for high-risk write operations (`send_registration_email`, `update_student_record`).
+- [x] **Hard limits:** Guardrails enforced for `max_turns`, `max_tool_calls`, `max_seconds`, and failure stops.
+- [x] **Agent vs script trade-offs note:** Documented in `README.md` and detailed in `docs/agent_vs_script.md`.
+- [x] **CLI runner (`safe_agent_cli.py`):** Interactive execution with `--auto-approve`, `--reject-risky`, and `--list-tools`.
+- [x] **Unit tests (`tests/test_safe_agent.py`):** 9/9 unit tests passing for schemas, loops, approvals, and limits.
 
 ---
 
