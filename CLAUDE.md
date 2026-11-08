@@ -23,6 +23,7 @@ Commands:
 - Run Grounded Document QA App: python app.py --query "What is the refund window?"
 - Run Grounding Evaluation: python evaluate.py
 - Run Safe Tool-Calling Agent: python safe_agent_cli.py --goal "Find AI events in Bengaluru and draft registration" --auto-approve
+- Run with Docker: docker compose up --build
 - Run full Python test suite: python -m unittest discover tests
 - Run full JavaScript test suite: npm test
 

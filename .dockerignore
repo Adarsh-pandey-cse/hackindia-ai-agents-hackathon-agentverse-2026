@@ -1,0 +1,28 @@
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv
+venv
+ENV/
+env/
+node_modules/
+
+# Secrets & Environment variables
+.env
+.env.*
+!.env.example
+
+# Git & Local configs
+.git
+.gitignore
+.claude
+.cursorrules
+
+# Test & Log artifacts
+.coverage
+htmlcov/
+.pytest_cache/
+*.log

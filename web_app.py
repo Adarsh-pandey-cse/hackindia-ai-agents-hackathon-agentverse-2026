@@ -7,12 +7,22 @@ import socketserver
 import os
 import sys
 
-PORT = 8080
+PORT = int(os.getenv("APP_PORT") or os.getenv("PORT") or 3000)
 DIRECTORY = os.path.join(os.path.dirname(os.path.abspath(__file__)), "web")
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
+
+    def do_GET(self):
+        if self.path == "/health" or self.path == "/api/health":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(b'{"status":"ok"}')
+            return
+        super().do_GET()
 
     def log_message(self, format, *args):
         # Clean logging

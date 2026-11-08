@@ -8,6 +8,7 @@
 [![HackIndia RAG Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20grounded%20document%20QA%20app-teal.svg)](https://hackindia.org/skills/build-a-grounded-document-qa-app)
 [![HackIndia Safe Tool Calling Agent Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20safe%20tool--calling%20agent-darkred.svg)](https://hackindia.org/skills/build-a-safe-tool-calling-agent)
 [![HackIndia Honest Model Results](https://img.shields.io/badge/HackIndia%20Skill-Report%20model%20results%20honestly-blue.svg)](https://hackindia.org/skills/report-model-results-honestly)
+[![HackIndia Docker Skill](https://img.shields.io/badge/HackIndia%20Skill-Dockerize%20a%20web%20app-2496ED.svg?logo=docker&logoColor=white)](https://hackindia.org/skills/dockerize-a-web-app)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -22,6 +23,7 @@
 6. [Build a grounded document QA app](https://hackindia.org/skills/build-a-grounded-document-qa-app)
 7. [Build a safe tool-calling agent](https://hackindia.org/skills/build-a-safe-tool-calling-agent)
 8. [Report model results honestly](https://hackindia.org/skills/report-model-results-honestly)
+9. [Dockerize a web app](https://hackindia.org/skills/dockerize-a-web-app)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -507,6 +509,39 @@ See detailed architecture analysis in [`docs/agent_vs_script.md`](docs/agent_vs_
 
 ---
 
+## 🐳 Run Locally with Docker (HackIndia Docker Skill)
+
+Package the web app and database so it runs the exact same way on any machine.
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team.git
+cd hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team
+```
+
+### 2. Create the environment file
+```bash
+cp .env.example .env
+```
+
+### 3. Start the app and database
+```bash
+docker compose up --build
+```
+
+### 4. Open the app
+- **Interactive Web UI:** [http://localhost:3000](http://localhost:3000)
+- **Health Check API:** [http://localhost:3000/health](http://localhost:3000/health) (expected response: `{"status":"ok"}`)
+
+### Architecture & Security Details
+- **Base image:** Official `python:3.12-slim` image for a fast, minimal container footprint.
+- **Dependency caching:** `requirements.txt` is copied and installed before application code to leverage Docker layer caching.
+- **Port isolation:** Exposes and maps only the web application port (`3000:3000`); the Postgres database container (`db`) communicates exclusively over the internal Docker network (`db:5432`) without publishing public host ports.
+- **Data persistence:** PostgreSQL container data is safely persisted across restarts using the named volume `agentverse_postgres_data`.
+- **Environment isolation:** Production secrets excluded from image via `.dockerignore`; runtime config safely injected from `.env.example`.
+
+---
+
 ## 🧪 Running Unit Tests
 
 The test suite validates Python CLI, ML Pipeline, RAG QA System, Safe Tool-Calling Agent, and Node.js subsystems (30 tests total):
@@ -617,6 +652,16 @@ Expected: `ℹ tests 7 | pass 7 | fail 0`
 - [x] **Confusion matrix:** Label order, actual vs predicted rows/columns explicitly documented.
 - [x] **Key metric:** Macro F1-score (0.9771) prioritized due to class imbalance.
 - [x] **Honest limitation:** Real-world network and context boundary constraints documented.
+
+### Skill 9: Dockerize a web app
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **`Dockerfile`:** Uses official `python:3.12-slim` base image, sets `WORKDIR`, leverages dependency caching, exposes port 3000, and defines startup command.
+- [x] **`docker-compose.yml`:** Multi-container orchestration for `app` and `db` (Postgres) with named volume persistence.
+- [x] **`.dockerignore`:** Excludes `node_modules`, virtualenvs, `.git`, cache files, and private secrets.
+- [x] **Port isolation:** Exposes web application port (`3000`), keeping the database secure inside internal network.
+- [x] **Health check:** Verified `/health` endpoint returning `{"status":"ok"}`.
+- [x] **Setup instructions in README:** Explicit 4-step setup (`clone`, `cp .env.example .env`, `docker compose up --build`, access URL).
 
 ---
 
