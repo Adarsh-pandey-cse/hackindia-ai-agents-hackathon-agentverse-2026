@@ -10,6 +10,7 @@
 [![HackIndia Honest Model Results](https://img.shields.io/badge/HackIndia%20Skill-Report%20model%20results%20honestly-blue.svg)](https://hackindia.org/skills/report-model-results-honestly)
 [![HackIndia Docker Skill](https://img.shields.io/badge/HackIndia%20Skill-Dockerize%20a%20web%20app-2496ED.svg?logo=docker&logoColor=white)](https://hackindia.org/skills/dockerize-a-web-app)
 [![HackIndia System Design Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20systems%20you%20can%20defend-crimson.svg)](https://hackindia.org/skills/design-systems-you-can-defend)
+[![HackIndia Express API Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20recruiter--ready%20Express%20API-emerald.svg)](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -26,6 +27,7 @@
 8. [Report model results honestly](https://hackindia.org/skills/report-model-results-honestly)
 9. [Dockerize a web app](https://hackindia.org/skills/dockerize-a-web-app)
 10. [Design systems you can defend](https://hackindia.org/skills/design-systems-you-can-defend)
+11. [Build a recruiter-ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -50,6 +52,7 @@
 6. **Grounded Document QA RAG App (`app.py`, `ingest.py`, `evaluate.py`):** Production Retrieval-Augmented Generation application that ingests multi-page documents, indexes text chunks with rich source/page metadata, retrieves evidence, constructs grounded prompts, generates answers with verbatim source citations (`[source: <chunk_id>, page: <page>]`), flags broken citations, strictly refuses out-of-scope queries to prevent hallucination, and includes an automated grounding evaluation (`eval/grounding_eval.md`). Built for the **[Build a grounded document QA app](https://hackindia.org/skills/build-a-grounded-document-qa-app)** skill.
 7. **Safe Tool-Calling Agent (`src/agent_loop.py`, `src/tools/`, `safe_agent_cli.py`):** Production tool-calling system featuring explicit tool JSON schemas, complete call-result loop, interactive human approval gates for high-risk operations (email dispatch, database mutation), hard limits (`max_turns`, `max_tool_calls`, `max_seconds`, consecutive failure stops), and documented trade-offs explaining when a deterministic script is superior. Built for the **[Build a safe tool-calling agent](https://hackindia.org/skills/build-a-safe-tool-calling-agent)** skill.
 8. **Defendable System Design Architecture (`docs/SYSTEM_DESIGN.md`):** Complete, lightweight, production-grade system architecture specification covering Client (Vanilla ES6+ web UI, Node.js CLI, Python CLI), Server (Python HTTP server, agent loop, RAG engine, ML inference), Multi-tiered Database (chunks JSON, TF-IDF vector index, PostgreSQL Docker), APIs (JSON-Schema tools, external REST + offline mock fallback), Caching (60s in-memory TTL) and bounded Queues, along with 4 explicitly defended architectural trade-offs. Built for the **[Design systems you can defend](https://hackindia.org/skills/design-systems-you-can-defend)** skill.
+9. **Recruiter-Ready Express 5 REST API (`server/`, `docs/EXPRESS_API.md`):** Production-grade RESTful API running on Node.js 24 LTS and Express 5, implementing modular layered architecture (`routes/`, `middleware/`, `errors/`, `config/`), request query and body validation, meaningful HTTP status codes (200, 201, 204, 400, 404), environment variable isolation, centralized 4-argument error handling, and 13 automated integration tests. Built for the **[Build a recruiter-ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)** skill.
 
 ---
 
@@ -670,6 +673,66 @@ Expected: `ℹ tests 7 | pass 7 | fail 0`
 
 ---
 
+---
+
+## 🚀 Recruiter-Ready Express 5 API (HackIndia Express Skill)
+
+**Skill:** [Build a Recruiter-Ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)  
+**Detailed Specification:** [`docs/EXPRESS_API.md`](docs/EXPRESS_API.md)  
+**Runtime:** Node.js 24 LTS (`v24.14.1`) | **Framework:** Express 5 (`^5.0.0`)  
+**Verification Tool:** [`verify_express_api.py`](verify_express_api.py)
+
+AgentVerse includes an enterprise-ready, modular Express 5 REST API designed for production developer workflows and recruiter code review standards:
+
+### 📐 Layered Architecture Map
+
+```
+server/
+  ├── config/env.js          # Typed environment variables via dotenv & process.env
+  ├── middleware/
+  │     ├── logger.js        # Request latency & telemetry logging
+  │     ├── validate.js      # Strict body & query parameter schema validation
+  │     └── auth.js          # Header-based API key authentication
+  ├── routes/
+  │     ├── health.js        # GET /health, GET / (Uptime, Node 24 runtime telemetry)
+  │     ├── tasks.js         # RESTful CRUD & query filters (GET, POST, PUT, DELETE)
+  │     └── agent.js         # POST /api/v1/agent/run (AI agent workload execution)
+  ├── errors/
+  │     └── errorHandler.js  # Centralized 4-argument error handler (err, req, res, next)
+  ├── app.js                 # Express app factory (middleware, router mount, 404)
+  └── index.js               # Listener entry point & graceful shutdown hooks
+```
+
+### 🎯 Key API Capabilities
+
+1. **Routes & Meaningful Status Codes:**
+   - `GET /health` (`200 OK`): Uptime, node version, service metadata.
+   - `GET /api/v1/tasks` (`200 OK`): Paginated query filtering (`?priority=HIGH&search=agent&limit=10&page=1`).
+   - `GET /api/v1/tasks/:id` (`200 OK` or `404 Not Found`).
+   - `POST /api/v1/tasks` (`201 Created` or `400 Bad Request` with structured error array).
+   - `PUT /api/v1/tasks/:id` (`200 OK` or `404 Not Found`).
+   - `DELETE /api/v1/tasks/:id` (`204 No Content` or `404 Not Found`).
+   - `POST /api/v1/agent/run` (`200 OK`): Dispatches agent analysis workload.
+2. **Centralized Error Handling:**
+   - Canonical 4-argument Express middleware `(err, req, res, next)` in `server/errors/errorHandler.js`.
+   - Never hangs unhandled promises or crashes the process. Returns consistent JSON error envelopes: `{ success: false, error: { message, code, status, details } }`.
+3. **Environment Isolation:**
+   - Managed via `server/config/env.js` and `.env.example`. Binds dynamic `PORT`, `NODE_ENV`, and `API_KEY`.
+4. **Automated Testing:**
+   - 13 automated integration tests running on Node 24 LTS native test runner (`tests/test_express_api.js`).
+
+### How to Run & Verify Express API:
+```bash
+# Start the Express server
+npm run api
+
+# Run Express automated integration test suite
+npm run test:api
+
+# Run HackIndia Express skill compliance verification
+python verify_express_api.py
+```
+
 ## 🏛️ System Design & Architecture (HackIndia System Design Skill)
 
 **Skill:** [Design systems you can defend](https://hackindia.org/skills/design-systems-you-can-defend)  
@@ -774,6 +837,19 @@ Expected output:
  VERDICT: 100% COMPLIANT - ALL SYSTEM DESIGN RUBRIC REQUIREMENTS MET
 ========================================================================
 ```
+
+### Skill 11: Build a recruiter-ready Express API
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **Node.js 24 LTS and Express 5:** Configured in `package.json` (`express >= 5.0.0`) and verified on Node `v24.14.1`.
+- [x] **Clean project structure:** Modular `server/` with `routes/`, `middleware/`, `errors/`, `config/`, `app.js`, `index.js`.
+- [x] **Routes and request handling:** Complete task CRUD, agent runner, and `/health` diagnostic endpoint.
+- [x] **Request body and query validation:** Strict schema validation middleware in `server/middleware/validate.js`.
+- [x] **Meaningful HTTP status codes:** 200 OK, 201 Created, 204 No Content, 400 Bad Request, 404 Not Found.
+- [x] **Environment variables:** Centralized in `server/config/env.js` and documented in `.env.example`.
+- [x] **Centralized error handling:** Canonical 4-argument error handler in `server/errors/errorHandler.js`.
+- [x] **Automated test suite (`tests/test_express_api.js`):** 13/13 integration tests passing on Node.js 24 LTS.
+- [x] **Automated verification tool (`verify_express_api.py`):** Standalone zero-dependency rubric validator.
 
 ### Skill 10: Design systems you can defend
 - [x] **Public repository:** Publicly accessible on GitHub.
