@@ -11,6 +11,7 @@
 [![HackIndia Docker Skill](https://img.shields.io/badge/HackIndia%20Skill-Dockerize%20a%20web%20app-2496ED.svg?logo=docker&logoColor=white)](https://hackindia.org/skills/dockerize-a-web-app)
 [![HackIndia System Design Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20systems%20you%20can%20defend-crimson.svg)](https://hackindia.org/skills/design-systems-you-can-defend)
 [![HackIndia Express API Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20recruiter--ready%20Express%20API-emerald.svg)](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
+[![HackIndia React Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20readable%20React%20apps-61DAFB.svg?logo=react&logoColor=black)](https://hackindia.org/skills/build-readable-react-apps)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -28,6 +29,7 @@
 9. [Dockerize a web app](https://hackindia.org/skills/dockerize-a-web-app)
 10. [Design systems you can defend](https://hackindia.org/skills/design-systems-you-can-defend)
 11. [Build a recruiter-ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
+12. [Build readable React apps](https://hackindia.org/skills/build-readable-react-apps)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -53,6 +55,7 @@
 7. **Safe Tool-Calling Agent (`src/agent_loop.py`, `src/tools/`, `safe_agent_cli.py`):** Production tool-calling system featuring explicit tool JSON schemas, complete call-result loop, interactive human approval gates for high-risk operations (email dispatch, database mutation), hard limits (`max_turns`, `max_tool_calls`, `max_seconds`, consecutive failure stops), and documented trade-offs explaining when a deterministic script is superior. Built for the **[Build a safe tool-calling agent](https://hackindia.org/skills/build-a-safe-tool-calling-agent)** skill.
 8. **Defendable System Design Architecture (`docs/SYSTEM_DESIGN.md`):** Complete, lightweight, production-grade system architecture specification covering Client (Vanilla ES6+ web UI, Node.js CLI, Python CLI), Server (Python HTTP server, agent loop, RAG engine, ML inference), Multi-tiered Database (chunks JSON, TF-IDF vector index, PostgreSQL Docker), APIs (JSON-Schema tools, external REST + offline mock fallback), Caching (60s in-memory TTL) and bounded Queues, along with 4 explicitly defended architectural trade-offs. Built for the **[Design systems you can defend](https://hackindia.org/skills/design-systems-you-can-defend)** skill.
 9. **Recruiter-Ready Express 5 REST API (`server/`, `docs/EXPRESS_API.md`):** Production-grade RESTful API running on Node.js 24 LTS and Express 5, implementing modular layered architecture (`routes/`, `middleware/`, `errors/`, `config/`), request query and body validation, meaningful HTTP status codes (200, 201, 204, 400, 404), environment variable isolation, centralized 4-argument error handling, and 13 automated integration tests. Built for the **[Build a recruiter-ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)** skill.
+10. **Readable React 18 Application (`src/App.jsx`, `src/components/`):** Production React application built with Vite 5 and Node.js 24 LTS showcasing readable component architecture, props data flow, `useState` hook management, controlled forms with real-time validation, stable list keys (`key={task.id}`), lifted state between filters and form components, and a justified `useEffect` hook with `AbortController` cleanup for live API synchronization. Built for the **[Build readable React apps](https://hackindia.org/skills/build-readable-react-apps)** skill.
 
 ---
 
@@ -675,6 +678,91 @@ Expected: `ℹ tests 7 | pass 7 | fail 0`
 
 ---
 
+---
+
+## ⚛️ Readable React 18 App Built with Vite (HackIndia React Skill)
+
+**Skill:** [Build readable React apps](https://hackindia.org/skills/build-readable-react-apps)  
+**Framework:** React 18 (`^18.3.1`) | **Build Tool:** Vite 5 (`^5.4.0`) | **Runtime:** Node.js 24 LTS (`v24.14.1`)  
+**Verification Tool:** [`verify_react_app.py`](verify_react_app.py)
+
+AgentVerse includes a recruiter-ready React 18 application built with Vite adhering to all HackIndia React conventions:
+
+### 🧩 Component Hierarchy & File Structure
+
+```
+src/
+  ├── main.jsx                 # React root mount (ReactDOM.createRoot)
+  ├── App.jsx                  # Main container managing lifted state & justified useEffect
+  ├── components/
+  │     ├── MetricsBar.jsx     # KPI telemetry component receiving read-only props
+  │     ├── TaskFilter.jsx     # Controlled search query and priority dropdown inputs
+  │     ├── TaskForm.jsx       # Controlled form managing local useState for new task dispatch
+  │     ├── TaskList.jsx       # List renderer with stable keys (key={task.id}) & empty states
+  │     └── TaskCard.jsx       # Card presentation component with status toggle & delete props
+  └── styles/
+        └── app.css            # Scoped CSS with custom properties & responsive grid
+```
+
+### 🔑 Core React Principles Verified in Code
+
+1. **Readable Components & Props:**
+   - Code is decomposed into single-responsibility functional components (`MetricsBar`, `TaskCard`, `TaskList`, `TaskFilter`, `TaskForm`).
+   - Components receive immutable data and callback actions strictly through explicit `props`.
+2. **`useState` Hook Management:**
+   - `App.jsx` uses `useState` for active tasks, search query, priority filter, and live backend connection state.
+   - `TaskForm.jsx` uses local `useState` for controlled inputs (`topic`, `category`, `priority`) and validation error messages.
+3. **Controlled Forms:**
+   - All input and select elements bind their values to state (`value={topic}`, `value={category}`, `value={priority}`) with corresponding `onChange` handlers.
+   - Form submissions are intercepted via `onSubmit={handleSubmit}` with `e.preventDefault()`, trimming whitespace and checking validation before dispatching to the parent.
+4. **Stable List Keys:**
+   - `TaskList.jsx` renders items using unique identifiers:
+     ```jsx
+     {tasks.map((task) => (
+       <TaskCard key={task.id} task={task} onStatusToggle={handleStatusToggle} onDelete={handleDelete} />
+     ))}
+     ```
+   - **Never uses fragile array indices** (`key={index}`), ensuring stable React virtual DOM reconciliation during filtering, sorting, or item deletion.
+5. **Lifted State:**
+   - Both `TaskFilter` (search/priority filter) and `TaskForm` (task creation) communicate by lifting state to parent `App.jsx`.
+   - `App.jsx` handles immutable state updates (`setTasks(prev => [newTask, ...prev])`) and feeds the filtered array down into `TaskList`.
+6. **Justified `useEffect` with Cleanup:**
+   - `App.jsx` implements a clean `useEffect` to synchronize task state with the Express 5 API (`/api/v1/tasks`).
+   - Uses native `AbortController` to abort ongoing requests when the component unmounts, preventing race conditions or memory leaks:
+     ```jsx
+     useEffect(() => {
+       const controller = new AbortController();
+       async function fetchLiveTasks() {
+         try {
+           const res = await fetch('/api/v1/tasks', { signal: controller.signal });
+           if (res.ok) {
+             const payload = await res.json();
+             if (payload.data) setTasks(payload.data);
+           }
+         } catch (err) {
+           if (err.name !== 'AbortError') setDataSource('Local Store (Offline Resilience)');
+         }
+       }
+       fetchLiveTasks();
+       return () => controller.abort(); // Cleanup on unmount
+     }, []);
+     ```
+
+### How to Run & Verify React App:
+```bash
+# Start Vite development server (hot reload)
+npm run dev
+
+# Compile production bundle with Vite (sub-second build)
+npm run build
+
+# Run automated React architecture test suite
+npm run test:react
+
+# Run HackIndia React skill compliance verification
+python verify_react_app.py
+```
+
 ## 🚀 Recruiter-Ready Express 5 API (HackIndia Express Skill)
 
 **Skill:** [Build a Recruiter-Ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)  
@@ -837,6 +925,20 @@ Expected output:
  VERDICT: 100% COMPLIANT - ALL SYSTEM DESIGN RUBRIC REQUIREMENTS MET
 ========================================================================
 ```
+
+### Skill 12: Build readable React apps
+- [x] **Public repository:** Publicly accessible on GitHub.
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **React app built with Vite:** Configured in `package.json` (`react ^18.3.1`, `vite ^5.4.0`) and `vite.config.js`.
+- [x] **Files with *.jsx:** `src/main.jsx`, `src/App.jsx`, `src/components/*.jsx`.
+- [x] **Readable components and props:** Functional components with clear prop interfaces (`MetricsBar`, `TaskCard`, `TaskList`, `TaskFilter`, `TaskForm`).
+- [x] **useState hook:** Managed in `App.jsx` (task lists, filters) and `TaskForm.jsx` (form input state).
+- [x] **Controlled forms:** Controlled inputs with `value`, `onChange`, and `onSubmit` validation in `TaskForm.jsx`.
+- [x] **Stable list keys:** Enforced using unique `key={task.id}` across task lists (no array indices).
+- [x] **Lifted state:** State lifted to `App.jsx` coordinating filters, form submission, and task presentation.
+- [x] **Justified useEffect:** Clean fetch with `AbortController` cancellation cleanup on unmount in `App.jsx`.
+- [x] **Automated test suite (`tests/test_react_app.js`):** 8/8 tests passing on Node.js native test runner.
+- [x] **Automated verification tool (`verify_react_app.py`):** Standalone zero-dependency rubric validator.
 
 ### Skill 11: Build a recruiter-ready Express API
 - [x] **Public repository:** Publicly accessible on GitHub.
