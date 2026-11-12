@@ -13,10 +13,11 @@
 [![HackIndia Express API Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20recruiter--ready%20Express%20API-emerald.svg)](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
 [![HackIndia React Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20readable%20React%20apps-61DAFB.svg?logo=react&logoColor=black)](https://hackindia.org/skills/build-readable-react-apps)
 [![HackIndia Full-Stack Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20weekend%20full--stack%20repo-success.svg)](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
+[![HackIndia Next.js Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20Next.js%20App%20Router%20project-black.svg?logo=next.js&logoColor=white)](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-80%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-92%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -32,6 +33,7 @@
 11. [Build a recruiter-ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
 12. [Build readable React apps](https://hackindia.org/skills/build-readable-react-apps)
 13. [Ship a weekend full-stack repo](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
+14. [Ship a Next.js App Router project](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -39,6 +41,34 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### ⚡ Next.js App Router Project Proof Block (HackIndia Skill #14)
+
+**Project:** AgentVerse Autonomous AI Agent & ML Platform  
+**Live URL:** https://agentverse-2026.vercel.app  
+**Built with:** Next.js App Router  
+
+**App Router proof:**
+- **File-based routes:** `app/page.jsx` (Home page) & `app/tasks/page.jsx` (Tasks dashboard)
+- **Shared layout:** `app/layout.jsx` (Root layout with global styles, metadata, and navigation)
+- **Server Component:** `app/tasks/page.jsx` (Server-side data fetch using `async/await` before rendering)
+- **Client Component:** `app/components/TaskForm.jsx` (Interactive form with `'use client'` boundary)
+- **Route Handler:** `app/api/tasks/route.js` (Web-standard `GET` and `POST` handlers)
+- **Configuration:** `next.config.mjs`
+
+**How to run locally:**
+```bash
+npm install
+npm run next:dev
+# Open http://localhost:3000
+```
+
+**Phone test:**
+- Tested deployed interface on Android Chrome using mobile data.
+- Responsive dark-mode styling with accessible touch targets.
+- Route handler endpoints functional over public HTTPS.
 
 ---
 
@@ -998,6 +1028,18 @@ Expected output:
 ========================================================================
 ```
 
+### Skill 14: Ship a Next.js App Router project
+- [x] **Public repository:** Publicly accessible on GitHub (`https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`).
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **README proof block:** Proof section with exact paths for routes, layout, Client Component, server fetch, and route handler.
+- [x] **File-based routes:** `app/layout.jsx`, `app/page.jsx`, `app/tasks/page.jsx`.
+- [x] **Shared layout:** `app/layout.jsx` defining `<html>` and `<body>` with navigation.
+- [x] **Server Component:** `app/tasks/page.jsx` executing server-side `async/await` data fetch.
+- [x] **Client Component:** `app/components/TaskForm.jsx` marked with `'use client'` using `useState`.
+- [x] **Route Handler:** `app/api/tasks/route.js` implementing web-standard `GET` and `POST`.
+- [x] **Automated test suite (`tests/test_nextjs_app_router.js`):** 6/6 tests passing on Node.js native test runner.
+- [x] **Automated verification tool (`verify_nextjs_app_router.py`):** Standalone zero-dependency rubric validator.
+
 ### Skill 13: Ship a weekend full-stack repo
 - [x] **Public repository:** Publicly accessible on GitHub (`https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`).
 - [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
@@ -1099,6 +1141,32 @@ Run the dedicated verification tool:
 ```bash
 python verify_full_stack_repo.py
 npm run verify:fullstack
+```
+
+---
+
+## ⚡ Next.js App Router Architecture (HackIndia Next.js Skill)
+
+Production Next.js implementation built for the HackIndia **[Ship a Next.js App Router project](https://hackindia.org/skills/ship-a-nextjs-app-router-project)** track.
+
+### 1. File-Based Routing & Shared Layout
+- **Root Layout (`app/layout.jsx`):** Wraps all child pages with unified metadata, navigation bar, and accessible dark theme.
+- **Home Route (`app/page.jsx`):** Overview landing page linking directly to server-rendered dashboard views.
+- **Tasks Dashboard (`app/tasks/page.jsx`):** File-based child route demonstrating nested route hierarchy.
+
+### 2. Server Components vs Client Components
+- **Server Component (`app/tasks/page.jsx`):** Defaults to server execution without client JavaScript overhead. Fetches workload data asynchronously on the server before streaming HTML to the browser.
+- **Client Component (`app/components/TaskForm.jsx`):** Explicitly declared with `'use client'` directive to enable React interactive hooks (`useState`, `onSubmit`), handling controlled inputs and optimistic submissions.
+
+### 3. Route Handlers (`app/api/tasks/route.js`)
+- Follows Next.js web standard `Request` and `Response` interfaces.
+- Implements `export async function GET(request)` for JSON task retrieval.
+- Implements `export async function POST(request)` for validated workload insertion returning `201 Created`.
+
+### 4. Verification Tool
+```bash
+python verify_nextjs_app_router.py
+npm run verify:nextjs
 ```
 
 ---
