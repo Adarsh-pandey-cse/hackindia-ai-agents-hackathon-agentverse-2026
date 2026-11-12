@@ -15,10 +15,11 @@
 [![HackIndia Full-Stack Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20weekend%20full--stack%20repo-success.svg)](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
 [![HackIndia Next.js Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20Next.js%20App%20Router%20project-black.svg?logo=next.js&logoColor=white)](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
 [![HackIndia REST API Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20an%20API%20teammates%20can%20use-forestgreen.svg)](https://hackindia.org/skills/design-an-api-teammates-can-use)
+[![HackIndia SQL Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20SQL--backed%20features-blue.svg?logo=postgresql&logoColor=white)](https://hackindia.org/skills/design-sql-backed-features)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-98%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-105%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -36,6 +37,7 @@
 13. [Ship a weekend full-stack repo](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
 14. [Ship a Next.js App Router project](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
 15. [Design an API teammates can use](https://hackindia.org/skills/design-an-api-teammates-can-use)
+16. [Design SQL-backed features](https://hackindia.org/skills/design-sql-backed-features)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -43,6 +45,57 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### 🗄️ SQL-Backed Feature Reviewer Summary (HackIndia Skill #16)
+
+**Feature:** Relational Task & Workload Execution Tracker  
+**Tech:** Node.js, Express 5, PostgreSQL 16, SQLite (`scripts/init_db.py`)  
+**Schema & Seed:** [`db/schema.sql`](db/schema.sql), [`db/seed.sql`](db/seed.sql), [`db/queries.sql`](db/queries.sql)  
+
+#### Run Locally:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team.git
+   cd hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team
+   ```
+2. Run database initialization & validation:
+   ```bash
+   python scripts/init_db.py
+   # Or with PostgreSQL:
+   # psql -d agentverse_db -f db/schema.sql
+   # psql -d agentverse_db -f db/seed.sql
+   ```
+3. Copy environment configuration:
+   ```bash
+   cp .env.example .env
+   ```
+4. Start the server:
+   ```bash
+   npm run api
+   ```
+
+#### Sample Query:
+```sql
+SELECT 
+    t.id AS task_id,
+    t.topic,
+    t.priority,
+    c.name AS category_name,
+    COUNT(l.id) AS execution_count,
+    ROUND(AVG(l.duration_ms), 2) AS avg_duration_ms
+FROM tasks t
+INNER JOIN categories c ON t.category_id = c.id
+LEFT JOIN execution_logs l ON t.id = l.task_id
+WHERE t.status = 'COMPLETED'
+GROUP BY t.id, t.topic, t.priority, c.name
+ORDER BY avg_duration_ms ASC
+LIMIT 10;
+```
+
+#### SQL Safety:
+User inputs are sanitized through parameterised queries (`$1, $2` in `server/db/database.js`) to strictly prevent SQL injection attacks.
 
 ---
 
@@ -1070,6 +1123,16 @@ Expected output:
 ========================================================================
 ```
 
+### Skill 16: Design SQL-backed features
+- [x] **Public repository:** Publicly accessible on GitHub (`https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`).
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **Database schema files (`db/schema.sql`):** Modeled with primary keys, foreign keys, and indexes.
+- [x] **Database seed files (`db/seed.sql`):** Contains realistic starter records.
+- [x] **SQL query patterns (`db/queries.sql`):** Demonstrates `SELECT`, `JOIN`, `GROUP BY`, and parameterized queries.
+- [x] **SQL injection protection:** Enforced in `server/db/database.js` with parameterized arrays.
+- [x] **Database initializer runner (`scripts/init_db.py`):** Cross-platform test runner validating schema and seed.
+- [x] **Automated verification tool (`verify_sql_feature.py`):** Standalone zero-dependency rubric validator.
+
 ### Skill 15: Design an API teammates can use
 - [x] **Public repository:** Publicly accessible on GitHub (`https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`).
 - [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
@@ -1258,6 +1321,29 @@ npm run api
 sh scripts/smoke.sh
 # Or cross-platform
 python scripts/smoke.py
+```
+
+---
+
+## 🗄️ SQL-Backed Feature Architecture (HackIndia SQL Skill)
+
+Relational database modeling and secure query subsystem built for the HackIndia **[Design SQL-backed features](https://hackindia.org/skills/design-sql-backed-features)** track.
+
+### 1. Relational Schema Modeling (`db/schema.sql`)
+- **Primary & Foreign Keys:** Modeled with `SERIAL PRIMARY KEY` and explicit `FOREIGN KEY (category_id) REFERENCES categories(id)` and `FOREIGN KEY (assigned_to) REFERENCES users(id)`.
+- **Integrity Constraints:** `CHECK (priority IN ('HIGH', 'MEDIUM', 'LOW'))` and `CHECK (status IN ('PENDING', 'IN_PROGRESS', 'COMPLETED', 'FAILED'))`.
+- **Query Optimization Indexes:** Strategic B-tree indexes on `tasks(priority)`, `tasks(status)`, and `execution_logs(task_id)` to prevent table scans on high-traffic endpoints.
+
+### 2. Query Competencies (`db/queries.sql`)
+- **SELECT & Filtering (Lesson 3):** Indexed reads with `WHERE status = 'PENDING'` and `ORDER BY created_at DESC LIMIT 10`.
+- **Multi-Table JOINs (Lesson 4):** `INNER JOIN categories` and `LEFT JOIN users` providing denormalized view objects.
+- **Aggregation & GROUP BY (Lesson 5):** Aggregated metrics (`COUNT`, `AVG(duration_ms)`, `AVG(prediction_confidence)`) grouped by category.
+- **SQL Injection Prevention (Lesson 7):** Standard parameterised queries (`$1`, `$2` in `server/db/database.js`).
+
+### 3. Verification Tool
+```bash
+python verify_sql_feature.py
+npm run verify:sql
 ```
 
 ---
