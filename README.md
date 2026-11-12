@@ -14,10 +14,11 @@
 [![HackIndia React Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20readable%20React%20apps-61DAFB.svg?logo=react&logoColor=black)](https://hackindia.org/skills/build-readable-react-apps)
 [![HackIndia Full-Stack Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20weekend%20full--stack%20repo-success.svg)](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
 [![HackIndia Next.js Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20Next.js%20App%20Router%20project-black.svg?logo=next.js&logoColor=white)](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
+[![HackIndia REST API Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20an%20API%20teammates%20can%20use-forestgreen.svg)](https://hackindia.org/skills/design-an-api-teammates-can-use)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-92%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-98%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -34,6 +35,7 @@
 12. [Build readable React apps](https://hackindia.org/skills/build-readable-react-apps)
 13. [Ship a weekend full-stack repo](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
 14. [Ship a Next.js App Router project](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
+15. [Design an API teammates can use](https://hackindia.org/skills/design-an-api-teammates-can-use)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -41,6 +43,46 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### 🚀 Teammate-Ready API Summary (HackIndia Skill #15)
+
+**Base URL: http://localhost:3000/api/v1**  
+**Docs:** [`docs/EXPRESS_API.md`](docs/EXPRESS_API.md) | **Smoke Test:** `scripts/smoke.sh` or `python scripts/smoke.py`
+
+#### Quick Try It:
+```bash
+# 1. Health telemetry
+curl -i "http://localhost:3000/health"
+
+# 2. List tasks with pagination & filtering
+curl -i "http://localhost:3000/api/v1/tasks?page=1&limit=5&priority=HIGH"
+
+# 3. Create a workload (201 Created)
+curl -i -X POST "http://localhost:3000/api/v1/tasks" \
+  -H "Content-Type: application/json" \
+  -d '{"topic":"Deploy Autonomous Agent Loop","priority":"HIGH","category":"ai_tech_trends"}'
+
+# 4. Trigger structured validation error (400 Bad Request)
+curl -i -X POST "http://localhost:3000/api/v1/tasks" \
+  -H "Content-Type: application/json" \
+  -d '{}'
+```
+
+#### Example Error Response (400 Bad Request):
+```json
+{
+  "success": false,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Validation failed: topic is required",
+    "details": [
+      { "field": "topic", "issue": "topic is required and must be non-empty string" }
+    ]
+  }
+}
+```
 
 ---
 
@@ -1028,6 +1070,19 @@ Expected output:
 ========================================================================
 ```
 
+### Skill 15: Design an API teammates can use
+- [x] **Public repository:** Publicly accessible on GitHub (`https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`).
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **Base URL and curl examples in README:** Documented near the top with copy-pasteable curls.
+- [x] **API versioning:** Prefixed with `/api/v1/` on all resource routes.
+- [x] **Resource-oriented URLs & HTTP methods:** Complete CRUD (`GET`, `POST`, `PUT`, `DELETE`).
+- [x] **Meaningful status codes:** `200 OK`, `201 Created`, `204 No Content`, `400 Bad Request`, `404 Not Found`.
+- [x] **Filtering and pagination:** Query parameters for `priority`, `search`, `limit`, and `page`.
+- [x] **Standardized error formatting:** Centralized JSON error envelopes with error codes and field details.
+- [x] **Teammate documentation:** Detailed specification in `docs/EXPRESS_API.md`.
+- [x] **Smoke test script:** Verified executable in `scripts/smoke.sh` and `scripts/smoke.py`.
+- [x] **Automated verification tool (`verify_api_design.py`):** Standalone zero-dependency rubric validator.
+
 ### Skill 14: Ship a Next.js App Router project
 - [x] **Public repository:** Publicly accessible on GitHub (`https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`).
 - [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
@@ -1167,6 +1222,42 @@ Production Next.js implementation built for the HackIndia **[Ship a Next.js App 
 ```bash
 python verify_nextjs_app_router.py
 npm run verify:nextjs
+```
+
+---
+
+## 🚀 Teammate-Ready REST API Design (HackIndia REST API Skill)
+
+Complete API specification built for the HackIndia **[Design an API teammates can use](https://hackindia.org/skills/design-an-api-teammates-can-use)** track. Detailed endpoint definitions, payload schemas, and status contracts are documented in [`docs/EXPRESS_API.md`](docs/EXPRESS_API.md).
+
+### 1. Resources & Plural Nouns
+- `/api/v1/tasks`: Collection resource for analytical agent tasks.
+- `/api/v1/tasks/:id`: Individual task resource entity.
+- `/api/v1/agent/run`: RPC operational endpoint for workload dispatch.
+- `/health`: Diagnostic telemetry resource.
+
+### 2. Meaningful HTTP Status Codes
+- `200 OK`: Successful read (`GET`), update (`PUT`), and execution (`POST /run`).
+- `201 Created`: Successful entity creation (`POST /api/v1/tasks`) with `Location` reference.
+- `204 No Content`: Successful deletion (`DELETE /api/v1/tasks/:id`) with zero body.
+- `400 Bad Request`: Validation failure on missing body attributes or invalid query values.
+- `404 Not Found`: Non-existent task identifier or unmapped route path.
+
+### 3. Filtering, Pagination & Sorting
+- `GET /api/v1/tasks?priority=HIGH`: Filters results strictly by priority tier.
+- `GET /api/v1/tasks?search=agent`: Performs case-insensitive substring search across topics.
+- `GET /api/v1/tasks?page=1&limit=5`: Slices collection with paginated metadata envelopes.
+
+### 4. Smoke Testing & Teammate Verification
+Teammates can clone and verify the API within two minutes:
+```bash
+# Start server
+npm run api
+
+# In another terminal, run smoke test
+sh scripts/smoke.sh
+# Or cross-platform
+python scripts/smoke.py
 ```
 
 ---

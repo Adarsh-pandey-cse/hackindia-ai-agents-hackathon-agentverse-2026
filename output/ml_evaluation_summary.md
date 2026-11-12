@@ -4,7 +4,7 @@
 **Dataset Source:** `HackIndia AgentVerse Telemetry Benchmark`  
 **Split Ratio:** `80% Train / 20% Test (Stratified)`  
 **Champion Model:** `LogisticRegression`  
-**Trained at:** `2026-11-12T09:56:50.836411+00:00`  
+**Trained at:** `2026-11-12T10:11:30.501946+00:00`  
 
 ---
 

@@ -175,3 +175,41 @@ npm test
 ```bash
 python verify_express_api.py
 ```
+
+
+---
+
+## 💻 Teammate Quickstart & cURL Examples
+
+Teammates can test the API using standard `curl` commands:
+
+### 1. Check Health Telemetry
+```bash
+curl -i "http://localhost:3000/health"
+```
+
+### 2. List Tasks with Pagination & Filtering
+```bash
+curl -i "http://localhost:3000/api/v1/tasks?page=1&limit=5&priority=HIGH"
+```
+
+### 3. Create a New Workload (201 Created)
+```bash
+curl -i -X POST "http://localhost:3000/api/v1/tasks" \
+  -H "Content-Type: application/json" \
+  -d '{"topic":"Decentralized Task Queue","priority":"HIGH","category":"ai_tech_trends"}'
+```
+
+### 4. Trigger a Structured Validation Error (400 Bad Request)
+```bash
+curl -i -X POST "http://localhost:3000/api/v1/tasks" \
+  -H "Content-Type: application/json" \
+  -d '{}'
+```
+
+### 5. Run the Automated Smoke Test
+```bash
+sh scripts/smoke.sh
+# Or on Windows/Python:
+python scripts/smoke.py
+```
