@@ -10,13 +10,16 @@
     "build": "vite build",
     "preview": "vite preview",
     "api": "node server/index.js",
-    "test": "node --test tests/test_agent.js tests/test_express_api.js tests/test_react_app.js",
+    "test": "node --test tests/test_agent.js tests/test_express_api.js tests/test_react_app.js tests/test_full_stack.js",
     "test:api": "node --test tests/test_express_api.js",
     "test:react": "node --test tests/test_react_app.js",
     "cli": "node src/agent_cli.js",
     "verify:system-design": "python verify_system_design.py",
     "verify:express": "python verify_express_api.py",
-    "verify:react": "python verify_react_app.py"
+    "verify:react": "python verify_react_app.py",
+    "fullstack": "node server/index.js",
+    "test:fullstack": "node --test tests/test_full_stack.js",
+    "verify:fullstack": "python verify_full_stack_repo.py"
   },
   "keywords": [
     "hackindia",

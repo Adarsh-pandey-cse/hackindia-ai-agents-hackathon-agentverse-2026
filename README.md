@@ -12,10 +12,11 @@
 [![HackIndia System Design Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20systems%20you%20can%20defend-crimson.svg)](https://hackindia.org/skills/design-systems-you-can-defend)
 [![HackIndia Express API Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20a%20recruiter--ready%20Express%20API-emerald.svg)](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
 [![HackIndia React Skill](https://img.shields.io/badge/HackIndia%20Skill-Build%20readable%20React%20apps-61DAFB.svg?logo=react&logoColor=black)](https://hackindia.org/skills/build-readable-react-apps)
+[![HackIndia Full-Stack Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20weekend%20full--stack%20repo-success.svg)](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-35%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-80%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -30,6 +31,7 @@
 10. [Design systems you can defend](https://hackindia.org/skills/design-systems-you-can-defend)
 11. [Build a recruiter-ready Express API](https://hackindia.org/skills/build-a-recruiter-ready-express-api)
 12. [Build readable React apps](https://hackindia.org/skills/build-readable-react-apps)
+13. [Ship a weekend full-stack repo](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -37,6 +39,76 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### 🌐 Weekend Full-Stack Repository Reviewer Summary (HackIndia Skill #13)
+
+**Project:** AgentVerse Autonomous AI Agent & ML Full-Stack Platform  
+**What it does:** An autonomous AI agent platform that executes analytical workloads, predicts execution success with a scikit-learn ML model (96.25% test accuracy), serves grounded document QA with verifiable citations, exposes a recruiter-ready modular Express 5 REST API, and provides a reactive React 18 / Vite control dashboard with loading and error resilience.
+
+**Live demo / Local access:**
+- React 18 + Vite Frontend Dashboard: `http://localhost:5173`
+- Express 5 REST API: `http://localhost:3000` (Health telemetry at `http://localhost:3000/health`)
+- Python Web Dashboard & Local Server: `http://localhost:5000`
+- Multi-Service Containerized Deployment: `docker compose up --build`
+
+**Main stack:**
+- **Frontend Client:** React 18.3, Vite 5.4, JSX components, controlled forms, lifted state, vanilla CSS3 design system
+- **Backend Server:** Express 5.3 on Node.js 24 LTS with modular routing (`routes/`), middleware (`middleware/`), and centralized error handling
+- **AI & RAG Engine:** Python 3.12, Scikit-Learn (LogisticRegression classifier), Grounded Document QA RAG app with verifiable citations
+- **Database & Storage:** PostgreSQL 16 container (`docker-compose.yml`), structured JSON datastores (`data/chunks.json`, `data/sample_input.json`), joblib serialized model artifacts
+
+**Run locally:**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team.git
+   cd hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team
+   ```
+2. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   pip install -r requirements.txt
+   ```
+4. Start the Express 5 backend API:
+   ```bash
+   npm run api
+   ```
+5. Start the React frontend dev server (in a second terminal):
+   ```bash
+   npm run dev
+   ```
+6. Open `http://localhost:5173` in your browser.
+
+**Environment variables:**
+```ini
+PORT=3000
+NODE_ENV=development
+VITE_API_URL=http://localhost:3000
+DATABASE_URL=postgres://app_user:app_password@localhost:5432/app_db
+API_KEY=agentverse_local_dev_key
+RAG_DATA_DIR=data/sample_docs
+RAG_CHUNKS_PATH=data/chunks.json
+```
+
+**API proof:**
+- `GET /health` -> 200 OK returns server uptime, Node.js version, and telemetry
+- `GET /api/v1/tasks` -> 200 OK returns task list with pagination and priority filtering
+- `POST /api/v1/tasks` -> 201 Created creates a new workload with body validation
+- `POST /api/v1/agent/run` -> 200 OK executes autonomous workflow with ML predictions
+- `POST /api/ask` -> 200 OK executes grounded RAG question answering with chunk citations
+
+**Test account or sample data:**
+- Pre-seeded task catalog: `data/sample_input.json` and `data/sample_input.csv`
+- Pre-indexed documents: `data/sample_docs/` (`college_faq.txt`, `refund_policy.txt`)
+- Test suites: `npm test` (34 Node.js tests passing) and `python -m unittest discover tests` (46 Python tests passing)
+- Zero-dependency verification: `python verify_full_stack_repo.py` or `npm run verify:fullstack`
+
+---
 
 ---
 
@@ -926,6 +998,20 @@ Expected output:
 ========================================================================
 ```
 
+### Skill 13: Ship a weekend full-stack repo
+- [x] **Public repository:** Publicly accessible on GitHub (`https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`).
+- [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
+- [x] **Reviewer finish block in README:** High-visibility submission summary with Project, What it does, Live demo, Main stack, Run locally, Environment variables, API proof, Test account/sample data.
+- [x] **Frontend client layer:** React 18 + Vite 5 + JSX components (`src/App.jsx`, `src/components/`, `vite.config.js`, `index.html`).
+- [x] **Backend server layer:** Modular Express 5 REST API (`server/index.js`, `server/app.js`, `server/routes/`, `server/middleware/`, `server/errors/`).
+- [x] **Database & storage layer:** PostgreSQL 16 container (`docker-compose.yml`), JSON datastores (`data/chunks.json`), and ML models (`models/`).
+- [x] **UI-to-API communication:** Client queries internal API routes with Vite reverse proxy.
+- [x] **Loading, success, and failure states:** Explicit UI representations for all three network states with offline fallback resilience.
+- [x] **Environment safety:** Complete `.env.example` reference; zero secrets committed (`.env` in `.gitignore`).
+- [x] **Navigable structure & documentation:** Detailed architecture guide in `docs/FULL_STACK_ARCHITECTURE.md`.
+- [x] **Automated test suite:** Verified with `tests/test_full_stack.js` and `tests/test_full_stack_repo.py`.
+- [x] **Automated verification tool (`verify_full_stack_repo.py`):** Standalone zero-dependency rubric validator.
+
 ### Skill 12: Build readable React apps
 - [x] **Public repository:** Publicly accessible on GitHub.
 - [x] **Commits by `@adarsh-pandey-cse`:** Authored and committed by Adarsh Pandey.
@@ -965,6 +1051,55 @@ Expected output:
 - [x] **Caching & queue choices explained:** In-memory 60s TTL cache, bounded turn budget and failure circuit breakers.
 - [x] **At least two trade-offs defended:** 4 trade-offs defended (Cache, Queue, Vector Index, Agent vs Script).
 - [x] **Automated verification tool (`verify_system_design.py`):** Standalone zero-dependency rubric validator.
+
+---
+
+## 🌐 Weekend Full-Stack Repository Architecture (HackIndia Full-Stack Skill)
+
+Detailed architecture specification for the HackIndia **[Ship a weekend full-stack repo](https://hackindia.org/skills/ship-a-weekend-full-stack-repo)** track. Full architectural diagrams and deep-dive design rationales are maintained in [`docs/FULL_STACK_ARCHITECTURE.md`](docs/FULL_STACK_ARCHITECTURE.md).
+
+### 1. Weekend-Sized Finishable Stack
+A cohesive, finishable stack chosen for high developer velocity, zero bloat, and total transparency:
+- **Client:** React 18 + Vite 5 + JSX components + CSS3 design system (`src/App.jsx`, `src/components/`, `vite.config.js`).
+- **Server:** Express 5.3 + Node.js 24 LTS (`server/`) with modular routers and centralized error handling.
+- **Data & Intelligence:** Python 3.12 ML Pipeline (`train_ml_model.py`), Grounded Document QA (`app.py`), and PostgreSQL 16 (`docker-compose.yml`).
+
+### 2. Defensible State Boundaries
+State is rigorously separated according to lifespan:
+- **Ephemeral UI State:** Local `useState` in `TaskForm.jsx` (form input buffers) and `TaskFilter.jsx` (transient query strings).
+- **Lifted Application State:** Managed in `src/App.jsx` (`tasks`, `isLoading`, `errorMessage`, `notification`, `dataSource`).
+- **Server-Side State:** Express 5 memory cache and JSON datastore in `server/routes/tasks.js`.
+- **Durable Persistence:** Relational database storage in PostgreSQL 16 and indexed vector chunks in `data/chunks.json`.
+
+### 3. Talking to Your Own API
+- The React client directly queries internal Express routes using `fetch('/api/v1/tasks')`.
+- The Vite development server provides an automatic reverse proxy (`/api` -> `http://localhost:3000`) in `vite.config.js` to eliminate CORS issues during development.
+- The Express server provides CORS middleware for decoupled production hosting.
+
+### 4. Explicit Loading, Success, and Failure States
+- **Loading:** Displays non-blocking, accessible status alerts (`role="status"`) while the network handshake is active.
+- **Success:** Renders connected status indicators (`Live Express 5 API`) and dismissible confirmation banners.
+- **Failure Resilience:** Catches network failures, displays clear diagnostic banners (`role="alert"`), and seamlessly falls back to pre-seeded local storage (`Local Store (Offline Resilience)`). The app remains 100% interactive even when offline.
+
+### 5. Strict Environment Parity & Secrets Safety
+- Environment variables are isolated in `.env.example`.
+- Active `.env` files are git-ignored in `.gitignore`.
+- Configuration is validated at runtime in `server/config/env.js`.
+
+### 6. Navigable Codebase
+- Predictable structure:
+  - `src/` : Frontend React components and entry points
+  - `server/` : Express 5 modular routes, middleware, and errors
+  - `data/` : Datasets and structured documents
+  - `docs/` : System design and architecture specifications
+  - `tests/` : Comprehensive test suites across Node.js and Python
+
+### 7. Automated Verification & Checklist
+Run the dedicated verification tool:
+```bash
+python verify_full_stack_repo.py
+npm run verify:fullstack
+```
 
 ---
 
