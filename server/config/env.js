@@ -14,6 +14,7 @@ export const config = {
   isProduction: process.env.NODE_ENV === 'production',
   isTest: process.env.NODE_ENV === 'test',
   apiKey: process.env.API_KEY || 'agentverse-secret-key-2026',
+  jwtSecret: process.env.JWT_SECRET || 'hackindia-safe-auth-secret-key-2026-agentverse',
   corsOrigin: process.env.CORS_ORIGIN || '*',
   version: '1.0.0',
 };

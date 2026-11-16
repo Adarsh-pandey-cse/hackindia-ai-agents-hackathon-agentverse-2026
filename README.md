@@ -16,10 +16,11 @@
 [![HackIndia Next.js Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20Next.js%20App%20Router%20project-black.svg?logo=next.js&logoColor=white)](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
 [![HackIndia REST API Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20an%20API%20teammates%20can%20use-forestgreen.svg)](https://hackindia.org/skills/design-an-api-teammates-can-use)
 [![HackIndia SQL Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20SQL--backed%20features-blue.svg?logo=postgresql&logoColor=white)](https://hackindia.org/skills/design-sql-backed-features)
+[![HackIndia Auth Skill](https://img.shields.io/badge/HackIndia%20Skill-Add%20safe%20sign--in-blue.svg)](https://hackindia.org/skills/add-safe-sign-in)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-105%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-111%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -38,6 +39,7 @@
 14. [Ship a Next.js App Router project](https://hackindia.org/skills/ship-a-nextjs-app-router-project)
 15. [Design an API teammates can use](https://hackindia.org/skills/design-an-api-teammates-can-use)
 16. [Design SQL-backed features](https://hackindia.org/skills/design-sql-backed-features)
+17. [Add safe sign-in](https://hackindia.org/skills/add-safe-sign-in)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -45,6 +47,35 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### 🔐 Safe Sign-In & Authentication Reviewer Summary (HackIndia Skill #17)
+
+**Feature:** Safe Authentication, Password Hashing, JWT Sessions, and HttpOnly Cookies  
+**Tech:** Node.js, Express 5, Next.js App Router, `bcryptjs`, `jsonwebtoken`  
+**Auth Endpoints:** `server/routes/auth.js` (`POST /api/v1/auth/signup`, `POST /api/v1/auth/signin`, `POST /api/v1/auth/signout`, `GET /api/v1/auth/me`, `POST /api/v1/auth/oauth/callback`), `app/api/auth/route.js`  
+**Security Guard:** `server/middleware/auth.js` (`requireAuth` verifying JWT from secure cookies or Bearer headers)
+
+#### Run Locally:
+1. Run standalone HackIndia Safe Sign-In validator:
+   ```bash
+   python verify_safe_signin.py
+   ```
+2. Run test suite:
+   ```bash
+   node --test tests/test_safe_auth.js
+   python -m unittest tests.test_safe_auth
+   ```
+
+#### Security Safeguards Checklist:
+- [x] **No Plaintext Passwords:** Passwords hashed with `bcrypt` (10 salt rounds) with unique salt per password.
+- [x] **No XSS Token Theft:** JWT session tokens stored in `HttpOnly` cookies, preventing JavaScript reading.
+- [x] **CSRF Defense:** Session cookies enforce `SameSite=Strict` and production `Secure` flags.
+- [x] **No User Enumeration:** Constant-time `bcrypt.compare` with generic 401 response on invalid credentials.
+- [x] **Route Protection:** Server-side `requireAuth` middleware rejects unauthenticated access with 401 Unauthorized.
+- [x] **Clean Signout:** `POST /api/v1/auth/signout` destroys cookie session with `Max-Age=0`.
+- [x] **OAuth Ready:** `/api/v1/auth/oauth/callback` supports passwordless OAuth token exchange.
 
 ---
 
@@ -1344,6 +1375,37 @@ Relational database modeling and secure query subsystem built for the HackIndia 
 ```bash
 python verify_sql_feature.py
 npm run verify:sql
+```
+
+---
+
+## 🔐 Safe Authentication & Sign-In Architecture (HackIndia Auth Skill)
+
+This repository implements production-grade authentication and session security following the HackIndia **[Add Safe Sign-In](https://hackindia.org/skills/add-safe-sign-in)** specifications.
+
+### 1. Threat Mitigation Architecture
+
+| Threat Vector | Mitigation Strategy & Implementation | Source File |
+| :--- | :--- | :--- |
+| **Plaintext Password Leaks** | Passwords are never stored in plaintext. Hashed using **`bcrypt`** (or `bcryptjs`) with a cost/salt factor of 10 rounds and individual unique salts. | [`server/routes/auth.js`](server/routes/auth.js) |
+| **Token Theft via XSS** | Session tokens are transmitted via **`HttpOnly` cookies**, preventing JavaScript document object access in browsers. | [`server/routes/auth.js`](server/routes/auth.js), [`app/api/auth/route.js`](app/api/auth/route.js) |
+| **Cross-Site Request Forgery (CSRF)** | Cookies enforce **`SameSite=Strict`** (or `Lax`) and production `Secure` flags, blocking cross-site forgery. | [`server/routes/auth.js`](server/routes/auth.js), [`app/api/auth/route.js`](app/api/auth/route.js) |
+| **Credential Stuffing & Timing Attacks** | Constant-time password comparisons with `bcrypt.compare()` and generic `401 Unauthorized: Invalid email or password` errors prevent username enumeration. | [`server/routes/auth.js`](server/routes/auth.js) |
+| **Unauthenticated Resource Access** | Strict `requireAuth` middleware verifies **JWT signatures** (`jsonwebtoken`), expiration (`exp`), and claims before granting access to `/api/v1/auth/me`. | [`server/middleware/auth.js`](server/middleware/auth.js) |
+| **Session Invalidation** | Explicit signout endpoints (`POST /api/v1/auth/signout`, `DELETE /api/auth`) immediately clear cookies with `Max-Age=0`. | [`server/routes/auth.js`](server/routes/auth.js), [`app/api/auth/route.js`](app/api/auth/route.js) |
+| **Passwordless OAuth Flow** | Implements simulated OAuth token exchange (`/api/v1/auth/oauth/callback`) for Google/GitHub sign-in without handling user passwords. | [`server/routes/auth.js`](server/routes/auth.js) |
+
+### 2. Available Endpoints
+
+- `POST /api/v1/auth/signup`: Registers a new user, hashes password with `bcrypt` (10 rounds), sets secure `HttpOnly` cookie with JWT session.
+- `POST /api/v1/auth/signin`: Verifies email and password using constant-time `bcrypt.compare`, issues JWT, and sets `SameSite=Strict` `HttpOnly` cookie.
+- `POST /api/v1/auth/signout`: Clears session cookie (`Max-Age=0`).
+- `GET /api/v1/auth/me`: Protected route guarded by `requireAuth` middleware.
+- `POST /api/v1/auth/oauth/callback`: Handles OAuth 2.0 authorization code exchange without exposing raw passwords.
+
+### 3. Verification Tool
+```bash
+python verify_safe_signin.py
 ```
 
 ---

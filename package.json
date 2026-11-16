@@ -10,7 +10,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "api": "node server/index.js",
-    "test": "node --test tests/test_agent.js tests/test_express_api.js tests/test_react_app.js tests/test_full_stack.js tests/test_nextjs_app_router.js tests/test_api_design.js tests/test_sql_feature.js",
+    "test": "node --test tests/test_agent.js tests/test_express_api.js tests/test_react_app.js tests/test_full_stack.js tests/test_nextjs_app_router.js tests/test_api_design.js tests/test_sql_feature.js tests/test_safe_auth.js",
     "test:api": "node --test tests/test_express_api.js",
     "test:react": "node --test tests/test_react_app.js",
     "cli": "node src/agent_cli.js",
@@ -39,12 +39,14 @@
   "license": "MIT",
   "dependencies": {
     "@vitejs/plugin-react": "^4.7.0",
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^18.0.10",
     "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "next": "^14.2.18",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vite": "^5.4.21",
-    "next": "^14.2.18"
+    "vite": "^5.4.21"
   }
 }

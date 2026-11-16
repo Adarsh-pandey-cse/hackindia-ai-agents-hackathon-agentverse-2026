@@ -14,6 +14,7 @@ import { errorHandler, ApiError } from './errors/errorHandler.js';
 import healthRoutes from './routes/health.js';
 import tasksRoutes from './routes/tasks.js';
 import agentRoutes from './routes/agent.js';
+import authRoutes from './routes/auth.js';
 
 export function createApp() {
   const app = express();
@@ -28,6 +29,7 @@ export function createApp() {
   app.use('/', healthRoutes);
 
   // API v1 Resource Routes
+  app.use('/api/v1/auth', authRoutes);
   app.use('/api/v1/tasks', optionalApiKeyAuth, tasksRoutes);
   app.use('/api/v1/agent', optionalApiKeyAuth, agentRoutes);
 
