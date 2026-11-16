@@ -17,10 +17,11 @@
 [![HackIndia REST API Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20an%20API%20teammates%20can%20use-forestgreen.svg)](https://hackindia.org/skills/design-an-api-teammates-can-use)
 [![HackIndia SQL Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20SQL--backed%20features-blue.svg?logo=postgresql&logoColor=white)](https://hackindia.org/skills/design-sql-backed-features)
 [![HackIndia Auth Skill](https://img.shields.io/badge/HackIndia%20Skill-Add%20safe%20sign--in-blue.svg)](https://hackindia.org/skills/add-safe-sign-in)
+[![HackIndia TypeScript Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20safer%20JavaScript%20with%20TypeScript-3178C6.svg?logo=typescript&logoColor=white)](https://hackindia.org/skills/ship-safer-javascript-with-typescript)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-111%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-118%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -40,6 +41,7 @@
 15. [Design an API teammates can use](https://hackindia.org/skills/design-an-api-teammates-can-use)
 16. [Design SQL-backed features](https://hackindia.org/skills/design-sql-backed-features)
 17. [Add safe sign-in](https://hackindia.org/skills/add-safe-sign-in)
+18. [Ship safer JavaScript with TypeScript](https://hackindia.org/skills/ship-safer-javascript-with-typescript)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -47,6 +49,38 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### 🔷 TypeScript Reviewer Summary (HackIndia Skill #18)
+
+**Feature:** Static Type-Safety, Generics, Type Narrowing, Discriminated Unions & Declarations  
+**Tech:** TypeScript 5.x / 7.x, Node.js 22 LTS, `tsconfig.json` (Strict Mode)  
+**Source Code:** [`src-ts/types.ts`](src-ts/types.ts), [`src-ts/agentService.ts`](src-ts/agentService.ts), [`src-ts/index.ts`](src-ts/index.ts)  
+**Declarations:** [`dist-ts/`](dist-ts/) (Generates `.d.ts` and `.d.ts.map` files)
+
+#### Run Locally:
+1. Type-check with zero errors:
+   ```bash
+   npm run typecheck
+   # Or: npx tsc --noEmit
+   ```
+2. Build JavaScript and declaration outputs:
+   ```bash
+   npm run build:ts
+   ```
+3. Run automated TypeScript validator:
+   ```bash
+   python verify_typescript.py
+   ```
+
+#### TypeScript Architecture Checklist:
+- [x] **Strict Mode:** `tsconfig.json` configured with `strict: true`, `noImplicitAny: true`, `strictNullChecks: true`.
+- [x] **Domain Interfaces:** `TaskItem`, `UserSession`, `ExecutionTelemetry`, and generic `ServiceResult<T>`.
+- [x] **Union Types & Discriminated Unions:** `PriorityLevel` union and `AgentAction` discriminated union.
+- [x] **User-Defined Type Guards:** `isTaskItem(x): x is TaskItem` and `isValidPriority(x): x is PriorityLevel`.
+- [x] **Exhaustive Matching:** `assertNever` ensuring compile-time completeness for union actions.
+- [x] **Clean Compilation:** `dist-ts/` with complete TypeScript type declarations (`.d.ts`).
 
 ---
 
@@ -1406,6 +1440,36 @@ This repository implements production-grade authentication and session security 
 ### 3. Verification Tool
 ```bash
 python verify_safe_signin.py
+```
+
+---
+
+## 🔷 TypeScript Architecture (HackIndia TypeScript Skill)
+
+Typed domain models and compilation subsystem built for the HackIndia **[Ship safer JavaScript with TypeScript](https://hackindia.org/skills/ship-safer-javascript-with-typescript)** track.
+
+### 1. Strict Compiler Configuration (`tsconfig.json`)
+Configured with modern ES2022 targets, NodeNext module resolution, and maximum safety compiler flags:
+- `strict: true` & `noImplicitAny: true`
+- `strictNullChecks: true` & `strictFunctionTypes: true`
+- `declaration: true` & `declarationMap: true` emitting `.d.ts` declaration maps into `dist-ts/`
+
+### 2. Type-Safety Competencies (`src-ts/`)
+- **Domain Modeling (`src-ts/types.ts`):** Readonly properties (`TaskItem`), union types (`PriorityLevel`, `TaskStatus`), and generic `ServiceResult<T>`.
+- **Type Narrowing & Guards (`src-ts/agentService.ts`):** Custom user-defined type guards `isTaskItem(x): x is TaskItem` and `isValidPriority(x): x is PriorityLevel`.
+- **Discriminated Unions & Pattern Matching:** `AgentAction` discriminated union checked exhaustively via `assertNever()`.
+- **Pipeline Runner (`src-ts/index.ts`):** End-to-end typed execution pipeline with asynchronous handlers.
+
+### 3. Verification & Build Commands
+```bash
+# Type-check without emitting
+npm run typecheck
+
+# Build declarations & JavaScript output
+npm run build:ts
+
+# Standalone HackIndia automated validator
+python verify_typescript.py
 ```
 
 ---
