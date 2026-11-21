@@ -18,10 +18,11 @@
 [![HackIndia SQL Skill](https://img.shields.io/badge/HackIndia%20Skill-Design%20SQL--backed%20features-blue.svg?logo=postgresql&logoColor=white)](https://hackindia.org/skills/design-sql-backed-features)
 [![HackIndia Auth Skill](https://img.shields.io/badge/HackIndia%20Skill-Add%20safe%20sign--in-blue.svg)](https://hackindia.org/skills/add-safe-sign-in)
 [![HackIndia TypeScript Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20safer%20JavaScript%20with%20TypeScript-3178C6.svg?logo=typescript&logoColor=white)](https://hackindia.org/skills/ship-safer-javascript-with-typescript)
+[![HackIndia Git Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20recruiter--ready%20GitHub%20repo-181717.svg?logo=github&logoColor=white)](https://hackindia.org/skills/ship-a-recruiter-ready-github-repo)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-118%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-124%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -42,6 +43,7 @@
 16. [Design SQL-backed features](https://hackindia.org/skills/design-sql-backed-features)
 17. [Add safe sign-in](https://hackindia.org/skills/add-safe-sign-in)
 18. [Ship safer JavaScript with TypeScript](https://hackindia.org/skills/ship-safer-javascript-with-typescript)
+19. [Ship a recruiter-ready GitHub repo](https://hackindia.org/skills/ship-a-recruiter-ready-github-repo)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -49,6 +51,39 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### 🐙 Recruiter-Ready GitHub Repo Summary (HackIndia Skill #19)
+
+**Feature:** Clean Conventional Git Commits, Secure .gitignore, MIT License & Stranger-Friendly README  
+**Tech:** Git 2.x, GitHub, Conventional Commits Specification, Markdown  
+**Repository (Team Fork):** [`Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team)  
+**Standalone Repository:** [`Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026`](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
+**Author:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))
+
+#### Run Locally:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team.git
+   cd hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team
+   ```
+2. Verify commit history:
+   ```bash
+   git log --oneline -n 10
+   ```
+3. Run automated Recruiter-Ready repository validator:
+   ```bash
+   python verify_recruiter_ready_repo.py
+   ```
+
+#### Recruiter-Ready Checklist:
+- [x] **Readable Commit History:** Over 25 atomic commits using the Conventional Commits specification (`feat:`, `fix:`, `docs:`, `test:`).
+- [x] **Author Identity:** Verified commit author matching `@adarsh-pandey-cse` / `Adarsh Pandey`.
+- [x] **Secret & Artifact Hygiene:** Comprehensive `.gitignore` preventing secrets (`.env`), cache (`__pycache__`), and dependencies (`node_modules`) from being committed.
+- [x] **Working Setup Steps:** Step-by-step instructions for installation, database setup, environment configuration, and execution.
+- [x] **Stranger-Friendly Documentation:** Clear architecture maps, review summaries, sample queries, and automated verification commands.
+- [x] **Open Source License:** Permissive open-source [MIT License](LICENSE).
 
 ---
 
@@ -1470,6 +1505,30 @@ npm run build:ts
 
 # Standalone HackIndia automated validator
 python verify_typescript.py
+```
+
+---
+
+## 🐙 Recruiter-Ready GitHub Repository Architecture (HackIndia Git & GitHub Skill)
+
+Git workflow, commit hygiene, and repository ergonomics built for the HackIndia **[Ship a recruiter-ready GitHub repo](https://hackindia.org/skills/ship-a-recruiter-ready-github-repo)** track.
+
+### 1. Commit Hygiene & Conventions
+All commits follow the **Conventional Commits** standard with clear prefixes:
+- `feat:` New features, endpoints, and architectural subsystems
+- `fix:` Bug fixes, error handling corrections, and validation adjustments
+- `docs:` Documentation improvements, README updates, and reviewer summaries
+- `test:` Unit, integration, and end-to-end verification suites
+
+### 2. Secret & Environment Protection
+- `.env.example` provides self-documenting templates with safe fallback defaults.
+- `.gitignore` rigorously excludes `.env`, `node_modules/`, `dist/`, build artifacts, and caches.
+- No sensitive keys or API secrets are ever tracked in git history.
+
+### 3. Verification Commands
+```bash
+python verify_recruiter_ready_repo.py
+npm run verify:git
 ```
 
 ---
