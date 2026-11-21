@@ -1,0 +1,11 @@
+task_id,topic,category_id,priority,duration_seconds,status,created_date,category_name,department,sla_hours,complexity_weight,duration_minutes,is_high_priority
+TASK-001,Autonomous AI Agents in 2026,CAT-01,HIGH,125.4,COMPLETED,2026-01-10,Autonomous Agents,AI Research,24,1.5,2.09,True
+TASK-002,Cryptocurrency and Web3 Ecosystem Metrics,CAT-02,MEDIUM,85.0,COMPLETED,,Web3 & Distributed Systems,Blockchain Labs,48,1.2,1.42,False
+TASK-003,Open Source AI Tools & Frameworks,CAT-03,HIGH,210.5,PENDING,,Developer Tooling & Infrastructure,Platform Engineering,12,1.8,3.51,True
+TASK-004,Distributed Consensus Models,CAT-02,MEDIUM,125.4,IN_PROGRESS,2026-01-15,Web3 & Distributed Systems,Blockchain Labs,48,1.2,2.09,False
+TASK-005,Generative UI Components,CAT-01,LOW,45.2,COMPLETED,,Autonomous Agents,AI Research,24,1.5,0.75,False
+TASK-006,Vector Embeddings and Chunking Strategy,CAT-03,HIGH,190.8,COMPLETED,2026-01-18,Developer Tooling & Infrastructure,Platform Engineering,12,1.8,3.18,True
+TASK-007,PostgreSQL Index Optimization,CAT-04,MEDIUM,140.0,COMPLETED,,Security & Databases,SecOps,8,2.0,2.33,False
+TASK-008,JWT Auth and Session Security,CAT-04,HIGH,115.6,COMPLETED,2026-01-22,Security & Databases,SecOps,8,2.0,1.93,True
+TASK-009,TypeScript Strict Mode Migration,CAT-03,MEDIUM,75.0,PENDING,2026-01-24,Developer Tooling & Infrastructure,Platform Engineering,12,1.8,1.25,False
+TASK-010,Agent Tool Calling Security Gates,CAT-01,HIGH,160.2,COMPLETED,2026-01-25,Autonomous Agents,AI Research,24,1.5,2.67,True

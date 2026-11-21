@@ -19,10 +19,11 @@
 [![HackIndia Auth Skill](https://img.shields.io/badge/HackIndia%20Skill-Add%20safe%20sign--in-blue.svg)](https://hackindia.org/skills/add-safe-sign-in)
 [![HackIndia TypeScript Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20safer%20JavaScript%20with%20TypeScript-3178C6.svg?logo=typescript&logoColor=white)](https://hackindia.org/skills/ship-safer-javascript-with-typescript)
 [![HackIndia Git Skill](https://img.shields.io/badge/HackIndia%20Skill-Ship%20a%20recruiter--ready%20GitHub%20repo-181717.svg?logo=github&logoColor=white)](https://hackindia.org/skills/ship-a-recruiter-ready-github-repo)
+[![HackIndia Pandas Skill](https://img.shields.io/badge/HackIndia%20Skill-Clean%20data%20with%20pandas-150458.svg?logo=pandas&logoColor=white)](https://hackindia.org/skills/clean-data-with-pandas)
 [![Python Version](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![Node.js Version](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022%20%7C%2024-green.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-124%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-130%20Passed%20(Python%20%2B%20Node.js)-brightgreen.svg)](tests/)
 
 **Submitted Skills:**
 1. [Write a runnable Python tool](https://hackindia.org/skills/write-a-runnable-python-tool)
@@ -44,6 +45,7 @@
 17. [Add safe sign-in](https://hackindia.org/skills/add-safe-sign-in)
 18. [Ship safer JavaScript with TypeScript](https://hackindia.org/skills/ship-safer-javascript-with-typescript)
 19. [Ship a recruiter-ready GitHub repo](https://hackindia.org/skills/ship-a-recruiter-ready-github-repo)
+20. [Clean data with pandas](https://hackindia.org/skills/clean-data-with-pandas)
 
 **Hackathon:** HackIndia AI Agents Hackathon - AgentVerse 2026  
 **Developer:** Adarsh Pandey ([@adarsh-pandey-cse](https://github.com/adarsh-pandey-cse))  
@@ -51,6 +53,36 @@
 **Hackathon Team Repository:** [https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team) (PR [#1](https://github.com/HackIndiaXYZ/hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team/pull/1))  
 **Standalone Repository:** [https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026](https://github.com/Adarsh-pandey-cse/hackindia-ai-agents-hackathon-agentverse-2026)  
 **Hackathon Team:** Adarsh Pandey's Team (`hackindia-ai-agents-hackathon-agentverse-2026-adarsh-pandeys-team`)  
+
+---
+
+### 🐼 Pandas Data Cleaning Reviewer Summary (HackIndia Skill #20)
+
+**Feature:** Heterogeneous Data Ingestion, Deduplication, Null Imputation, Relational Joins, Grouped Aggregations & Charts  
+**Tech:** Python 3.12, `pandas 3.x`, `numpy 2.x`, `matplotlib`, Jupyter Notebook  
+**Raw Datasets:** [`data/raw_tasks.csv`](data/raw_tasks.csv), [`data/raw_categories.json`](data/raw_categories.json)  
+**Pipeline Script:** [`clean_data.py`](clean_data.py)  
+**Jupyter Notebook:** [`notebooks/clean_data_pipeline.ipynb`](notebooks/clean_data_pipeline.ipynb)  
+**Outputs:** [`output/cleaned_tasks.csv`](output/cleaned_tasks.csv), [`output/category_summary.json`](output/category_summary.json), [`output/charts/tasks_by_category.png`](output/charts/tasks_by_category.png)
+
+#### Run Locally:
+1. Run automated data cleaning pipeline:
+   ```bash
+   python clean_data.py
+   ```
+2. Run standalone Pandas validator:
+   ```bash
+   python verify_pandas_pipeline.py
+   ```
+
+#### Data Cleaning Checklist:
+- [x] **Multi-format Ingestion:** Reads raw tabular CSV and nested JSON metadata.
+- [x] **Deduplication & Trimming:** Drops duplicate rows and removes messy whitespace.
+- [x] **Null Value Handling:** Imputes missing priorities and median duration values.
+- [x] **Relational Merge (JOIN):** Executes `pd.merge(tasks, categories, on='category_id', how='left')`.
+- [x] **Grouped Aggregations:** Groups by category with `groupby().agg()` computing task counts and execution duration metrics.
+- [x] **Visualization & Export:** Generates high-res bar chart (`output/charts/tasks_by_category.png`) and clean CSV/JSON exports.
+- [x] **Interactive Notebook:** Complete runnable Jupyter Notebook in `notebooks/clean_data_pipeline.ipynb`.
 
 ---
 
@@ -1529,6 +1561,41 @@ All commits follow the **Conventional Commits** standard with clear prefixes:
 ```bash
 python verify_recruiter_ready_repo.py
 npm run verify:git
+```
+
+---
+
+## 🐼 Pandas Data Cleaning Architecture (HackIndia Pandas Skill)
+
+Data engineering, cleaning, relational merging, and aggregation pipeline built for the HackIndia **[Clean data with pandas](https://hackindia.org/skills/clean-data-with-pandas)** track.
+
+### 1. Heterogeneous Data Ingestion & Relational Joins
+- **Multi-source Loading:** Loads raw task execution logs (`data/raw_tasks.csv`) and department category metadata (`data/raw_categories.json`).
+- **Relational Merge (`pd.merge`):** Performs relational join mapping `category_id` to obtain department metadata, SLA targets, and complexity weights.
+
+### 2. Data Cleaning & Transformation Pipeline (`clean_data.py`)
+- **Deduplication:** Identifies and drops duplicate entries with `drop_duplicates(subset=['task_id'])`.
+- **String Normalization:** Cleans leading/trailing whitespace across text and category columns.
+- **Null Value Imputation:** Imputes missing priority flags with `'MEDIUM'` and replaces missing numerical execution durations with median durations using NumPy and pandas.
+- **Datetime Standardization:** Parses heterogeneous timestamp strings into standardized ISO-8601 timestamps using `pd.to_datetime()`.
+
+### 3. Grouped Aggregations & Summary Analytics
+- **Groupby Metrics (`groupby().agg()`):** Groups cleaned datasets by category and calculates aggregate metrics: total task count, mean duration, max duration, high-priority task count, and SLA adherence rates.
+- **Structured Export:** Generates clean tabular dataset (`output/cleaned_tasks.csv`) and structured analytical summary (`output/category_summary.json`).
+
+### 4. Visualization & Interactive Notebook
+- **Chart Generation:** Matplotlib visualization saved to [`output/charts/tasks_by_category.png`](output/charts/tasks_by_category.png) displaying task distribution and average processing time.
+- **Jupyter Notebook (`notebooks/clean_data_pipeline.ipynb`):** Step-by-step interactive walk-through covering ingestion, exploratory inspection, cleaning transformations, aggregations, and visual charting.
+
+### 5. Verification Commands
+```bash
+# Execute end-to-end data cleaning pipeline
+python clean_data.py
+npm run clean:data
+
+# Run standalone automated pandas validation suite
+python verify_pandas_pipeline.py
+npm run verify:pandas
 ```
 
 ---

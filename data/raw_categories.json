@@ -1,0 +1,30 @@
+[
+  {
+    "category_id": "CAT-01",
+    "category_name": "Autonomous Agents",
+    "department": "AI Research",
+    "sla_hours": 24,
+    "complexity_weight": 1.5
+  },
+  {
+    "category_id": "CAT-02",
+    "category_name": "Web3 & Distributed Systems",
+    "department": "Blockchain Labs",
+    "sla_hours": 48,
+    "complexity_weight": 1.2
+  },
+  {
+    "category_id": "CAT-03",
+    "category_name": "Developer Tooling & Infrastructure",
+    "department": "Platform Engineering",
+    "sla_hours": 12,
+    "complexity_weight": 1.8
+  },
+  {
+    "category_id": "CAT-04",
+    "category_name": "Security & Databases",
+    "department": "SecOps",
+    "sla_hours": 8,
+    "complexity_weight": 2.0
+  }
+]
